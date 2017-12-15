@@ -120,13 +120,13 @@ main() {
 		return 1
 	fi
 
-	#if git ls-remote --exit-code $repo "refs/heads/$deploy_branch" ; then
-	#	# deploy_branch exists in $repo; make sure we have the latest version
-    #
-	#	disable_expanded_output
-	#	git fetch --force $repo $deploy_branch:$deploy_branch
-	#	enable_expanded_output
-	#fi
+	if git ls-remote --exit-code $repo "refs/heads/$deploy_branch" ; then
+		# deploy_branch exists in $repo; make sure we have the latest version
+
+		disable_expanded_output
+		git fetch --force $repo $deploy_branch:$deploy_branch
+	    enable_expanded_output
+	fi
 
 	# check if deploy_branch exists locally
 	if git show-ref --verify --quiet "refs/heads/$deploy_branch"
@@ -138,19 +138,18 @@ main() {
 }
 
 initial_deploy() {
-	#akbakb git --work-tree "$deploy_directory" checkout --orphan $deploy_branch
-	#akbakb git --work-tree "$deploy_directory" add --all
-    git add --all
-	commit+push
+	git --work-tree "$deploy_directory" checkout --orphan $deploy_branch
+	git --work-tree "$deploy_directory" add --all
+
+    commit+push
 }
 
 incremental_deploy() {
 	#make deploy_branch the current branch
 	git symbolic-ref HEAD refs/heads/$deploy_branch
 	#put the previously committed contents of deploy_branch into the index
-	#akbakb git --work-tree "$deploy_directory" reset --mixed --quiet
-	#akbakb git --work-tree "$deploy_directory" add --all
-    git add --all
+	git --work-tree "$deploy_directory" reset --mixed --quiet
+	git --work-tree "$deploy_directory" add --all
 
 	set +o errexit
 	diff=$(git --work-tree "$deploy_directory" diff --exit-code --quiet HEAD --)$?

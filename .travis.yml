@@ -1,5 +1,6 @@
 env:
   global:
+    - GIT_DEPLOY_REPO=https://github.com/opensourcefoundries/osfoundries-rendered.git
     - GIT_DEPLOY_DIR=docs # this is the default output dir of Hugo
     - GIT_DEPLOY_BRANCH=master # this is the target branch, replace by gh-pages for Project Pages
     - GIT_DEPLOY_USERNAME="Travis CI" # dummy name
