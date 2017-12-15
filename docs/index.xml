@@ -137,8 +137,9 @@ Please feel free to contact us, our customer service center is working for you 2
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://opensourcefoundries.github.io/osfoundries/product/</guid>
-      <description>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-Overview Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</description>
+      <description>Overview The Zephyr and Linux microPlatforms are extensible software and hardware platforms that make it easier to develop, secure, and maintain Internet-connected embedded devices.
+End-to-end Demonstration Systems shows you how to combine the microPlatforms with server and cloud applications to create complete systems. Using these systems, you can publish sensor data from devices to the cloud and perform firmware over the air (FOTA) updates of the device firmware.
+Linux microPlatform The Linux microPlatform, based on OpenEmbedded / Yocto and Docker, is targeted at Linux-based devices.</description>
     </item>
     
   </channel>
