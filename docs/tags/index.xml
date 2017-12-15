@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Open Source Foundries, Ltd.</title>
+    <link>https://opensourcefoundries.github.io/osfoundries/tags/</link>
+    <description>Recent content in Tags on Open Source Foundries, Ltd.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2017, Open Source Foundries, Ltd.; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 10 Oct 2017 13:07:31 +0200</lastBuildDate>
+    
+	<atom:link href="https://opensourcefoundries.github.io/osfoundries/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fota</title>
+      <link>https://opensourcefoundries.github.io/osfoundries/tags/fota/</link>
+      <pubDate>Tue, 10 Oct 2017 13:07:31 +0200</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries/tags/fota/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>https://opensourcefoundries.github.io/osfoundries/tags/golang/</link>
+      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hawkbit</title>
+      <link>https://opensourcefoundries.github.io/osfoundries/tags/hawkbit/</link>
+      <pubDate>Tue, 10 Oct 2017 13:07:31 +0200</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries/tags/hawkbit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://opensourcefoundries.github.io/osfoundries/tags/hugo/</link>
+      <pubDate>Thu, 03 Aug 2017 13:39:46 +0200</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>https://opensourcefoundries.github.io/osfoundries/tags/programming/</link>
+      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theme</title>
+      <link>https://opensourcefoundries.github.io/osfoundries/tags/theme/</link>
+      <pubDate>Tue, 24 Oct 2017 13:50:46 +0200</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries/tags/theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Updates</title>
+      <link>https://opensourcefoundries.github.io/osfoundries/tags/updates/</link>
+      <pubDate>Wed, 13 Dec 2017 13:50:46 +0200</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries/tags/updates/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

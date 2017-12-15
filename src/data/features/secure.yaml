@@ -1,0 +1,4 @@
+weight: 4
+name: "Secure"
+icon: "fa fa-shield"
+description: "Fully encrypted communication, frequently updated to address CVEs, Secure storage"

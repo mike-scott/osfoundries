@@ -1,0 +1,4 @@
+weight: 5
+name: "Continuous Integration"
+icon: "fa fa-recycle"
+description: "Source is continually rebased and retested against upstream projects to make sure any regressions are quickly found and fixed."

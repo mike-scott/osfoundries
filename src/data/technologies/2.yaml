@@ -1,0 +1,4 @@
+text: "Docker is a software technology providing containers, promoted by the company Docker, Inc. Docker provides an additional layer of abstraction and automation of operating-system-level virtualization on Windows and Linux."
+name: "Docker"
+position: "Latest Release"
+picture: "img/technologies/docker.png"

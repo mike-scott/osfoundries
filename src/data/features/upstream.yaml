@@ -1,0 +1,4 @@
+weight: 2
+name: "Upstream"
+icon: "fa fa-level-up"
+description: "The moment you get away from the upstream code, the harder it is to keep up.  We use tools and processes to make it easy to develop embedded products while staying close to the upstream"

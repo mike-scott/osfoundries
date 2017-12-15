@@ -1,0 +1,178 @@
+baseurl = "https://opensourcefoundries.github.io/osfoundries/"
+title = "Open Source Foundries, Ltd."
+theme = "universal"
+publishDir = "../docs"
+languageCode = "en-us"
+# Site language. Available translations in the theme's `/i18n` directory.
+defaultContentLanguage = "en"
+# Enable comments by entering your Disqus shortname
+disqusShortname = "osfoundries"
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = "UA-111281311-1"
+
+# Define the number of posts per page
+paginate = 10
+
+[menu]
+[[menu.main]]
+    name = "Product"
+    url  = "/product/"
+    weight = 1
+[[menu.main]]
+    name = "Overview"
+    parent = "Product"
+    url  = "/product/#Overview"
+    weight = 2
+[[menu.main]]
+    name = "Linux microPlatform"
+    parent = "Product"
+    url  = "/product/#Linux-microPlatform"
+    weight = 3
+[[menu.main]]
+    name = "Zephyr microPlatform"
+    parent = "Product"
+    url  = "/product/#Zephyr-microPlatform"
+    weight = 4
+
+[[menu.main]]
+    name = "Blog"
+    url  = "/blog/"
+    weight = 5
+[[menu.main]]
+    name = "About"
+    identifier = "About"
+    url  = "/about/"
+    weight = 6
+    [[menu.main]]
+        name = "Company"
+        parent = "About"
+        url  = "/about#Company"
+        weight = 7
+    [[menu.main]]
+        name = "Investors"
+        parent = "About"
+        url  = "/about/#Investors"
+        weight = 8
+    [[menu.main]]
+        name = "Partners"
+        parent = "About"
+        url  = "/about/#Partners"
+        weight = 9
+    [[menu.main]]
+        name = "Team"
+        parent = "About"
+        url  = "/about/#Team"
+        weight = 10
+[[menu.main]]
+    name = "Login"
+    url  = "/contact/"
+    weight = 12
+
+[params]
+    viewMorePostLink = "/blog/"
+    author = "DevCows"
+    defaultKeywords = ["devows", "hugo", "go"]
+    defaultDescription = ""
+
+    # Google Maps API key (if not set will default to not passing a key.)
+    #googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
+
+    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
+    style = "default"
+
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+    #
+    # Enable the contact form by entering your Formspree.io email
+    email = "your@email.com"
+
+    about_us = "<p>after years of developing products based on open source technologies, we have found a way to scale this service for you</p>"
+    copyright = "Copyright (c) 2017, Open Source Foundries, Ltd.; all rights reserved."
+
+    # Format dates with Go's time formatting
+    date_format = "January 2, 2006"
+
+    logo = "img/logo.png"
+    address = """<p><strong>Open Source Foundries Ltd.</strong>
+        <br>Mills & Reeve Llp
+        <br>1 St James Court
+        <br>NR3 1RU
+        <br>Norwich, Norfolk
+        <br>
+        <strong>United Kingdom</strong>
+      </p>
+      """
+    latitude = "-12.043333"
+    longitude = "-77.028333"
+
+[Permalinks]
+    blog = "/blog/:year/:month/:day/:filename/"
+
+# Enable or disable top bar with social icons
+[params.topbar]
+    enable = false
+    text = ""
+
+# Enable and disable widgets for the right sidebar
+[params.widgets]
+    categories = true
+    tags = true
+    search = true
+
+[params.carousel]
+    enable = true
+    # All carousel items are defined in their own files. You can find example items
+    # at 'exampleSite/data/carousel'.
+    # For more informtion take a look at the README.
+
+[params.features]
+    enable = true
+    # All features are defined in their own files. You can find example items
+    # at 'exampleSite/data/features'.
+    # For more informtion take a look at the README.
+
+[params.technologies]
+    enable = true
+    # All technologies are defined in their own files. You can find example items
+    # at 'exampleSite/data/technologies'.
+    # For more informtion take a look at the README.
+    title = "Technologies"
+    subtitle = "At Open Source Technologies, we bring the latest technologies in embedded"
+
+[params.testimonials]
+    enable = false
+    # All testimonials are defined in their own files. You can find example items
+    # at 'exampleSite/data/testimonials'.
+    # For more informtion take a look at the README.
+    title = "Testimonials"
+    subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
+
+[params.see_more]
+    enable = false
+    icon = "fa fa-file-code-o"
+    title = "Do you want to see more?"
+    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
+    link_url = "#"
+    link_text = "Check other homepages"
+
+[params.clients]
+    enable = true
+    # All clients are defined in their own files. You can find example items
+    # at 'exampleSite/data/clients'.
+    # For more informtion take a look at the README.
+    title = "Our Clients"
+    subtitle = ""
+
+[params.recent_posts]
+    enable = true
+    title = "From our blog"
+    subtitle = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
