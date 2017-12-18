@@ -1,4 +1,4 @@
-text: "OpenEmbedded is a build automation framework and cross-compile environment used to create Linux distributions for embedded devices. The OpenEmbedded framework is developed by the OpenEmbedded community, which was formally established in 2003."
-name: "Open Embedded"
+text: "OpenEmbedded is a build automation framework and environment used to create Linux for embedded devices. Open Source Foundries use OpenEmbedded to deliver the Linux microPlatform as the heart of your software product"
+name: "Open Embedded"cross
 position: "Latest Release"
 picture: "img/technologies/openembedded.png"
