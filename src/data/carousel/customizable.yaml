@@ -1,8 +1,9 @@
 weight: 4
-title: "Easy to customize"
+title: "Developers"
 description: >
   <ul class="list-style-none">
-    <li>7 preprepared colour variations.</li>
-    <li>Easily to change fonts</li>
+    <li>Rapidly integrate your application</li>
+    <li>End to end testing on every commit</li>
+    <li>Open source software with lifetime product support<li>
   </ul>
 image: "img/carousel/template-easy-code.png"
