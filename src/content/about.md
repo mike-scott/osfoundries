@@ -4,11 +4,11 @@ description = "About us"
 keywords = ["About","What is Open Source Foundries","Who","Investors"]
 +++
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+Open Source Foundries provides best-in-class solutions for software development and lifetime maintenance for connected products, ranging from the smallest sensors to smart and edge devices. Our core products are Zephyr RTOS and Linux based microPlatforms which provide product quality templates for secure, OTA updatable connected devices for industrial and consumer markets. 
 
 ## Company
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+Open Source Foundries targets global markets 
 
 * Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 * Aliquam tincidunt mauris eu risus.
