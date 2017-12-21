@@ -103,12 +103,9 @@ paginate = 10
 
     logo = "img/logo.png"
     address = """<p><strong>Open Source Foundries Ltd.</strong>
-        <br>Mills & Reeve Llp
-        <br>1 St James Court
-        <br>NR3 1RU
-        <br>Norwich, Norfolk
-        <br>
-        <strong>United Kingdom</strong>
+        <br>Cambridge UK
+        <strong>Open Source Foundries Inc.</strong>
+        <br>Boulder CO
       </p>
       """
     latitude = "-12.043333"
