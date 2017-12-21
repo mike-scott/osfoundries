@@ -1,4 +1,4 @@
-text: "Docker is a software technology that uses Containers to provide abstraction and automation of operating systems, service and applications. Open Source Foundries uses Docker to provide flexibility and security for your connected device application"
+text: "Docker is a Container technology to provide abstraction and automation of operating systems, service and applications. Open Source Foundries uses Docker to provide flexibility and security for your connected device application"
 name: "Docker"
 position: "Latest Release"
 picture: "img/technologies/docker.png"
