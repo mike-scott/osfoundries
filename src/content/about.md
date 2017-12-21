@@ -36,4 +36,4 @@ Our technical team is globally distributed and comprises experts in software dev
 
 ---
 
-> In case you have not found what you are lookiong for on this site please feel free to contact us; our customer support team will be happy to help you.
+> In case you have not found what you are looking for on this site, please feel free to contact us; our customer support team will be happy to help you.
