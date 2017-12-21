@@ -1,4 +1,4 @@
-text: "Zephyr is a Linux Foundation-hosted open source collaborative project uniting industry leaders to build a best-of-class small, scalable RTOS optimized for resource constrained devices on multiple architectures."
+text: "Zephyr is a Linux Foundation-hosted open source project uniting industry leaders to build a best-of-class small, scalable multi-architecture RTOS optimized for resource constrained devices. The Zephyr microPlatform offers a secure, tested and updatable implementation for your next embedded/sensor/controller product"
 name: "Zephyr"
 position: "Latest Release"
 picture: "img/technologies/zephyr.png"
