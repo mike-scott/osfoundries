@@ -2,4 +2,3 @@ weight: 4
 name: "Secure"
 icon: "fa fa-shield"
 description: "Secure boot, storage and updates provided with fully encrypted communications. OTA updates provided as needed to address CVEs and bugs, and to offer new features"
-https://github.com/OpenSourceFoundries/osfoundries/tree/master/src/data/features
