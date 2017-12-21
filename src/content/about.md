@@ -8,28 +8,32 @@ Open Source Foundries provides best-in-class solutions for software development 
 
 ## Company
 
-Open Source Foundries targets global markets 
-
-* Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-* Aliquam tincidunt mauris eu risus.
-* Vestibulum auctor dapibus neque.
+Open Source Foundries targets global markets with software development platforms and lifetime maintenance delivered as a service. Zephyr and Linux microPlatforms are delivered as secure, updatable software foundations, enabling customers to focus on their applications leveraging an open platform supporting security, OTA updates and the latest industry protocol and communications stacks including BLE, 802.15.4, WiFi and 5G standards including NB-IoT and LTE-M. The Company is based in Cambridge UK and Boulder CO, USA and is establishing partnerships in China and other territories in 2018. 
 
 ## Investors
 
-Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+Open Source Foundries is funded by Linaro Ltd, a leading global software company delivering Open Source Software for the Arm ecosystem. Additional investors are expected to be announced in early 2018. 
 
 ## Partners
 
-Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+Open Source Foundries is partnering with key companies and organizations in the following areas so that we can scale out across the industry.
+
+* Key Open Source Upstream Projects including the Linux kernel, OpenEmbedded, Yocto and Zephyr
+* Microcontroller and SoC vendors including Arm and other architectures
+* Value added distributors in the US, Europe and Asia
+* Software service providers and Consultancy companies
 
 ## Team
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+The Open Source Foundries executive team consists of industry veterans with deep experience of product development, open source and global business operations.
 
-* Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-* Aliquam tincidunt mauris eu risus.
-* Vestibulum auctor dapibus neque.
+* Ian Drew, Chairman
+* George Grey, CEO
+* Robert Booth, COO
+* Alan Bennett, VP Engineering
+
+Our technical team is globally distributed and comprises experts in software development, testing and delivery.
 
 ---
 
-> In case you haven't found the answer for your question please feel free to contact us, our customer support will be happy to help you.
+> In case you have not found what you are lookiong for on this site please feel free to contact us; our customer support team will be happy to help you.
