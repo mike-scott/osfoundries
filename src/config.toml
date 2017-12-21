@@ -146,7 +146,7 @@ paginate = 10
     # at 'exampleSite/data/technologies'.
     # For more informtion take a look at the README.
     title = "Technologies"
-    subtitle = "Use the latest technologies to develop a better product in less time"
+    subtitle = "Use the latest technologies to develop a better product faster"
 
 [params.testimonials]
     enable = false
