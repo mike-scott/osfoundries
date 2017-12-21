@@ -103,9 +103,9 @@ paginate = 10
 
     logo = "img/logo.png"
     address = """<p><strong>Open Source Foundries Ltd.</strong>
-        <br>Cambridge UK
-        <strong>Open Source Foundries Inc.</strong>
-        <br>Boulder CO
+        <br>Cambridge, UK
+        <br><br><strong>Open Source Foundries Inc.</strong>
+        <br>Boulder CO, USA
       </p>
       """
     latitude = "-12.043333"
