@@ -95,7 +95,7 @@ paginate = 10
     # Enable the contact form by entering your Formspree.io email
     email = "your@email.com"
 
-    about_us = "<p>after years of developing products based on open source technologies, we have found a way to scale this service for you</p>"
+    about_us = "<p>We deliver product quality open source platforms and tools to build and maintain secure and updatable embedded and connected devices</p>"
     copyright = "Copyright (c) 2017, Open Source Foundries, Ltd.; all rights reserved."
 
     # Format dates with Go's time formatting
