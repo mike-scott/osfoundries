@@ -27,4 +27,4 @@ The Zephyr microPlatform, based on the Zephyr real-time operating system, is tar
 
 ---
 
-> In case you haven't found the answer for your question please feel free to contact us, and we will get back to you as soon as we can.
+> In case you haven't found what you are looking for, please feel free to contact us and we will get back to you as soon as we can.
