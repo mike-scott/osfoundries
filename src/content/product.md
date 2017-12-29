@@ -34,9 +34,16 @@ The Open Source Foundries end to end reference implementation provides an exampl
 (Block diagram of simple gateway)
 
 ## Zephyr microPlatform
-
 The Zephyr microPlatform, based on the Zephyr real-time operating system, is targeted at microcontroller-based devices.
 
+(to do)
+
+## Lifetime Maintenance
+Open Source Foundries products are continuously updated, integrated, tested and delivered to subscribers. In today's connected world, where devices are connected 24/7 to the internet, it is no longer feasible to build, test and deploy products without a secure way of updating them. While secure boot and encrypted data can be implemented, modern software is complex and near impossible to make completely tamper-proof. All products need to be able to be updated through their product lifetime with bug fixes and security updates. Traditionally this is achieved by maintaining products through support for long term supported infrastructure (for example an LTS operating system kernel). However, this only addesses the kernel itself and not the entire software stack from bootloader to application. Over a connected product lifetime (which can be many years) it is much easier, faster and less error-prone to perform updates on the latest software, than to have to engineer modern security patches into a particular build on devices that may be many years old. A continuously updatable product provides lower maintenance costs, protection against software vulnerabilities and other security threats, and also has the added benefit of allowing you to deliver new features to the end customer over the product lifetime. 
+
+Open Source Foundries provides a subscription for 24/7 updates to the microPlatform products enabling you to maintain your customer products and selectively update them with the latest software, bug and security fixes. These can be deployed to the end product on a continuous basis, or as planned updates, perhaps when introducing new features or functionality. We do not provide the actual update service, since this is dependent on your product, geography, connectivity service and cloud delivery solution. Therefore, there are no per-update charges. However, our end to end reference implemnentation includes open source server/cloud device management and update software to enable continuous intgration and testing of the microPlatforms, that you can also use for your own product development or deployment. The microPlatforms support third party device management cloud vendors who use industry standard IoT protocols. We will be continuously testing with major industry device management providers - let us know if you would like to add a particular provider to our roadmap. 
+
+By leveraging these updates into your own software development and product testing cycle you can offer your customers the latest software for your product including critical security fixes at any time during its life. Furthermore, we will never "lock you in" to our services. At any time you are able to stop your subscription and take over the ongoing software maintenance of the microPlatform yourself. 
 ---
 
 > In case you haven't found what you are looking for, please feel free to contact us (link) and we will get back to you as soon as we can.
