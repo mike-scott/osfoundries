@@ -33,6 +33,11 @@ paginate = 10
     parent = "Product"
     url  = "/product/#Zephyr-microPlatform"
     weight = 4
+[[menu.main]]
+    name = "Lifetime Maintenance"
+    parent = "Product"
+    url  = "/product/#Lifetime-Maintenance"
+    weight = 5
 
 [[menu.main]]
     name = "Blog"
