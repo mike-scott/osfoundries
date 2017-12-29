@@ -29,7 +29,7 @@ Kernel and Services
 A recent kernel.org stable kernel version is supported and tested as part of the Linux microPlatforn. We subscribe to the "less is more" philosophy in delivering a minimum set of services needed to run Docker Containers. This minimizes the overall software footprint, increases security by limiting the software available for compromise, and helps improve quality and stability through comprehensive testing of the supplied functionality. Features such as packaging support are not included by default, as we expect your own application and services to be securely delivered and managed in Docker containers. (? language support eg Java, Go, Python etc.)
 
 Application Deployment
-The Open Source Foundries end to end reference platform provides an example of using Containers for yoor own application. The Linux microPlatform is used for a simple gateway application to interface sensors and controllers using IoT protocols such as LWM2M and MQTT to cloud providers. Leshan and Hawkbit open source device management software is used to securely configure, update and manage the gateway application. 
+The Open Source Foundries end to end reference implementation provides an example of using Containers for yoor own application. The Linux microPlatform is used for a simple gateway application to interface sensors and controllers using IoT protocols such as LWM2M and MQTT to cloud providers. Leshan and Hawkbit open source device management software is used to securely configure, update and manage the gateway application. 
 
 (Block diagram of simple gateway)
 
