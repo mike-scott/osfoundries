@@ -34,9 +34,38 @@ The Open Source Foundries end to end reference implementation provides an exampl
 (Block diagram of simple gateway)
 
 ## Zephyr microPlatform
-The Zephyr microPlatform, based on the Zephyr real-time operating system, is targeted at microcontroller-based devices.
+Zephyr microPlatform
+The Zephyr Project (link) is a scalable cross-architecture, open governance RTOS for constrained devices, built with internet connectivity and security from the outset. At Open Source Foundries we base our RTOS microPlatform on Zephyr because we believe that it is the future "Linux kernel of microcontrollers". The OS has an open governance model like the Linux kernel that allows for companies and individuals to add features and functionality and evolve the RTOS over time. Unlike the Linux kernel, Zephyr is licensed on the permissive Apache 2.0 open source license, allowing you to easily integrate your own proprietary technology. 
 
-(to do)
+The Open Source Foundries Zephyr microPlatform is a complete secure, OTA updatable, product template for building a microcontroller based connected product. It includes the following key features:
+
+* MCUboot secure bootloader
+* Image updater
+* Zephyr kernel
+* Zephyr networking and communications stacks
+* Example sensor and actuator/control applications
+
+(Picture of Stack)
+
+MCUboot
+MCUboot is a secure, single thread bootloader that executes from flash memory and provides a secure boot process using an immutable public key or key-hash stored in the microcontroller. We provide documentation on how to replace the sample developer key with your own key. The microPlatform can also be modfied to utilize any custom security hardware available. 
+
+Image Updater
+The image updater enables A/B signed image loading and roll-back. This is used to carry out secure OTA updates to your product. 
+
+Zephyr Kernel 
+The Zephyr kernel provides a small footprint, high performance, multi-threaded execution environment for higher level stacks, libraries and applications. A minimal Zephyr-based implementation can use less than 8KB of memory. More complex applications including WiFi and Bluetooth can be implemented in less than 64KB of ROM.
+
+Networking and Communications Stacks
+Zephyr supports a variety of communications stacks for networking, Bluetooth including mesh, 802.15.4. Support for new low power and 5G standards including LoRa, NB-IoT and LTE-M is underway. IoT network protocols including DTLS, LwM2M and MQTT are supported, and more powerful devices can use the full TCP, TLS and HTTPS stack. The Zephyr microPlatform is continuously tested with multiple BLE and BLE Mesh device configurations, with both LwM2M and MQTT protocols. The microPlatform networking interfaces can be configured to your specific hardware requirements. Open Source Foundries will be adding additional reference wireless support in the continuous updates. 
+
+Example Applications
+Your product application is compiled and built using the Zephyr SDK, available for Linux, Mac and Windows platforms. Open Source Foundries provides an out of the box installation so you can focus on your application and not on setting up tools. The reference implementation provides a sample application for gathering device sensor data and controlling devices connected to the MCU. 
+
+Security
+The Zephyr microPlatform is designed to enable simple development of secure devices, with a secure boot architecture, signed update process and encrypted data transfers using DTLS or TLS. By default the microPlatform assumes you will install an immutable public key (or hash) into the MCU during the MCU and/or product manafacturing process. A suitable source of entropy for the True Random Number Generator (TRNG) function is also required. You may also take advantage of any additional security functions that may be available in your product hardware. Documentation is available to help you ensure that your product takes advantage of the provided secuirty infrastructure. 
+
+The Zephyr Project is evolving rapidly with new functionality being added on a regular basis. The microPlatform is a stable, integrated and tested Zephyr-based product platform that is targeted as the foundation of a connected device. Our end to end continuous integration and testing and continuous update process means that you can focus on your application, leaving Open Source Foundries to ensuring that the microPlatform remains stable and functional. With each update we provide full information on changes and new functionality so that you are easily able to keep your product software updated. 
 
 ## Lifetime Maintenance
 Open Source Foundries products are continuously updated, integrated, tested and delivered to subscribers. In today's connected world, where devices are permanently connected to the internet, it is no longer feasible to build, test and deploy products without a secure way of updating them. While secure boot and encrypted data can be implemented, modern software is complex and near impossible to make completely tamper-proof. All products need to be able to be updated through their product lifetime with bug fixes and security updates. Traditionally this is achieved by maintaining products through support for long term supported infrastructure (for example an LTS operating system kernel). However, this only addesses the kernel itself and not the entire software stack from bootloader to application. Over a connected product lifetime (which can be many years) it is much easier, faster and less error-prone to perform updates on the latest software, than to have to engineer modern security patches into a particular build on devices that may be many years old. A continuously updatable product provides lower maintenance costs, protection against software vulnerabilities and other security threats, and also has the added benefit of allowing you to deliver new features to the end customer over the product lifetime. 
