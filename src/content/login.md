@@ -1,6 +1,7 @@
 +++
 title = "Login"
-id = "login"
+description = "Login and Signup"
+keywords = ["Login","Signup","Get Started"]
 +++
 
 # Login in or Sign up here
