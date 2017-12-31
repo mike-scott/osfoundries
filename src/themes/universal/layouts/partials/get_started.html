@@ -1,20 +1,21 @@
-<div class="container" id="get_started">
-
-    <div class="row">
-        <div class="col-md-8">
-
-            <section>
-
-                {{ .Content }}
-
-                <div id="get_started-message"></div>
-
-                {{ end }}
-
-            </section>
+{{ if isset .Site.Params "get_started" }}
+{{ if .Site.Params.get_started.enable }}
+<section class="bar background-image-fixed-2 no-mb color-white text-center">
+    <div class="dark-mask"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="icon icon-lg"><i class="{{ .Site.Params.get_started.icon }}"></i>
+                </div>
+                <h3 class="text-uppercase">{{ .Site.Params.get_started.title }}</h3>
+                <p class="lead">{{ .Site.Params.get_started.subtitle }}</p>
+                <p class="text-center">
+                    <a href="{{ .Site.Params.get_started.link_url }}" class="btn btn-template-transparent-black btn-lg">{{ .Site.Params.get_started.link_text }}</a>
+                </p>
+            </div>
 
         </div>
-
     </div>
-    <!-- /.row -->
-</div>
+</section>
+{{ end }}
+{{ end }}
