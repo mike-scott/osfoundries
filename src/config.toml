@@ -69,7 +69,7 @@ paginate = 10
         url  = "/about/#Team"
         weight = 10
 [[menu.main]]
-    name = "Login"
+    name = "Login | Signup"
     url  = "/contact/"
     weight = 12
 
@@ -171,7 +171,7 @@ paginate = 10
     # All clients are defined in their own files. You can find example items
     # at 'exampleSite/data/clients'.
     # For more informtion take a look at the README.
-    title = "Our Clients"
+    title = "Get Started"
     subtitle = ""
 
 [params.recent_posts]
