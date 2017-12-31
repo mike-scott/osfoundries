@@ -70,6 +70,7 @@ paginate = 10
         weight = 10
 [[menu.main]]
     name = "Login | Signup"
+    identifier = "Login"
     url  = "/login/"
     weight = 12
 
