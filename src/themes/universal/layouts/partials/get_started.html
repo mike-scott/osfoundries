@@ -11,8 +11,7 @@
                 <p class="lead">{{ .Site.Params.get_started.subtitle }}</p>
                 <p class="text-center">
                     # <a href="{{ .Site.Params.get_started.link_url }}" class="btn btn-template-transparent-black btn-lg">{{ .Site.Params.get_started.link_text }}</a>
-                    {{ .Site.Params.address | markdownify }}
-                    <a href="/osfoundries-rendered/login" class="btn btn-small btn-template-main">{{ i18n "loginGoTo" }}</a>
+                    <a href="login" class="btn btn-small btn-template-main">{{ i18n "loginGoTo" }}</a>
                 </p>
             </div>
 
