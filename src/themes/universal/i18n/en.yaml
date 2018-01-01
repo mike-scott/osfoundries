@@ -7,6 +7,9 @@
 - id: portedBy
   translation: "Ported to Hugo by"
 
+- id: loginGoTo
+  translation: "Go to login page"
+  
 - id: contactGoTo
   translation: "Go to contact page"
 
