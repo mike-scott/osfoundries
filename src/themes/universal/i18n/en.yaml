@@ -8,7 +8,7 @@
   translation: "Ported to Hugo by"
 
 - id: loginGoTo
-  translation: "Go to login page"
+  translation: "Sign Up"
   
 - id: contactGoTo
   translation: "Go to contact page"
