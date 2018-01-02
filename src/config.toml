@@ -43,10 +43,6 @@ paginate = 10
     url  = "/blog/"
     weight = 5
 [[menu.main]]
-    name = "Partners"
-    url  = "/partners/"
-    weight = 6
-[[menu.main]]
     name = "About"
     identifier = "About"
     url  = "/about/"
@@ -60,6 +56,11 @@ paginate = 10
         name = "Investors"
         parent = "About"
         url  = "/about/#Investors"
+        weight = 10
+    [[menu.main]]
+        name = "Partners"
+        parent = "About"
+        url  = "/about/#Partners"
         weight = 10
     [[menu.main]]
         name = "Team"
