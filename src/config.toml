@@ -177,7 +177,7 @@ paginate = 10
 [params.get_started]
     enable = true
     title = "Get Started"
-    subtitle = "Get started with free access to the microPlatforms and a free trial subscription to the update service"
+    subtitle = "We provide the software for your connected IoT products and allow you to tet started with free access to the microPlatforms and a free trial subscription to the update service"
 
 [params.recent_posts]
     enable = true
