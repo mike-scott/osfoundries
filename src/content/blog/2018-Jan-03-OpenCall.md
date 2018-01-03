@@ -3,20 +3,20 @@ title = "microPlatform OpenCall meeting minutes"
 date = "2018-01-03"
 tags = ["linux", "zephyr", "update", "microplatform", "ble"]
 categories = ["minutes", "microPlatform"]
-banner = "img/banners/opencall.png"
+banner = "img/banners/opencall010318.png"
 +++
 
 # 2018 January 3rd Open Call minutes
 
 ## Highlights
 
-OSF is now 3 months old and the microPlatforms are reaching full speed.  We are working on a few final work items before we move from limited beta to a public beta state for the Zephyr and Linux microPlatforms. 
+OSF is now 3 months old and the microPlatforms are reaching full speed.  We are working on a few final work items before we move from limited beta to a public beta state for the Zephyr and Linux microPlatforms.
 
 ## New BLE Dongle efforts
 
-For our initial radio technology, we have chosen BLE (Bluetooth Low Energy) as it is the most mature and public radio technology that is available in both Linux and Zephyr projects.  On most of the boards we have used we have found critical bugs with the proprietary BLE radio code and with the UART/ACHI sample code already in Zephyr and a capable Nordic NRF52 module available on the BLE Nano 2, we now have a fully functional and surprisingly stable BLE Dongle that we can use with our host.  
+For our initial radio technology, we have chosen BLE (Bluetooth Low Energy) as it is the most mature and public radio technology that is available in both Linux and Zephyr projects.  On most of the boards we have used we have found critical bugs with the proprietary BLE radio code and with the UART/ACHI sample code already in Zephyr and a capable Nordic NRF52 module available on the BLE Nano 2, we now have a fully functional and surprisingly stable BLE Dongle that we can use with our host.
 
-Todo: 
+Todo:
 * Integrate sample code with MCUBOOT so we can use 'zmp build' and 'zmp flash' commands
 * Release documentation to use the BLE Nano 2 + BLE Nano 2 programmer board as a peripheral BLE dongle
 
@@ -30,9 +30,9 @@ __Source code mirrors:__
 
 The microPlatform is based on software and sourceccode made available by upstream projects and hardware manufacturers.  To insure that the microPlatform can always be built from source we have created some OSF mirrors that will provide a higher level of service so that OSF subscribers will always be able to build the microPlatforms from source, even in the event that the upstream repositories may not be reachable.
 
-Recent issues addressed: 
+Recent issues addressed:
 
-* We have found that enabling the UART on the Raspberry PI 3 causes significant system instability, including BLE performance.  We are now recommending doing no system validation with UART enabled on the Raspberry PI 3.  This causes some problems with automation as a LAVA-based automation requires UART for controlling the device under test.  We are working on enabling Raspberry PI 3 testing by using a conjunction of UART and SSH rather than just UART.  
+* We have found that enabling the UART on the Raspberry PI 3 causes significant system instability, including BLE performance.  We are now recommending doing no system validation with UART enabled on the Raspberry PI 3.  This causes some problems with automation as a LAVA-based automation requires UART for controlling the device under test.  We are working on enabling Raspberry PI 3 testing by using a conjunction of UART and SSH rather than just UART.
 
 ## Zephyr microPlatform
 
@@ -44,12 +44,12 @@ __Encrypted communication:__
 
 When we build connected devices we want to have reference samples that are securable and a fundamental requirement is to support encrypted communication protocols.  Of course on a constrained device, the memory limits make this quite a challenge and we are working on how to best enable Zephyr TCP (TLS) and UDP (DTLS) encryption.
 
-__Key storage:__ 
+__Key storage:__
 
 As we work towards a reference design for secure communication,  we are working with FCB / Flash Circular Buffer (https://mynewt.apache.org/latest/os/modules/fcb/fcb/) integration within Zephyr.  There is an initial patch in review and we hope to enable our sample applications to use FCB for key storage soon.
 
 ## Upcoming Events
 
 * January Engineering Sprint - Austin TX, January 15 - 17
-* Embedded World 2018 - February 27 - March 1 
+* Embedded World 2018 - February 27 - March 1
 * Embedded Linux Conference - March 12 - 14
