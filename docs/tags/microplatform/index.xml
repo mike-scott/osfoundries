@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microplatform on Open Source Foundries, Ltd.</title>
+    <link>https://opensourcefoundries.github.io/osfoundries-rendered/tags/microplatform/</link>
+    <description>Recent content in Microplatform on Open Source Foundries, Ltd.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2017, Open Source Foundries, Ltd.; all rights reserved.</copyright>
+    <lastBuildDate>Wed, 03 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://opensourcefoundries.github.io/osfoundries-rendered/tags/microplatform/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>microPlatform OpenCall meeting minutes</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/03/2018-jan-03-opencall/</link>
+      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2018/01/03/2018-jan-03-opencall/</guid>
+      <description>2018 January 3rd Open Call minutes Highlights OSF is now 3 months old and the microPlatforms are reaching full speed. We are working on a few final work items before we move from limited beta to a public beta state for the Zephyr and Linux microPlatforms.
+New BLE Dongle efforts For our initial radio technology, we have chosen BLE (Bluetooth Low Energy) as it is the most mature and public radio technology that is available in both Linux and Zephyr projects.</description>
+    </item>
+    
+  </channel>
+</rss>

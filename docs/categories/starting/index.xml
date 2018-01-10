@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Starting on Open Source Foundries, Ltd.</title>
+    <link>https://opensourcefoundries.github.io/osfoundries-rendered/categories/starting/</link>
+    <description>Recent content in Starting on Open Source Foundries, Ltd.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2017, Open Source Foundries, Ltd.; all rights reserved.</copyright>
+    <lastBuildDate>Tue, 24 Oct 2017 13:50:46 +0200</lastBuildDate>
+    
+	<atom:link href="https://opensourcefoundries.github.io/osfoundries-rendered/categories/starting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quickstart: Linux microPlatform</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/10/24/linux-quickstart/</link>
+      <pubDate>Tue, 24 Oct 2017 13:50:46 +0200</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/10/24/linux-quickstart/</guid>
+      <description> Introduction Here&amp;rsquo;s how you use the Linux microPlatform in 30 seconds
+## this is a comment $ echo this is a command this is a command ## edit the file $vi foo.md +++ date = &amp;quot;2014-09-28&amp;quot; title = &amp;quot;creating a new theme&amp;quot; +++ bah and humbug :wq ## show it $ cat foo.md +++ date = &amp;quot;2014-09-28&amp;quot; title = &amp;quot;creating a new theme&amp;quot; +++ bah and humbug $  </description>
+    </item>
+    
+    <item>
+      <title>Quickstart: Zephyr microPlatform</title>
+      <link>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/10/24/zephyr-quickstart/</link>
+      <pubDate>Tue, 24 Oct 2017 13:50:46 +0200</pubDate>
+      
+      <guid>https://opensourcefoundries.github.io/osfoundries-rendered/blog/2017/10/24/zephyr-quickstart/</guid>
+      <description> Introduction Here&amp;rsquo;s how you use zephyr
+## this is a comment $ echo this is a command this is a command ## edit the file $vi foo.md +++ date = &amp;quot;2014-09-28&amp;quot; title = &amp;quot;creating a new theme&amp;quot; +++ bah and humbug :wq ## show it $ cat foo.md +++ date = &amp;quot;2014-09-28&amp;quot; title = &amp;quot;creating a new theme&amp;quot; +++ bah and humbug $  </description>
+    </item>
+    
+  </channel>
+</rss>
