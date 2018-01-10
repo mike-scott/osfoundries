@@ -10,7 +10,7 @@ banner = "img/banners/update.png"
 
 ## Highlights
 
-- **Non-fast-forward** Zephyr update to 1.11 development tree
+- Bluetooth behaviors impacting MAC addresses are changed following Linux microPlatform update
 
 ## Components
 
@@ -28,80 +28,14 @@ banner = "img/banners/update.png"
 
 
 #### Features
-
-##### Memory security improvements for ARC: 
-- The ARC architecture has gained additional memory
-security support.
-
-
-##### I2C for STM32F0: 
-- The STM32F0 SoC family gained I2C support.
-
-
-##### New Bluetooth testing API and cases: 
-- Bluetooth grew a new testing API, and several test cases
-were merged.
-
-
-##### Board support and peripheral enablement: 
-- Various fixes and peripheral enablement in the boards,
-across architectures.
-
-
-##### Ethernet improvements for mcux driver: 
-- The mcux ethernet driver now disables promiscuous mode
-by default, and also implements IPv6 multicast group
-joining/leaving.
-
-
-##### Device tree bindings for sensors and I2C: 
-- A generic yaml description for some sensors and I2C
-devices was added to device tree, along with other
-sensor- and I2C-related fixes.
-
-
-##### Legacy cleanups: 
-- Thread groups were removed from the kernel, along with
-other cleanups in clocks and timers.
-
-
-##### Flashing/debugging changes: 
-- The flash and debug infrastructure has been reworked to
-largely eliminate the use of environment variables. All
-board files were affected. Out-of-tree boards will need
-to be updated. Users of in-tree boards have been
-updated. User workflows that use the old environment
-variables will need updates.
-
-
-##### size_report changes: 
-- Similarly to the flashing and debugging changes, the
-size_report script now uses command-line arguments
-instead of environment variables. User workflows that
-use the old environment variables will need updates.
-
+- Not addressed in this update
 
 #### Bugs
 
-##### STM32F0 flash fixes: 
-- The STM32F0 SoC family has fixes for the flash driver
-
-
-
-##### LWM2M fixes: 
-- Several network fixes were merged for the LWM2M library.
-
-
-
-##### IEEE 802.15.4 fixes: 
-- Fixes were merged for IEEE 802.15.4.
-
-
-
-##### Some BT Mesh fixes: 
-- A few fixes and improvements were made to the Bluetooth
-Mesh app. The pace of fixes on this new feature appears
-to be slowing down, indicating greater maturity.
+##### LWM2M packet fix: 
+- The LWM2M stack includes a fix which prevents a packet
+which may need to be retransmitted from being freed
+until after this retransmission has completed, if necessary.
 
 
 
@@ -109,17 +43,29 @@ to be slowing down, indicating greater maturity.
 
 
 #### Features
-- Not addressed in this update
+
+##### CONFIG_NET_L2_BT_ZEP1656 disabled: 
+- This obscure option was used to preserve compatibility
+contrary to the Bluetooth specification with
+implementation characteristics in the Linux kernel. Now
+that the upstream Linux microPlatform was updated to
+v4.14, which has fixes for these characteristics, the
+option can be disabled.
+
+
+##### dm-hawkbit-mqtt cleanups and optimizations: 
+- Various confusing implementation details in this
+application have been fixed and otherwise cleaned
+up. The resulting application now requires less memory.
+
 
 #### Bugs
 
-##### Fixes for blockages in the TCP stack: 
-- The dm-hawkbit-mqtt sample reduced the TCP retry count,
-which prevents the TCP stack from blocking due to low
-memory conditions when many retry packets are in flight.
-This is a tradeoff between compliance with RFC
-recommendations for retry time and a working system with
-tight memory constraints.
+##### Packet pool workaround for MQTT: 
+- The dm-hawkbit-mqttt sample now uses an extra packet
+pool when the underlying link layer is Bluetooth. This
+keeps the network stack working in the face of IPv6
+packet header compression.
 
 
 # Linux microPlatform

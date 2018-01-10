@@ -2,8 +2,9 @@
 title = "Quickstart: Linux microPlatform"
 date = "2017-10-24T13:50:46+02:00"
 tags = ["theme"]
-categories = ["starting"]
+categories = ["quickstart","linux","microPlatform"]
 banner = "img/banners/banner-1.jpg"
+draft = true
 +++
 
 ## Introduction

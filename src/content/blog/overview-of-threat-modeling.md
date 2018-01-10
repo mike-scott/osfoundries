@@ -2,8 +2,9 @@
 title = "Threat modeling methods"
 date = "2017-08-03T13:39:46+02:00"
 tags = ["hugo"]
-categories = ["pseudo"]
+categories = ["threats"]
 banner = "img/banners/banner-3.jpg"
+draft = true
 +++
 
 ## Step 1. Install Hugo
