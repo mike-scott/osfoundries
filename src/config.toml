@@ -39,9 +39,13 @@ paginate = 10
     url  = "/product/#Lifetime-Maintenance"
     weight = 5
 [[menu.main]]
+    name = "Partners"
+    url  = "/partners/"
+    weight = 6
+[[menu.main]]
     name = "Blog"
     url  = "/blog/"
-    weight = 5
+    weight = 7
 [[menu.main]]
     name = "About"
     identifier = "About"
@@ -58,20 +62,15 @@ paginate = 10
         url  = "/about/#Investors"
         weight = 10
     [[menu.main]]
-        name = "Partners"
-        parent = "About"
-        url  = "/about/#Partners"
-        weight = 10
-    [[menu.main]]
         name = "Team"
         parent = "About"
         url  = "/about/#Team"
-        weight = 11
+        weight = 12
 [[menu.main]]
     name = "Login | Signup"
     identifier = "Login"
     url  = "/login/"
-    weight = 12
+    weight = 13
 
 [params]
     viewMorePostLink = "/blog/"
@@ -173,7 +172,7 @@ paginate = 10
     # For more informtion take a look at the README.
     title = "Our Partners"
     subtitle = "We have proudly collaborated with the following companies."
-    
+
 [params.get_started]
     enable = true
     title = "Get Started"
