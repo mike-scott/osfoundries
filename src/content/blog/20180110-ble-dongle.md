@@ -1,12 +1,12 @@
 +++
-title = "Opensource Bluetooth Low Engergy (BLE) usb dongle"
+title = "Opensource Bluetooth Low Energy (BLE) USB dongle"
 date = "2018-01-08"
 tags = ["ble", "radio", "open source", "bugs"]
 categories = ["Bluetooth", "Radio"]
 banner = "img/banners/ble-dongle.png"
 +++
 
-# An open source usb dongle / BLE host radio
+# An open source USB dongle / BLE host radio
 
 If you've ever had to ship a product you know how frustrating a critical bug can be when your only driver is proprietary.  Many times the problem may be in your code and not the vendor's code, but it is often a difficult journey to find the root cause.  Vendors have many customers and finding the right technical contact takes time and without a compelling business case you may ultimately find that your use of the device is not _standard_ and you end up at the back of the line, even sometimes forced to find a different component.  Well, with Zephyr maybe we are beginning to take a step forward as we now have the ability to control the entire communication path in an almost _ready-for-certification_ Bluetooth low energy radio.
 
