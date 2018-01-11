@@ -8,6 +8,12 @@ banner = "img/banners/update.png"
 
 # Zephyr microPlatform
 
+## Summary
+
+The major change in this update is a non-fast-forward Zephyr
+repository tree based on the upstream 1.11 development tree.
+
+
 ## Highlights
 
 - **Non-fast-forward** Zephyr update to 1.11 development tree
@@ -123,6 +129,12 @@ tight memory constraints.
 
 
 # Linux microPlatform
+
+## Summary
+
+Raspberry Pi 3 kernel was updated to use the same OSF distro configuration
+fragment as used by the other machines.
+
 
 ## Highlights
 

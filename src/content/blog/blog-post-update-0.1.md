@@ -8,6 +8,21 @@ banner = "img/banners/update.png"
 
 # Zephyr microPlatform
 
+## Summary
+
+This release includes a Zephyr tree from the the 1.10 development
+cycle. This tree does not yet include the conversion of the build
+system to CMake.
+
+It includes an MCUBoot tree based on work done in the master
+branch following the v1.0.0 tag, which includes some work making it
+easier to port new boards to the bootloader than it was in that
+release.
+
+Finally, several sample applications are included, with numerous
+improvements from publicly released versions.
+
+
 ## Highlights
 
 - Zephyr tree from 1.10 development cycle, before CMake transition
@@ -257,6 +272,14 @@ CONFIG_LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_SUPPORT=y.
 
 
 # Linux microPlatform
+
+## Summary
+
+This release includes a major OpenEmbedded / Yocto update, which is now based
+on the latest Rocko (2.4) baseline (which is in the process to be released).
+
+Go was updated to 1.9 and Docker was updated to the CE 17.06 release.
+
 
 ## Highlights
 

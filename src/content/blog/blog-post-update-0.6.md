@@ -8,6 +8,18 @@ banner = "img/banners/update.png"
 
 # Zephyr microPlatform
 
+## Summary
+
+The most significant change in this update follows the Linux
+microPlatform switch to a Linux v4.14-based tree. This impacts
+compatibility with any gateways relying on the old Bluetooth
+behavior, and also will cause changes to the MAC addresses reported
+by the Zephyr microPlatform sample applications. Users of the
+bt-joiner container whitelist feature in the Linux microPlatform
+will need to update their whitelists. Specifically, the leading
+D6:E7 in the MAC addresses must be changed to D4:E7.
+
+
 ## Highlights
 
 - Bluetooth behaviors impacting MAC addresses are changed following Linux microPlatform update
@@ -69,6 +81,14 @@ packet header compression.
 
 
 # Linux microPlatform
+
+## Summary
+
+OSF Unified Linux Kernel was updated to the 4.14 series. The Linux Kernel
+update also includes changes required to properly implement RFC 766 (IPv6 over
+Bluetooth Low Energy), causing incompatibilities with Zephyr devices using the
+NET_L2_BT_ZEP1656 Zephyr workaround (required for kernels older than 4.12).
+
 
 ## Highlights
 

@@ -8,6 +8,15 @@ banner = "img/banners/update.png"
 
 # Zephyr microPlatform
 
+## Summary
+
+This is the first Zephyr microPlatform update which uses the new CMake
+build system, which has replaced the use of Kbuild.
+
+As described in the summary from https://foundries.io/mp/zmp/0.2, all
+users will need to update any out of tree application build systems.
+
+
 ## Highlights
 
 - Zephyr tree from 1.10 release candidate, with CMake
@@ -282,6 +291,14 @@ connected via 6lowpan on recent Linux kernels.
 
 
 # Linux microPlatform
+
+## Summary
+
+Linux microPlatform add supports for generic 64bit Intel targets.
+Validated with Minnowboard Turbot and NUC variants.
+
+Layer updates for meta-osf, and meta-intel.
+
 
 ## Highlights
 

@@ -8,6 +8,17 @@ banner = "img/banners/update.png"
 
 # Zephyr microPlatform
 
+## Summary
+
+"This is the final release which uses the Linux kernel Kbuild
+build system. The next release will have a CMake-based build
+system. **All out of tree applications will need updates** to
+their build systems to move to CMake. Refer to the Zephyr
+Application Development Primer for details:
+
+http://docs.zephyrproject.org/application/application.html"
+
+
 ## Highlights
 
 - Final Zephyr commit before the build system moves to CMake
@@ -150,6 +161,15 @@ temperature object.
 
 
 # Linux microPlatform
+
+## Summary
+
+Linux microPlatform build system improvements to easy the platform build process
+in docker containers.
+
+Layer updates for meta-osf, meta-freescale-3rdparty meta-qcom, meta-raspberrypi
+and openembedded-core and meta-linaro.
+
 
 ## Highlights
 
