@@ -4,7 +4,6 @@ date = "2018-01-17T13:50:46+02:00"
 tags = ["linux", "docker", "microPlatform"]
 categories = ["quickstart","linux","microPlatform"]
 banner = "img/banners/docker.png"
-draft = true
 +++
 
 ## Introduction
