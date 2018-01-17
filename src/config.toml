@@ -129,8 +129,13 @@ paginate = 10
     tags = true
     search = true
 
-[params.carousel]
+[params.front]
     enable = true
+    title = "Title"
+    description = "description"
+
+[params.carousel]
+    enable = false
     # All carousel items are defined in their own files. You can find example items
     # at 'exampleSite/data/carousel'.
     # For more informtion take a look at the README.

@@ -1149,15 +1149,18 @@ fieldset[disabled] .btn-template-primary.active {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+  top: -60px;
+  z-index: -10;
 }
+
 .home-carousel .dark-mask {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #34435b;
-  opacity: 0.9;
+  background: #000;
+  opacity: 0;
   filter: alpha(opacity=90);
 }
 .home-carousel .owl-carousel {

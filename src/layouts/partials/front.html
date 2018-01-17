@@ -1,0 +1,23 @@
+{{ if isset .Site.Params "front" }}
+{{ if .Site.Params.front.enable }}
+<section>
+    <div class="home-carousel">
+        {{/* <div class="dark-mask"></div> */}}
+        <div class="container">
+            <div class="homepage">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 col-md-offset-4">
+                    <div class="front-title">
+                    Open Source microPlatforms for Developing Connected Devices
+                    </div>
+                    <div class="front-description">
+                    Secure • Updatable • Lifetime Support
+                    </div>
+                </div>
+            </div>
+            <!-- /.project owl-slider -->
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}

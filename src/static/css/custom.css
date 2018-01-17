@@ -1,0 +1,32 @@
+/* your styles go here */
+
+.box-image-text .image {
+  min-height: 200px;
+  max-height: 200px;
+}
+
+.box-simple {
+  min-height: 230px;
+}
+
+.homepage {
+    height: 100vh;
+}
+
+.front-title {
+    font-weight: 300;
+    font-size: 43px;
+    color: #fff;
+    letter-spacing: 0.08em;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.front-description {
+    font-weight: 300;
+    font-size: 35px;
+    color: #FFA900;
+    letter-spacing: 0.08em;
+    text-align: center;
+
+}
