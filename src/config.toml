@@ -67,9 +67,9 @@ paginate = 10
         url  = "/about/#Team"
         weight = 12
 [[menu.main]]
-    name = "Login | Signup"
+    name = "Get Started"
     identifier = "Login"
-    url  = "/login/"
+    url  = "https://foundries.io/"
     weight = 13
 
 [params]
