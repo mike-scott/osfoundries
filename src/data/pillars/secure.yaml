@@ -1,4 +1,4 @@
 weight: 1
 name: "Secure"
-icon: "fa fa-shield"
-description: "When you build your products using our microPlatforms you have access to continuously updated software allowing you to rapidly fix security vulnerabilities, deliver bug fixes and add new features"
+icon: "fa fa-lock"
+description: "Built-in Security from device boot to the cloud with encrypted data transfers"

@@ -3,6 +3,16 @@
 {{ if gt (len .Site.Data.pillars) 0 }}
 <section class="bar background-white">
     <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="vision-title">Our Vision</div>
+                <div class="vision-description"> Building software for Connected Devices should be easier and faster.
+                Our open source RTOS and Linux microPlatforms make it easier for you
+                to deliver new products with built-in security and lifetime updates.
+                </div>
+            </div>
+        </div>
+
         {{ range $index, $element := sort .Site.Data.pillars "weight" }}
     		{{ if eq (mod $index 4) 0 }}
     		<div class="col-md-12">
