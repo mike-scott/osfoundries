@@ -1,23 +1,69 @@
 /* your styles go here */
+.navbar {
+    z-index: 9000;
+    text-rendering: optimizeLegibility;
+    margin-bottom: 0;
+}
 
-.homepage {
+.intro {
+    min-height: 300px;
+    margin-top: -67px;
+    background: url('../img/photogrid.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-clip: border-box;
+}
+
+.intro-layer {
+    min-height: 300px;
     height: 100vh;
 }
 
-.front-title {
+.front-title,
+.front-description {
     font-weight: 300;
-    font-size: 43px;
-    color: #fff;
     letter-spacing: 0.08em;
-    margin-top: 200px;
     text-align: center;
 }
 
-.front-description {
-    font-weight: 300;
-    font-size: 35px;
-    color: #FFA900;
-    letter-spacing: 0.08em;
-    text-align: center;
+.front-title {
+    font-size: 43px;
+    margin-top: 200px;
+}
 
+.front-description {
+    font-size: 35px;
+}
+
+.front-more-bottom {
+    bottom: 0;
+    position: absolute;
+    padding-bottom: 2em;
+}
+
+.front-more-fixed-width {
+    width: 250px;
+    left: 50%;
+    margin-left: -125px;
+}
+
+.btn-more {
+    height: 60px;
+    width: 60px;
+    font-size: 35px;
+    background: 0 0;
+    cursor: pointer;
+}
+
+.front-title,
+.btn-more,
+.btn-more:visited {
+    color: #ffffff;
+}
+
+.front-description,
+.btn-more:hover {
+    color: #FFA900;
 }
