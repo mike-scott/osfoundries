@@ -1,0 +1,33 @@
+{{ if isset .Site.Params "overview" }}
+{{ if .Site.Params.overview.enable }}
+<section class="overview background-image-fixed-2 no-mb color-white text-center">
+    <div class="dark-mask"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="lead">microPlatforms are complete product templates for your next
+                Connected Device design, allowing you to focus on your value-add and application,
+                rather than undifferentiated features. The Zephyr microPlatform is RTOS-based for
+                microcontroller projects. The Linux microPlatform is for more powerful SoCs,
+                enabling connected devices ranging from smart products to autonomous  cars.
+                Docker Containers are used for your updatable applications and services.
+
+                Benefits from using our product:
+                  <ul>
+                  <li> Extensive support for upstream SoCs and MCUs
+                  <li> Leverage our team of experts for your product  foundation
+                  <li> No lock-in, through use of Open Source code, licensed to allow
+                     you to include proprietary value-add
+                  <li> Continuously tested and updated
+                  <li> Accelerate your product development
+                  <li> Dramatically reduce lifetime maintenance costs with no
+                     per-unit royalties
+                </ul>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}
