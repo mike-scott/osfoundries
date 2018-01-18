@@ -4,11 +4,22 @@ description = "Open Source Foundries Partners"
 keywords = ["Partners","together","collaboration","reference","hardware"]
 +++
 
-Work with Open Source Foundries on Zephyr RTOS and Linux microPlatforms (Secure, updatable software for product development)
+Open Source Foundries products are Zephyr RTOS and Linux microPlatforms to
+enable you to rapidly develop secure, OTA updatable connected products.
+Whether your application is a remote sensor, a smart light or device, an
+appliance, or even a robot, drone or self-driving car the microPlatforms
+rovide a proven, tested platform on which to securely build your product
+and applications.
 
-Enable your products in our core software platforms and/or provide services to our customers
+microPlatforms are configurable minimum footprint implementations of software
+for building any connected device, whether based on a microcontroller or
+advanced multi-core SoCs. The microPlatforms are Open Source products so
+you have access to all the source code at no charge, and Open Source
+Foundries offer a lifetime subscription service (per product not per unit)
+to enable you to keep your product maintained with the latest security
+fixes, updates and new functionality over its lifetime.
 
-[What is a microPlatform?]({{< ref "product.md" >}}) 
+[What is a microPlatform?]({{< ref "product.md" >}})
 
 ## Key differentiators of microPlatforms
 
