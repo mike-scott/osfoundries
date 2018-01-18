@@ -156,7 +156,7 @@ paginate = 10
     # For more informtion take a look at the README.
 
 [params.technologies]
-    enable = true
+    enable = false
     # All technologies are defined in their own files. You can find example items
     # at 'exampleSite/data/technologies'.
     # For more informtion take a look at the README.
@@ -193,6 +193,6 @@ paginate = 10
     subtitle = "We provide the software for your connected IoT products and allow you to get started with a free trial subscription to the update service"
 
 [params.recent_posts]
-    enable = true
+    enable = false
     title = "From our blog"
     subtitle = ""
