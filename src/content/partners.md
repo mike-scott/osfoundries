@@ -4,81 +4,74 @@ description = "Open Source Foundries Partners"
 keywords = ["Partners","together","collaboration","reference","hardware"]
 +++
 
-Open Source Foundries products are Zephyr RTOS and Linux microPlatforms to
-enable you to rapidly develop secure, OTA updatable connected products.
-Whether your application is a remote sensor, a smart light or device, an
-appliance, or even a robot, drone or self-driving car the microPlatforms
-rovide a proven, tested platform on which to securely build your product
-and applications.
-
-microPlatforms are configurable minimum footprint implementations of software
-for building any connected device, whether based on a microcontroller or
-advanced multi-core SoCs. The microPlatforms are Open Source products so
-you have access to all the source code at no charge, and Open Source
-Foundries offer a lifetime subscription service (per product not per unit)
-to enable you to keep your product maintained with the latest security
-fixes, updates and new functionality over its lifetime.
+As an open source company working with partners across the ecosystem is key to our success. Partners have access to our products for internal use, and are weclome to both use and contribute to our work. If you are interested in partnering with us on the microPlatforms please contact us or sign up using the form below. 
 
 [What is a microPlatform?]({{< ref "product.md" >}})
 
 ## Key differentiators of microPlatforms
 
-__We support Any Architecture__
+__We can support any CPU Architecture__
 
-* ARM, Intel, Risc V support
+* ARM, Intel, RISC-V etc.
 
-__We support Any Cloud__
+__We can support any Cloud__
 
-* Alibaba, Amazon, Microsoft Azure, IBM Bluemix, Google Cloud, Private clouds too
+* Alibaba, Amazon, AT&T M2X, Microsoft Azure, IBM Bluemix, Google Cloud, mBed Cloud, and private clouds too
 
 __microPlatforms undergo relevant and rigorous automated testing__
 
-* microPlatforms and continuously tested against real-world end-to-end IoT use-cases insuring that every update works from the device to the cloud
+* microPlatforms are continuously tested against real-world end-to-end IoT use cases, ensuring that every update works from the cloud to the device
 
 # Partner Benefits
 
 __SoC / MCU / SoM Vendors and Distributors__
 
-* Integrate your products
-* Accelerate customer designs
+* Integrate your products into the microPlatforms
+* Accelerate your customer designs
+* Use the microPlatforms as reference software for your devices
 
 __Wireless and peripheral solutions__
 
 * Build support for your products into the microPlatforms
-* Ready to go reference software for your reference hardware
+* Open Source and/or proprietary code
+* Enable supported reference software for your reference hardware
 
 __Device management and Cloud providers__
 
+* Enable microPlatform customers to build products that interface out to the box to your cloud
 * Enable more devices to integrate with your cloud services
 
 __Service Companies__
 
 * Deliver value-add to microPlatform customers
-* integrated development, advanced hardware enablement, long-term support
+* Provide integrated development services
+* Offer advanced hardware enablement
+* Deliver long-term support
 
 __Reference Hardware__
 
-* Open Source Foundries identifies and uses key hardware products for testing and verification of the microPlatforms
+* Open Source Foundries identifies and uses a small number of key hardware products for rigorous testing and verification of the microPlatforms
 * Selected hardware partners are selected for many reasons including:
+  *  Product functionality (Connectivity/Radios, Sensors, Security hardware, AI engines etc.)
   *  Level of upstream support
-  *  Ease of use and automation friendly designs
-  *  Your commitment to maintaining support upstream
-  *  Your commitment to maintaining any closed source/blobs
+  *  Automation-friendly hardware design
+  *  A commitment to maintaining support upstream for your hardware
+  *  A commitment to maintaining any closed source/proprietary blobs
   *  Global availability of your hardware to developers and product manufacturers
-  *  Your commitment to hosting CI facilities, or funding installation and support for your hardware into OSF CI Labs
-  *  Provides support of major new functionality (for example; RISC-V architecture products, security capabilities, connectivity /radios)
+  *  A commitment to hosting CI facilities, or funding installation and support for your hardware into our production CI Labs
 
 # Why partner with Open Source Foundries
 
-* Partner with us on delivering a open source, secure, updatable platform for connected products with lifetime support & maintenance
+* Partner with us on delivering an open source, secure, updatable platform for connected products with lifetime support & maintenance
 * Enable your product or service into the microPlatform offerings
 * Influence our roadmap
 * Get recognition and visibility on our website and marketing materials
 
 # Simple terms and conditions
 
-* Partners simply maintain an annual partner membership the microPlatform(s)
+* Partners simply maintain a single annual subscription for the microPlatform(s)
 * Partners can verify their product “works on microPlatform”
-  * Leverage self-testing/certification programs
+* Leverage self-testing/certification programs (coming in 2018)
 * Partners may use the subscription without restriction for internal use
-* Internal engineering teams get immediate benefit by working against a stable, verified open source software that has been through automated integration testing
+* Partner internal engineering teams get immediate benefit by working against a stable, verified open source software platform that benefits from automated integration testing and continuous updates of the latest technologies
+* Contact us to learn more, or sign up below
