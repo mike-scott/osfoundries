@@ -3,7 +3,7 @@ title = "Using your own firmware signing keys with MCUBoot"
 date = "2018-01-17"
 tags = ["mcuboot", "security", "keys"]
 categories = ["mcuboot", "threats"]
-banner = "img/banners/banner-1.jpg"
+banner = "img/banners/banner-mcuboot.jpg"
 draft = true
 +++
 
