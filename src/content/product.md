@@ -134,7 +134,7 @@ can securely publish sensor data from devices to the fog or cloud, receive
 commands or data back, and perform over the air updates to your devices and
 applications.
 
-![IoT System built on LWM2M](../img/lwm2m-system.png)
+![IoT System built on LWM2M](../img/endtoend.png)
 
 
 ## Lifetime Support
