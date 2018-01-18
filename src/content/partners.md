@@ -76,3 +76,5 @@ __Reference Hardware__
 * Partners may use the subscription without restriction for internal use
 * Partner internal engineering teams get immediate benefit by working against a stable, verified open source software platform that benefits from automated integration testing and continuous updates of the latest technologies
 * Contact us to learn more, or sign up below
+
+---
