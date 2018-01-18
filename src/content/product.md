@@ -182,3 +182,5 @@ product including critical security fixes at any time during its life.
 Furthermore, we will never “lock you in” to our services. At any time you
 are able to stop your subscription and take over the ongoing software
 maintenance of the microPlatform yourself.
+
+---
