@@ -4,11 +4,12 @@ description = "Open Source Foundries Partners"
 keywords = ["Partners","together","collaboration","reference","hardware"]
 +++
 
-As an open source company working with partners across the ecosystem is key to our success. Partners have access to our products for internal use, and are weclome to both use and contribute to our work. If you are interested in partnering with us on the microPlatforms please contact us or sign up using the form below. 
+# Our Partners
+As an open source company working with partners across the ecosystem is key to our success. Partners have access to our products for internal use, and are weclome to both use and contribute to our work. If you are interested in the microPlatforms please contact us, or sign up using the form below. 
 
 [What is a microPlatform?]({{< ref "product.md" >}})
 
-## Key differentiators of microPlatforms
+# Key differentiators of microPlatforms
 
 __We can support any CPU Architecture__
 
