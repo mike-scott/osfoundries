@@ -14,7 +14,7 @@ OSF is now 3 months old and the microPlatforms are reaching full speed.  We are 
 
 ## New BLE Dongle efforts
 
-For our initial radio technology, we have chosen BLE (Bluetooth Low Energy) as it is the most mature and public radio technology that is available in both Linux and Zephyr projects.  On most of the boards we have used we have found critical bugs with the proprietary BLE radio code and with the UART/ACHI sample code already in Zephyr and a capable Nordic NRF52 module available on the BLE Nano 2, we now have a fully functional and surprisingly stable BLE Dongle that we can use with our host.
+For our initial radio technology, we have chosen BLE (Bluetooth Low Energy) as it is the most mature and public radio technology that is available in both Linux and Zephyr projects.  On most of the boards we have used we have found critical bugs with the proprietary BLE radio code, but with the UART/ACHI sample code already in Zephyr and a capable Nordic NRF52 module available on the BLE Nano 2, we now have a fully functional and surprisingly stable BLE Dongle that we can use with our host.
 
 Todo:
 * Integrate sample code with MCUBOOT so we can use 'zmp build' and 'zmp flash' commands
@@ -28,11 +28,11 @@ Current efforts are working on preparing and releasing an update for the microPl
 
 __Source code mirrors:__
 
-The microPlatform is based on software and sourceccode made available by upstream projects and hardware manufacturers.  To insure that the microPlatform can always be built from source we have created some OSF mirrors that will provide a higher level of service so that OSF subscribers will always be able to build the microPlatforms from source, even in the event that the upstream repositories may not be reachable.
+The microPlatform is based on software and source code made available by upstream projects and hardware manufacturers.  To ensure that the microPlatform can always be built from source we have created some OSF mirrors that will provide a higher level of service so that OSF subscribers will always be able to build the microPlatforms from source, even in the event that the upstream repositories may not be reachable.
 
 Recent issues addressed:
 
-* We have found that enabling the UART on the Raspberry PI 3 causes significant system instability, including BLE performance.  We are now recommending doing no system validation with UART enabled on the Raspberry PI 3.  This causes some problems with automation as a LAVA-based automation requires UART for controlling the device under test.  We are working on enabling Raspberry PI 3 testing by using a conjunction of UART and SSH rather than just UART.
+* We have found that enabling the UART on the Raspberry PI 3 causes significant system instability, including BLE performance.  We are now recommending doing no system validation with UART enabled on the Raspberry PI 3.  This causes some problems with automation as a LAVA-based automation requires UART for controlling the device under test.  We are working on enabling Raspberry PI 3 testing by using a combination of UART and SSH rather than just UART.
 
 ## Zephyr microPlatform
 
@@ -42,7 +42,7 @@ We have done some initial preparation work to enable generic analog to digital s
 
 __Encrypted communication:__
 
-When we build connected devices we want to have reference samples that are securable and a fundamental requirement is to support encrypted communication protocols.  Of course on a constrained device, the memory limits make this quite a challenge and we are working on how to best enable Zephyr TCP (TLS) and UDP (DTLS) encryption.
+When we build connected devices we want to have reference samples that are securable, and a fundamental requirement is to support encrypted communication protocols.  Of course on a constrained device, the memory limits make this quite a challenge and we are working on how to best enable Zephyr TCP (TLS) and UDP (DTLS) encryption.
 
 __Key storage:__
 
