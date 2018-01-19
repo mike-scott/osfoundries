@@ -27,8 +27,8 @@ on a variety of SoCs, and a minimal set of services to run product applications
 and services in Docker Containers. The microPlatform is deliberately intended
 to be a minimal core implementation using best practices to increase security
 through reducing attack surfaces, and to increase product quality and
-performance. A typical headless implementation with networking stack and
-supporting Docker Containers uses about (350MB) of storage.
+performance. A typical headless product implementation with networking stack and
+supporting Docker Containers will use less than 200MB of storage.
 
 microPlatforms are configurable minimum footprint implementations of software
 for building any connected device, whether based on a microcontroller or

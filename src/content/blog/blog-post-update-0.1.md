@@ -49,7 +49,7 @@ improvements from publicly released versions.
 ##### GPIO interface deprecations: 
 - The GPIO_PIN_ENABLE and GPIO_PIN_DISABLE configuration
 constants, which overlap with functionality provided by the
-pinux driver, were deprecated.
+pinmux driver, were deprecated.
 
 
 ##### New CoAP API: 
@@ -255,7 +255,7 @@ due to the previous 200ms TCP retry logic.
 
 
 ##### dm-hawkbit-mqtt: logging fixes: 
-- Compilation warnings due to mis-used logging macros were fixed.
+- Compilation warnings due to missused logging macros were fixed.
 
 
 
@@ -265,7 +265,7 @@ from HTTP -> CoAP) a CoAP ETAG option is used to specify
 the version of the binary file.
 
 The length of that ETAG can be quite large (including a
-UUID), which is greater than what the buffer can hold by
+UUID), which is greater than the buffer can hold by
 default. This issue was resolved, fixing errors raised
 when using HTTP download in resource 5/0/1 with
 CONFIG_LWM2M_FIRMWARE_UPDATE_PULL_COAP_PROXY_SUPPORT=y.
