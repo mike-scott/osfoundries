@@ -183,4 +183,21 @@ Furthermore, we will never “lock you in” to our services. At any time you
 are able to stop your subscription and take over the ongoing software
 maintenance of the microPlatform yourself.
 
+
+## Pricing
+
+We provide free access to the last public release of the Zephyr and Linux 
+microPlatforms. This enables you to evaluate our product and use the open
+source software at no cost. We make public releases available typically 
+once or twice a year. 
+
+You may then subscribe to get our latest builds of the Zephyr and/or Linux 
+microPlatfoms. You can try out our service for 30 days at no cost and then 
+pay $1,000/month (Zephyr) or $2,500/month (Linux) for continued access to 
+the latest updates, security patches and new features to help you develop 
+your new product. You need a subscription for each end product that you 
+build and maintain, and there are no per unit royalties or charges. 
+
+ToDo - Table/Picture of options with subscription benefits
+
 ---
