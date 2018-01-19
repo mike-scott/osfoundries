@@ -8,15 +8,15 @@ keywords = ["FAQ","How do I","questions","what if"]
 Open Source Foundries products are Zephyr RTOS and Linux microPlatforms to
 enable you to rapidly develop secure, OTA updatable connected products.
 Whether your application is a remote sensor, a smart light or device, an
-appliance, or even a robot, drone or self-driving car the microPlatforms
+appliance, or even a robot, drone or self-driving car, the microPlatforms
 provide a proven, tested platform on which to securely build your product
 and applications.
 
-microPlatforms are configurable minimum footprint implementations of software
+microPlatforms are configurable, minimum footprint implementations of software
 for building any connected device, whether based on a microcontroller or
-advanced multi-core SoCs. The microPlatforms are Open Source products so you
+advanced multi-core SoCs. The microPlatforms are open source, so you
 have access to all the source code at no charge, and Open Source Foundries
-offer a lifetime subscription service (per product not per unit) to enable
+offers a lifetime subscription service (per product not per unit) to enable
 you to keep your product maintained with the latest security fixes, updates
 and new functionality over its lifetime.
 
@@ -24,7 +24,7 @@ and new functionality over its lifetime.
 The Linux microPlatform is a complete software implementation for an updatable,
 connected device. It comprises a recent Linux kernel.org stable kernel tested
 on a variety of SoCs, and a minimal set of services to run product applications
-and services in Docker Containers. The microPlatform is deliberately intended
+and services in Docker containers. The microPlatform is deliberately intended
 to be a minimal core implementation using best practices to increase security
 through reducing attack surfaces, and to increase product quality and
 performance. A typical headless product implementation with networking stack and
