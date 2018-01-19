@@ -149,6 +149,9 @@ paginate = 10
 [params.overview]
     enable = true
 
+[params.signup]
+    enable = true
+
 [params.features]
     enable = false
     # All features are defined in their own files. You can find example items

@@ -117,6 +117,11 @@
     font-weight: 300;
 }
 
+.getstarted-heading {
+    color: white;
+    font-weight: 300;
+}
+
 #heading-breadcrumbs h1 {
   color: #fff;
   text-transform: uppercase;
@@ -140,4 +145,19 @@
 
     /* margin-right: 5px; */
     color: white;
+}
+
+.btn-template-main {
+  color: #FFA900;
+  background-color: #000;
+  border-color: orange;
+}
+.btn-template-main:hover,
+.btn-template-main:focus,
+.btn-template-main:active,
+.btn-template-main.active,
+.open > .dropdown-toggle.btn-template-main {
+  color: #38a7bb;
+  background-color: #e6e6e6;
+  border-color: #2a7d8c;
 }
