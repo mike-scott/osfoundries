@@ -10,7 +10,7 @@ banner = "img/banners/docker.png"
 
 > “The great thing about Docker is that your developers run the exact same container as what runs in production.”
 
-This is what the Docker hype is about, creating reproducibile enviroments for applications. The technology enables us to create lightweight secure microservices which run on an array of SoCs that can be updated over the air in a matter of seconds. We believe that accelerating code delivery will utimately reduce time to market. Hype aside, Docker has matured and has become a foundational building block of our microPlatforms.
+This is what the Docker hype is about, creating reproducibile environments for applications. The technology enables us to create lightweight, secure microservices which run on an array of SoCs that can be updated over the air in a matter of seconds. We believe that accelerating code delivery will ultimately reduce time to market. Hype aside, Docker has matured and has become a foundational building block of our microPlatforms.
 
 ## Complexity
 
@@ -20,7 +20,7 @@ The microPlatforms are built to be architecture agnostic, meaning we don't favor
   * A per architecture Dockerfile must be created to reference the proper base image.
   * Users must _know_ the right image to pull for the system they are currently using.
 
-On the surface, this doesn't seem so bad. In practice it's painful for users and a nightmare for documentation. Below is an example of how tedious and error prone documenting running a container on the microPlatform
+On the surface, this doesn't seem so bad. In practice it's painful for users and a nightmare for documentation. Below is an example of how tedious and error prone documenting running a container on the microPlatform is
 
 arm:
 
@@ -54,7 +54,7 @@ One image reference to rule them all. The tag latest points to our image manifes
 
 ## Building
 
-Architecture specific image layers need to be produced before an manifest can be created. Lets quickly dive into what is needed to do this, and discuss some limitations that Docker currently has.
+Architecture specific image layers need to be produced before an manifest can be created. Let's quickly dive into what is needed to do this, and discuss some limitations that Docker currently has.
 
 ### Base Images
 
