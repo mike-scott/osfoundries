@@ -10,14 +10,14 @@ The Zephyr RTOS and Linux microPlatform products enable you to rapidly develop
 and maintain secure, OTA updatable connected devices.
 
 The microPlatforms are configurable, small footprint, open source software for
-building connected devices, whether they are based on microcontrollers, advanced
-multi-core SoCs, or combinations of these. Whether you're making a remote
+building connected devices, based on microcontrollers, advanced
+multi-core SoCs, or both. Whether you're making a remote
 sensor, smart light, appliance, robot, drone, or self-driving car, the
 microPlatforms provide a proven, tested platform to build upon.
 
 Open Source Foundries offers a per-product (not per-unit) subscription service
 to the latest microPlatform updates to enable you to maintain your product with
-the latest security fixes, updates, and new functionality throughout its
+the latest security fixes, updates and new functionality throughout its
 lifetime. There's no lock-in, and public releases are available, typically once
 or twice a year.
 
