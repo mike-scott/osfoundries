@@ -159,7 +159,7 @@
 .btn-template-main:active,
 .btn-template-main.active,
 .open > .dropdown-toggle.btn-template-main {
-  color: #38a7bb;
-  background-color: #e6e6e6;
-  border-color: #2a7d8c;
+  color: #FFA900;
+  background-color: #fff;
+  border-color: orange;
 }
