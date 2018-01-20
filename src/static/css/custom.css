@@ -135,7 +135,9 @@
     color: white;
     font-size: 1.3em;
 }
-
+.getstarted-button {
+    text-align: center;
+}
 
 .overview-bullets li {
     font-weight: 300;
@@ -148,8 +150,8 @@
 }
 
 .btn-template-main {
-  color: #FFA900;
-  background-color: #000;
+  color: #000;
+  background-color: #FFA900;
   border-color: orange;
 }
 .btn-template-main:hover,
