@@ -1,4 +1,4 @@
-{{ if isset .Site.Params "signup" }}
+t{{ if isset .Site.Params "signup" }}
 {{ if .Site.Params.signup.enable }}
 <section class="overview background-image-fixed-2 no-mb color-white text-center">
     <div class="dark-mask"></div>
@@ -14,9 +14,7 @@
                 well as access to the latest updates, security patches and new
                 features to help you develop your new product.
                 </p>
-                <p>
-                  <a class="btn btn-template-main getstarted-button" role="button" href="https://foundries.io">Get Started</a>
-                </p>
+                <a class="btn btn-template-main" role="button" href="https://foundries.io">Get Started</a>
             </div>
         </div>
     </div>
