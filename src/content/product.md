@@ -55,13 +55,12 @@ The Zephyr microPlatform is a complete software platform for developing an
 updatable, connected microcontroller-based device.
 
 The Zephyr Project is a scalable, cross-architecture RTOS for constrained
-devices, designed for security and with built-in Internet connectivity. At Open
-Source Foundries, we base our RTOS microPlatform on Zephyr because we believe
-that it is the future “Linux kernel of microcontrollers”. Like the Linux kernel,
-Zephyr has an open governance model that allows companies and individuals to
-add features and functionality and evolve the RTOS over time.  Unlike the Linux
-kernel, Zephyr is licensed under the permissive Apache 2.0 open source license,
-allowing you to easily integrate your own proprietary technology.
+devices, designed for security and with built-in Internet connectivity. The Open
+Source Foundries RTOS microPlatform is based on Zephyr because we believe that
+it is the future “Linux kernel of microcontrollers”. Like the Linux kernel,
+Zephyr has an open governance model that allows companies and individuals to add
+features and functionality and evolve the RTOS over time. Zephyr is licensed
+under the Apache 2.0 license.
 
 The Zephyr microPlatform includes the following key features:
 
