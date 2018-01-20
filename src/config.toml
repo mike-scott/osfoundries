@@ -99,8 +99,12 @@ paginate = 10
     # Enable the contact form by entering your Formspree.io email
     email = "your@email.com"
 
-    about_us = "<p>We deliver product quality open source platforms and tools to build and maintain secure and updatable embedded and connected devices.</p>"
-    copyright = "Copyright (c) 2018, Open Source Foundries, Ltd.; all rights reserved."
+    about_us = "<p>We provide best-in-class software platforms with lifetime support for 
+    building and maintaining connected products, ranging from the smallest sensors to 
+    smart and edge devices. Our core products are Zephyr RTOS and Linux based microPlatforms, 
+    which provide product quality templates to build secure, OTA updatable connected devices 
+    for industrial and consumer markets.</p>"
+    copyright = "Copyright 2018 Open Source Foundries Ltd. All rights reserved."
 
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
