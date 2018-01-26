@@ -1,0 +1,19 @@
+.product-title {
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+}
+.product-highlight {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: left;
+}
+
+.product-paragraph {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.blockdiagram {
+    text-align: center;
+}
