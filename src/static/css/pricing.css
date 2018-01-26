@@ -1,0 +1,99 @@
+
+#intro {
+    margin: 1.5em auto;
+}
+
+.intro-row {
+    min-height: 150px;
+    text-align: center;
+}
+
+.intro-message {
+    margin-bottom: 1em;
+    font-size: 2.5em;
+    font-weight: 400;
+}
+
+#pricing {
+    margin: 1em auto;
+    min-height: 550px;
+}
+
+.intro-submessage {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+.tier {
+    /* border: 1px solid #dddddd; */
+}
+
+.tier-price-title {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 300;
+    vertical-align: middle;
+}
+
+.tier-price {
+    text-align: center;
+    font-weight: 300;
+    padding: 1em 0;
+    color: #fefefe;
+}
+
+.liber .tier-subscribe a,
+.liber .tier-price {
+    background-color: #757575
+}
+
+.quaestor .tier-subscribe a,
+.quaestor .tier-price {
+    background-color: #fb8c00;
+}
+
+.praetor .tier-subscribe a,
+.praetor .tier-price {
+    background-color: #f4511e;
+}
+
+.currency {
+    font-size: 1.5em;
+}
+
+.price {
+    font-size: 2em;
+}
+
+.recurrence {
+    font-size: 1.4em;
+}
+
+.tier-features {
+    margin: 1em;
+}
+
+.tier-features .feature {
+    margin: 1em 0;
+    font-size: 1.25em;
+    font-weight: 300;
+    text-align: center;
+}
+
+.tier-subscribe {
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 1em;
+}
+
+.tier-subscribe a {
+    width: 100%;
+}
+
+.tier-subscribe a:hover,
+.tier-subscribe a {
+    color: #fefefe;
+    text-decoration: none;
+}
