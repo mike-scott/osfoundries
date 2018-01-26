@@ -5,9 +5,9 @@ keywords = ["Partners","together","collaboration","reference","hardware"]
 +++
 
 # Our Partners
-As an open source company working with partners across the ecosystem is key to our success. Partners have access to our products for internal use, and are weclome to both use and contribute to our work. If you are interested in the microPlatforms please contact us, or sign up using the form below. 
+As an open source company working with partners across the ecosystem is key to our success. Partners have access to our products for internal use, and are weclome to both use and contribute to our work. If you are interested in the microPlatforms please contact us, or sign up using the form below.
 
-[What is a microPlatform?]({{< ref "product.md" >}})
+[What is a microPlatform?]({{< ref "product.html" >}})
 
 # Key differentiators of microPlatforms
 
