@@ -154,6 +154,7 @@
   background-color: #FFA900;
   border-color: orange;
 }
+
 .btn-template-main:hover,
 .btn-template-main:focus,
 .btn-template-main:active,
@@ -164,10 +165,9 @@
   border-color: orange;
 }
 
-li#getstarted.dropdown {
-    border-color: white;
-    color: white;
-    font-weight: 600;
-    font-size: 1em;
-    background-color: #3a2b14;
+.btn-template-main-gettingstarted {
+  color: #000;
+  background-color: #FFA900;
+  border-color: orange;
+  padding-top: 2em;
 }
