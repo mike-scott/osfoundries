@@ -8,7 +8,7 @@ draft = true
 +++
 
 Secure firmware over the air (FOTA) updates are a key [Zephyr microPlatform]({{< ref "product.html#zephyr-microplatform" >}}) feature. This post explains how to use your own firmware signing key pair to secure the boot process on your devices.
-
+<!--more-->
 # Boot Process Overview
 
 When your Zephyr microPlatform device boots, [MCUBoot](https://mcuboot.com/) checks for a cryptographically signed firmware update, then installs and runs it if one is available. Simplified, the boot process looks like this:

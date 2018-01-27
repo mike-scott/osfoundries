@@ -7,12 +7,10 @@ banner = "img/banners/lwm2m.png"
 draft = true
 +++
 
-# Update an embedded device with LwM2M
-
 [OMA Lightweight M2M](http://openmobilealliance.org/iot/lightweight-m2m-lwm2m) (LWM2M) offers a firmware object interface for directing client devices to download and apply firmware updates.  Using the Zephyr microPlaform and Eclipse's [Leshan Demo Server](https://www.eclipse.org/leshan/), this seemingly complex process can be demonstrated in a few easy steps.
 
 To illustrate how a firmware update is delivered via LwM2M, you will make a small change to the Zephyr microPlatform (ZMP) LwM2M sample project which disables the Light Control object.  When flashed to an embedded device, the Leshan UI will be missing the "Light Control" portion near the bottom of the client detail page.  Once this "bug" is found, you will fix the LwM2M sample, recompile and deliver your updated firmware as an over the air (OTA) update.  The new firmware can be confirmed by locating the "Light Control" object in the Leshan UI.
-
+<!--more-->
 
 ## Hardware Requirements
 
@@ -42,7 +40,7 @@ index 48abe3c..f19d284 100644
 -CONFIG_LWM2M_IPSO_LIGHT_CONTROL=y
 +# CONFIG_LWM2M_IPSO_LIGHT_CONTROL is not set
  CONFIG_SYS_LOG_LWM2M_LEVEL=3
- 
+
  # Logging
 ```
 
@@ -84,7 +82,7 @@ index 48abe3c..f19d284 100644
 -# CONFIG_LWM2M_IPSO_LIGHT_CONTROL is not set
 +CONFIG_LWM2M_IPSO_LIGHT_CONTROL=y
  CONFIG_SYS_LOG_LWM2M_LEVEL=3
- 
+
  # Logging
 ```
 

@@ -6,12 +6,10 @@ categories = ["docker"]
 banner = "img/banners/docker.png"
 +++
 
-## Introduction
-
 > “The great thing about Docker is that your developers run the exact same container as what runs in production.”
 
 This is what the Docker hype is about, creating reproducibile environments for applications. The technology enables us to create lightweight, secure microservices which run on an array of SoCs that can be updated over the air in a matter of seconds. We believe that accelerating code delivery will ultimately reduce time to market. Hype aside, Docker has matured and has become a foundational building block of our microPlatforms.
-
+<!--more-->
 ## Complexity
 
 The microPlatforms are built to be architecture agnostic, meaning we don't favor one over the other. This ensures any user will have the same experience no matter which architecture they may choose. This is a complex problem to solve when it comes to Docker containers, as each image layer is built for a specific architecture. That means to use a Docker container, a user needs to know the architecture they will use, otherwise the container simply won't function at runtime. The basics of the problem we've solved is outlined below:
@@ -81,7 +79,7 @@ Multi arch support is on the bleeding edge, so there are a few limitations to no
 
 [1] https://github.com/bitnami/minideb
 
-[2]https://hub.docker.com/r/opensourcefoundries/minideb/ 
+[2]https://hub.docker.com/r/opensourcefoundries/minideb/
 
 [3] https://github.com/gliderlabs/docker-alpine
 

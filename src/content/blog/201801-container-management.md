@@ -6,8 +6,6 @@ categories = ["quickstart","linux","microPlatform"]
 banner = "img/banners/docker.png"
 +++
 
-## Introduction
-
 The Linux microPlatform uses a set of Docker containers to provide end-to-end
 services used by the Zephyr microPlatform. The containers and their
 configurations are deployed using a simple [shell script]
@@ -16,7 +14,7 @@ configurations are deployed using a simple [shell script]
 with Docker support. Some distro packages such as Ubuntu 16.04 don't have this,
 so make sure you install Ansible from a [proper source](http://docs.ansible.com/ansible/latest/intro_installation.html)
 before continuing.
-
+<!--more-->
 ```
 		+------------+      +-------------+
 		|            |      |             |

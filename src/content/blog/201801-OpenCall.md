@@ -1,17 +1,13 @@
 +++
-title = "microPlatform OpenCall meeting minutes"
+title = "Jan 3, 2018 - microPlatform OpenCall meeting minutes"
 date = "2018-01-03"
 tags = ["linux", "zephyr", "update", "microplatform", "ble"]
 categories = ["minutes", "microPlatform"]
 banner = "img/banners/opencall010318.png"
 +++
 
-# 2018 January 3rd Open Call minutes
-
-## Highlights
-
 OSF is now 3 months old and the microPlatforms are reaching full speed.  We are working on a few final work items before we move from limited beta to a public beta state for the Zephyr and Linux microPlatforms.
-
+<!--more-->
 ## New BLE Dongle efforts
 
 For our initial radio technology, we have chosen BLE (Bluetooth Low Energy) as it is the most mature and public radio technology that is available in both Linux and Zephyr projects.  On most of the boards we have used we have found critical bugs with the proprietary BLE radio code, but with the UART/ACHI sample code already in Zephyr and a capable Nordic NRF52 module available on the BLE Nano 2, we now have a fully functional and surprisingly stable BLE Dongle that we can use with our host.
