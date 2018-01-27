@@ -22,55 +22,61 @@ paginate = 10
         name = "Overview"
         parent = "Product"
         url  = "/product/#Overview"
-        weight = 2
+        weight = 1
     [[menu.main]]
         name = "Linux microPlatform"
         parent = "Product"
         url  = "/product/#Linux-microPlatform"
-        weight = 3
+        weight = 2
     [[menu.main]]
         name = "Zephyr microPlatform"
         parent = "Product"
         url  = "/product/#Zephyr-microPlatform"
-        weight = 4
+        weight = 3
     [[menu.main]]
         name = "Lifetime Support"
         parent = "Product"
         url  = "/product/#Lifetime-Support"
-        weight = 5
+        weight = 4
     [[menu.main]]
         name = "Pricing"
         parent = "Product"
         url  = "/product/#pricing-anchor"
-        weight = 6
+        weight = 5
 [[menu.main]]
     name = "Partners"
     url  = "/partners/"
-    weight = 7
+    weight = 2
 [[menu.main]]
     name = "Blog"
     url  = "/blog/"
-    weight = 8
+    weight = 3
 [[menu.main]]
     name = "About"
     identifier = "About"
     url  = "/about/"
-    weight = 9
+    weight = 4
     [[menu.main]]
         name = "Company"
         parent = "About"
         url  = "/about/#Company"
-        weight = 10
+        weight = 1
     [[menu.main]]
         name = "Investors"
         parent = "About"
         url  = "/about/#Investors"
-        weight = 11
+        weight = 2
     [[menu.main]]
         name = "Team"
         parent = "About"
         url  = "/about/#Team"
-        weight = 12
+        weight = 3
+    [[menu.main]]
+        name = "Careers"
+        parent = "About"
+        url  = "/about/#Careers"
+        weight = 4
+
 [[menu.main]]
     name = "Getting Started"
     url  = "https://foundries.io"
