@@ -7,7 +7,7 @@ banner = "img/banners/banner-mcuboot.jpg"
 draft = true
 +++
 
-Secure firmware over the air (FOTA) updates are a key [Zephyr microPlatform]({{< ref "product.md#zephyr-microplatform" >}}) feature. This post explains how to use your own firmware signing key pair to secure the boot process on your devices.
+Secure firmware over the air (FOTA) updates are a key [Zephyr microPlatform]({{< ref "product.html#zephyr-microplatform" >}}) feature. This post explains how to use your own firmware signing key pair to secure the boot process on your devices.
 
 # Boot Process Overview
 
