@@ -163,3 +163,11 @@
   background-color: #fff;
   border-color: orange;
 }
+
+li#getstarted.dropdown {
+    border-color: white;
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+    background-color: #3a2b14;
+}

@@ -18,31 +18,31 @@ paginate = 10
     name = "Product"
     url  = "/product/"
     weight = 1
-[[menu.main]]
-    name = "Overview"
-    parent = "Product"
-    url  = "/product/#Overview"
-    weight = 2
-[[menu.main]]
-    name = "Linux microPlatform"
-    parent = "Product"
-    url  = "/product/#Linux-microPlatform"
-    weight = 3
-[[menu.main]]
-    name = "Zephyr microPlatform"
-    parent = "Product"
-    url  = "/product/#Zephyr-microPlatform"
-    weight = 4
-[[menu.main]]
-    name = "Lifetime Support"
-    parent = "Product"
-    url  = "/product/#Lifetime-Support"
-    weight = 5
-[[menu.main]]
-    name = "Pricing"
-    parent = "Product"
-    url  = "/product/#Pricing"
-    weight = 6
+    [[menu.main]]
+        name = "Overview"
+        parent = "Product"
+        url  = "/product/#Overview"
+        weight = 2
+    [[menu.main]]
+        name = "Linux microPlatform"
+        parent = "Product"
+        url  = "/product/#Linux-microPlatform"
+        weight = 3
+    [[menu.main]]
+        name = "Zephyr microPlatform"
+        parent = "Product"
+        url  = "/product/#Zephyr-microPlatform"
+        weight = 4
+    [[menu.main]]
+        name = "Lifetime Support"
+        parent = "Product"
+        url  = "/product/#Lifetime-Support"
+        weight = 5
+    [[menu.main]]
+        name = "Pricing"
+        parent = "Product"
+        url  = "/product/#Pricing"
+        weight = 6
 [[menu.main]]
     name = "Partners"
     url  = "/partners/"
@@ -59,7 +59,7 @@ paginate = 10
     [[menu.main]]
         name = "Company"
         parent = "About"
-        url  = "/about#Company"
+        url  = "/about/#Company"
         weight = 10
     [[menu.main]]
         name = "Investors"
@@ -71,11 +71,15 @@ paginate = 10
         parent = "About"
         url  = "/about/#Team"
         weight = 12
+[[menu.main]]
+    name = "Getting Started"
+    url  = "https://foundries.io"
+    weight = 99
 
 [params]
     viewMorePostLink = "/blog/"
     author = "DevCows"
-    defaultKeywords = ["devows", "hugo", "go"]
+    defaultKeywords = ["microPlatform", "osf", "updates"]
     defaultDescription = ""
 
     # Google Maps API key (if not set will default to not passing a key.)
