@@ -16,7 +16,7 @@ build system, which has replaced the use of Kbuild.
 As described in the summary from https://foundries.io/mp/zmp/0.2, all
 users will need to update any out of tree application build systems.
 
-
+<!--more-->
 ## Highlights
 
 - Zephyr tree from 1.10 release candidate, with CMake
@@ -299,7 +299,7 @@ Validated with Minnowboard Turbot and NUC variants.
 
 Layer updates for meta-osf, and meta-intel.
 
-
+<!--more-->
 ## Highlights
 
 - Added meta-intel layer to provide intel-corei7-64 machine type

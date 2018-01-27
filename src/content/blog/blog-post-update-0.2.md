@@ -18,7 +18,7 @@ Application Development Primer for details:
 
 http://docs.zephyrproject.org/application/application.html"
 
-
+<!--more-->
 ## Highlights
 
 - Final Zephyr commit before the build system moves to CMake
@@ -170,7 +170,7 @@ in docker containers.
 Layer updates for meta-osf, meta-freescale-3rdparty meta-qcom, meta-raspberrypi
 and openembedded-core and meta-linaro.
 
-
+<!--more-->
 ## Highlights
 
 - Build system improvements to easy the platform build process in docker containers

@@ -19,7 +19,7 @@ bt-joiner container whitelist feature in the Linux microPlatform
 will need to update their whitelists. Specifically, the leading
 D6:E7 in the MAC addresses must be changed to D4:E7.
 
-
+<!--more-->
 ## Highlights
 
 - Bluetooth behaviors impacting MAC addresses are changed following Linux microPlatform update
@@ -89,7 +89,7 @@ update also includes changes required to properly implement RFC 766 (IPv6 over
 Bluetooth Low Energy), causing incompatibilities with Zephyr devices using the
 NET_L2_BT_ZEP1656 Zephyr workaround (required for kernels older than 4.12).
 
-
+<!--more-->
 ## Highlights
 
 - OSF Unified Linux Kernel updated to the 4.14 series (4.14.7)

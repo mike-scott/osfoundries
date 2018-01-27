@@ -52,3 +52,8 @@ var=0.6
 header $var '2018-01-10'
 curlit '# Zephyr microPlatform' zmp $var
 curlit '# Linux microPlatform' lmp $var
+
+var=0.7
+header $var '2018-01-25'
+curlit '# Zephyr microPlatform' zmp $var
+curlit '# Linux microPlatform' lmp $var
