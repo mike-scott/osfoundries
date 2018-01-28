@@ -55,12 +55,12 @@
 
 .quaestor .tier-subscribe a,
 .quaestor .tier-price {
-    background-color: #fb8c00;
+    background-color: #FFA900;
 }
 
 .praetor .tier-subscribe a,
 .praetor .tier-price {
-    background-color: #f4511e;
+    background-color: #000;
 }
 
 .currency {
