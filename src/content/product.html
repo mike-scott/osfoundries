@@ -3,8 +3,9 @@
 
   {{ partial "head.html" . }}
 
-  <link href="{{ .Site.BaseURL }}css/pricing.css" rel="stylesheet">
   <link href="{{ .Site.BaseURL }}css/product.css" rel="stylesheet">
+  <link href="{{ .Site.BaseURL }}css/pricing.css" rel="stylesheet">
+  <link href="{{ .Site.BaseURL }}css/hardware.css" rel="stylesheet">
 
   <body>
 
@@ -40,7 +41,12 @@
                         lifetime. There's no lock-in, and public releases are available, typically once
                         or twice a year.
                         </div>
-
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
                         <div class="product-title">Linux microPlatform</div>
                         <div class="product-paragraph"> The Linux microPlatform is a complete software platform for developing an
                         updatable, connected, Linux-based device.</div>
@@ -70,7 +76,12 @@
                         containers on your devices. Using these in your application, you leverage our
                         team of open source experts to reduce costs and time to market.
                         </div>
-
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
                         <div class="product-title">Zephyr microPlatfrom</div>
                         <div class="product-paragraph">The Zephyr microPlatform is a complete software platform for developing an
                         updatable, connected microcontroller-based device.
@@ -172,6 +183,12 @@
                         you are easily able to keep your product software updated, even between Zephyr
                         releases.
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
                         <div class="product-title">End to end, Tested Reference System</div>
                         <div class="product-paragraph">
                             Open Source Foundries integrates the microPlatform software itself, reference
@@ -182,9 +199,15 @@
                             cloud, receive commands or data back, and perform over the air updates to your
                             devices and applications. Both public and private clouds are supported.
                         </div>
-                        <a name="lifetime-support"></a>
                         <div class="blockdiagram"><img src="{{ .Site.BaseURL }}/img/endtoend.png"></div>
+                        <a name="lifetime-support"></a>
                         <div class="image-caption">End to end reference system</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
                         <div class="product-title">Lifetime Support</div>
                         <div class="product-paragraph">
                             Open Source Foundries continuously develops, integrates, tests, and delivers
@@ -200,20 +223,91 @@
                             from bootloader to application. It is also slow and error-prone to back-port
                             security and bug-fix patches onto software that may be many years old.
                         </div>
-                        <a name="pricing-anchor"></a>
                         <div class="product-paragraph">
                             Deploying updatable products allows you to deliver bug fixes and new features to
                             your customers throughout your product's lifetime, and provides both lower
                             maintenance costs and protection against software vulnerabilities and other
                             security threats.
                         </div>
+            <a name="hardware"></a>
                         <div class="product-paragraph">
                             By subscribing to the microPlatforms, you gain access to the latest fully
                             integrated and tested updates from Open Source Foundries. As a subscriber, you
                             are free to use these updates in your products. We will never “lock you in” --
                             you can cancel your subscription at any time.
                         </div>
-
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="product-title">Hardware</div>
+                        <div class="product-paragraph">
+                            The microPlatforms are hardware and architecture independent.
+                            Open Source Foundries use a small number of reference hardware
+                            platforms to create CI test labs to enable automated end to end
+                            testing across volumes of devices. Our goals for
+                            reference devices include:
+                            <ul>
+                                <li>Functionality</li>
+                                <li>Strong upstream support</li>
+                                <li>Global availability of devices and low cost development boards</li>
+                            </ul>
+                            Documentation is provided on how to use the microPlatforms on
+                            any hardware supported in the relevant upstream projects
+                            (i.e. <a href="http://docs.zephyrproject.org/boards/boards.html">the Zephyr Project</a> and
+                            the Linux kernel).
+                        </div>
+                        <div class="product-paragraph">
+                            We provide builds for several popular hardware platforms as examples,
+                            and are also working with SoC and MCU manufacturers to create a
+                            “microPlatform Certified” program.
+                        </div>
+                        <div class="divTable hwTable">
+                            <div class="divTableHeading">
+                                <div class="divTableRow">
+                                    <div class="divTableHeadBlank"></div>
+                                    <div class="divTableHead">Linux microPlatform</div>
+                                    <div class="divTableHead">Zephyr microPlatform</div>
+                                </div>
+                            </div>
+                            <div class="divTableBody">
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Reference HW</div>
+                                    <div class="divTableCell">
+                                        <li>Raspberry Pi 3<br>
+                                        <li>Compulab IoT-GATE-iMX7</div>
+                                    <div class="divTableCell">
+                                        <li>Red Bear BLE Nano 2 (Nordic nRF52832)</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Also tested</div>
+                                    <div class="divTableCell">
+                                        <li>Hikey<br>
+                                        <li>DragonBoard 410C<br>
+                                        <li>DragonBoard 820C<br>
+                        <a name="pricing-anchor"></a>
+                                        <li>Beaglebone Black Wireless<br>
+                                        <li>Intel NUC (Core i3)</div>
+                                    <div class="divTableCell">
+                                        <li>96Boards Nitrogen<br>
+                                        <li>ST32F410</div>
+                                </div>
+                                <div class="divTableRow">
+                                    <div class="divTableCell">Other</div>
+                                    <div class="divTableCell">
+                                        Upstream supported hardware	</div>
+                                    <div class="divTableCell">
+                                        <a href="http://docs.zephyrproject.org/boards/boards.html">Upstream Zephyr hardware</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
                         <div class="product-title">Pricing</div>
                         <div class="product-paragraph"> We provide free access
                             to the last public release of the Zephyr and Linux
@@ -232,7 +326,6 @@
                             new product. You need a subscription for each end
                             product that you build and maintain, and there are
                             no per unit royalties or charges.
-                        </div>
                         <section id="pricing">
                             <div class="container">
                                 <div class="row">

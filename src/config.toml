@@ -21,23 +21,28 @@ paginate = 10
     [[menu.main]]
         name = "Overview"
         parent = "Product"
-        url  = "/product/#Overview"
+        url  = "/product/#overview"
         weight = 1
     [[menu.main]]
         name = "Linux microPlatform"
         parent = "Product"
-        url  = "/product/#Linux-microPlatform"
+        url  = "/product/#linux-microPlatform"
         weight = 2
     [[menu.main]]
         name = "Zephyr microPlatform"
         parent = "Product"
-        url  = "/product/#Zephyr-microPlatform"
+        url  = "/product/#zephyr-microPlatform"
         weight = 3
     [[menu.main]]
         name = "Lifetime Support"
         parent = "Product"
-        url  = "/product/#Lifetime-Support"
+        url  = "/product/#lifetime-Support"
         weight = 4
+    [[menu.main]]
+        name = "Hardware"
+        parent = "Product"
+        url  = "/product/#hardware"
+        weight = 5
     [[menu.main]]
         name = "Pricing"
         parent = "Product"

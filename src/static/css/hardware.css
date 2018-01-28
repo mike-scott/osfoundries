@@ -1,0 +1,53 @@
+div.hwTable {
+  text-align: left;
+  border-collapse: collapse;
+  margin: auto;
+}
+.divTable.hwTable .divTableCell, .divTable.hwTable .divTableHead {
+  padding: 3px 8px;
+}
+.divTable.hwTable .divTableBody .divTableCell {
+  font-size: 16px;
+}
+.divTable.hwTable .divTableHeading {
+  background: #FFA900;
+  background: -moz-linear-gradient(top, #ffbe40 0%, #ffb119 66%, #FFA900 100%);
+  background: -webkit-linear-gradient(top, #ffbe40 0%, #ffb119 66%, #FFA900 100%);
+  background: linear-gradient(to bottom, #ffbe40 0%, #ffb119 66%, #FFA900 100%);
+}
+.divTable.hwTable .divTableHeading .divTableHead {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  text-align: left;
+}
+.divTableHeadBlank {
+    background: #fff;
+}
+.hwTable .tableFootStyle {
+  font-size: 14px;
+}
+.hwTable .tableFootStyle .links {
+	 text-align: right;
+}
+.hwTable .tableFootStyle .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+.hwTable.outerTableFooter {
+  border-top: none;
+}
+.hwTable.outerTableFooter .tableFootStyle {
+  padding: 3px 5px;
+}
+/* DivTable.com */
+.divTable{ display: table; }
+.divTableRow { display: table-row; }
+.divTableHeading { display: table-header-group;}
+.divTableCell, .divTableHead, .divTableHeadBlank { display: table-cell;}
+.divTableHeading { display: table-header-group;}
+.divTableFoot { display: table-footer-group;}
+.divTableBody { display: table-row-group;}
