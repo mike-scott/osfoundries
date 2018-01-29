@@ -112,8 +112,8 @@ paginate = 10
     # - you're done. Happy mailing!
     #
     # Enable the contact form by entering your Formspree.io email
-    email = "your@email.com"
-
+    email = "contact@opensourcefoundries.com"
+    career_email = "careers@opensourcefoundries.com"
     about_us = """<p>We provide best-in-class software platforms with lifetime support for
     building and maintaining connected products, ranging from the smallest sensors to
     smart and edge devices. Our core products are Zephyr RTOS and Linux based microPlatforms,
