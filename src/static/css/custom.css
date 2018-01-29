@@ -166,10 +166,9 @@
 }
 
 .btn-template-main-gettingstarted {
-  color: #000;
-  background-color: #FFA900;
   border-color: orange;
-  padding-top: 2em;
+  margin: 24px;
+  padding: 3px 3px;
 }
 
 .image-caption{
