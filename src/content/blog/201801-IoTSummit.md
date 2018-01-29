@@ -1,5 +1,5 @@
 +++
-title = "Open Source Foundries at ELC IoT Summit 2018"
+title = "Open Source Foundries at ELC / Open IoT Summit 2018"
 date = "2018-01-26"
 tags = ["linux", "docker", "microPlatform"]
 categories = ["conferences","iot","microPlatform"]
@@ -7,13 +7,12 @@ banner = "img/banners/elc2018.png"
 +++
 
 Open Source Foundries is excited to have an opportunity to demonstrate
-our end to end IoT microPlatforms at this years Embedded Linux conference and
-the IoT Summit alongside the Zephry project.
+our end to end IoT microPlatforms at this years Embedded Linux Conference and
+the Open IoT Summit alongside the Zephry project.
 
-This year, the conference will take place in Portland Oregon, at the downtown
-Portland Hilton, March 12-15.
-
-Open Source Foundries will be presenting on 4 topics at this year's IoT Summit.
+This year, the events will take place in Portland Oregon, at the downtown
+Portland Hilton from March 12-15.  Open Source Foundries will be presenting
+on 4 topics at this year's IoT Summit.
 
 <!--more-->
 

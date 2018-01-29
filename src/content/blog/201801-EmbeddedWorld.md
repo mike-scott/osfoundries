@@ -9,7 +9,7 @@ banner = "img/banners/ew2018.png"
 Open Source Foundries is excited to have an opportunity to demonstrate
 our end to end IoT microPlatforms at this years Embedded World conference in
 Nuremburg, Germany.  The Embedded World conference takes place between
-February 27-March first at the Embedded World conference Center.
+February 27th-March 1st at the Embedded World conference Center.
 OSF will be presenting in the Zephyr booth, located in
 [Hall 4, booth number: 4-680](https://www.embedded-world.de/en/exhibitors/participation/floor-plan).
 
