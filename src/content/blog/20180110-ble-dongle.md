@@ -1,40 +1,64 @@
 +++
-title = "Opensource Bluetooth Low Energy (BLE) USB dongle"
+title = "Open Source Bluetooth Low Energy (BLE) USB dongle"
 date = "2018-01-08"
 tags = ["ble", "radio", "open source", "bugs"]
 categories = ["Bluetooth", "Radio"]
 banner = "img/banners/ble-dongle.png"
 +++
 
+Open Source Foundries has released binaries and source code for a Zephyr-based Bluetooth Low Energy USB dongle to the public.
 
-If you've ever had to ship a product you know how frustrating a critical bug can be when your only driver is proprietary.  Many times the problem may be in your code and not the vendor's code, but it is often a difficult journey to find the root cause.  Vendors have many customers and finding the right technical contact takes time, and without a compelling business case you may ultimately find that your use of the device is not _standard_ and you end up at the back of the line, even sometimes forced to find a different component.  Well with Zephyr maybe we are beginning to take a step forward, as we now have an entirely open source BLE solution from the host to the client, and there are vendors that are talking about possibly providing an almost _ready-for-certification_ Bluetooth low energy radio stack based on Zephyr.
 <!--more-->
+
+If you've ever had to ship a product, you know how frustrating a critical bug can be when your only driver is proprietary.  Many times, the problem may be in your code and not the vendor blob, but it is often a difficult journey to find the root cause.  Vendors have many customers, and finding the right technical contact takes time. At times, without a compelling business case, you may ultimately find that your use of the device is not "standard", putting your issue at the back of the line. This can even sometimes force you to source and integrate a different component.
+
+With [Zephyr](https://www.zephyrproject.org/), we have taken a step forward where Bluetooth is concerned. We now have a completely open source, Apache 2.0 Licensed BLE solution from the host to the client, with vendors discussing nearly _ready for certification_ Bluetooth low energy radio stacks based on Zephyr.
+
+Open Source Foundries has integrated this code for use with the [RedBear BLE Nano 2 Kit](https://redbear.cc/product/ble-nano-kit-2.html), which we use internally as a standalone USB Bluetooth dongle. We welcome the community to try out the sources and binaries provided below!
 
 ## Hardware Requirements
 
-Though we are currently focusing development on the Redbear Labs Nano v2 (nRF52), any nRF51/nRF52 board can be compatible with the setup, as long it provides a UART-USB converter that supports flow control.
+We currently use the RedBear BLE Nano v2 kit, which is based on an nRF52 chip and a companion DAPLink programmer. However, any nRF51/nRF52 board can be used, as long as you have a separate UART to USB converter that supports hardware flow control.  These include:
 
-* nRF51-PCA10028
-* nRF52-PCA10040
-* nRF52840-PCA10056
-* Redbear Labs Nano v1 (nRF51)
-* Redbear Labs Nano v2 (nRF52)
+* Nordic [nRF51 DK](https://www.nordicsemi.com/eng/Products/nRF51-DK)
+* Nordic [nRF52 DK](https://www.nordicsemi.com/eng/Products/Bluetooth-low-energy/nRF52-DK)
+* Nordic [nRF52840 Preview DK](https://www.nordicsemi.com/eng/Products/nRF52840-Preview-DK)
+* RedBear [BLE Nano v1](http://redbearlab.com/blenano/) (nRF51-based)
+* RedBear [BLE Nano v2](https://redbear.cc/product/ble-nano-kit-2.html) (nRF52)
 
-## Sourcecode
+## Unsupported / Pre-Release Binaries
 
-To get the radio to work you need to configure a Zephyr sample for your NRF5 device, and configure a linux host.  Due to flow control being disabled by default on the DAPLink USB adapter, you will also need to load modified DAPLink firmware.
+For binaries, please see:
 
-### DAPLink USB firmware
+https://github.com/OpenSourceFoundries/zephyr-ble-dongle/releases
 
-To use with the stock DAPLink USB 1.5 adapter a firmware update is required, as the stock firmware has several issues with the USB CDC UART interface.
+## Source and Setup Instructions
 
-To update to the latest DAPLink firmware just follow the guide available at https://github.com/redbear/nRF5x/tree/master/USB-IF#daplink-usb-interface-daplink-v15 and enable flow control.  (NOTE: we provide a prebuilt version that we used during our internal tests below).
+You will need to:
 
-### Zephyr HCI UART sample changes required
+- Load updated firmware to the DAPLink board (this is the board that attaches to your computer via USB and is used to reprogram the nRF5 chip, as well as provide UART access. Don't worry; the updated firmware still provides the usual DAPLink functionality).
+- Flash a Zephyr-based BLE dongle application to the nRF5 device which is plugged into the DAPLink programmer.
+- Configure a Linux host to use the combined DAPLink/Nano as a BLE dongle.
 
-The source code used for the bluetooth dongle is simply re-purposing the HCI-UART sample within the Zephyr sample tree and adding a few configuration items.
+### DAPLink Firmware Update
 
-For the NRF5 device: $ZEPHYR_BASE/samples/bluetooth/hci_uart/nrf5.conf
+The stock DAPLink firmware provided with the BLE Nano 2 kit has several issues with the USB CDC UART interface. To use this with the dongle, a firmware update is required.
+
+To update to the latest DAPLink firmware just follow the guide available at https://github.com/redbear/nRF5x/tree/master/USB-IF#daplink-usb-interface-daplink-v15 and enable flow control. (Note that we've provided a prebuilt version that we've used internally above.)
+
+To install the firmware update:
+
+- Press the button on the DAPLink board while plugging in your board. Make sure the button is pressed the entire time, from before you plug it in until it is mounted.
+- The DAPLink will boot in a firmware update mode; the mount point will be named "MAINTENANCE".
+- Drag and drop the updated DAPLink binary to the "MAINTENANCE" mount point.
+- Your DAPLink device will then reboot in its usual mode; the mount point will be named "DAPLINK".
+
+### Zephyr Application
+
+The source code is simply the hci_uart sample within the Zephyr tree. However, you'll need to add a few configuration options.
+
+Add the following to the file $ZEPHYR_BASE/samples/bluetooth/hci_uart/nrf5.conf.
+
 ```
  CONFIG_BT_CTLR_RX_BUFFERS=18
  CONFIG_BT_CTLR_TX_BUFFERS=19
@@ -45,11 +69,17 @@ For the NRF5 device: $ZEPHYR_BASE/samples/bluetooth/hci_uart/nrf5.conf
  CONFIG_BT_RX_BUF_LEN=264
 ```
 
-You can also increase the number of connections above the default of 16 parallel bluetooth connections.  To increase, simply change CONFIG_BT_MAX_CONN in $ZEPHYR_BASE/samples/bluetooth/hci_uart/nrf5.conf.  We've had some success testing as many as 24 devices concurrently, but you'll want to make sure your performance is acceptable. Additional RX/TX buffers and larger data length should also used for better performance, if not restricted by RAM.
+You can also increase the number of connections above the default of 16 parallel bluetooth connections by changing CONFIG_BT_MAX_CONN in the same file.  We've had some success testing as many as 24 devices concurrently, but you'll want to verify this for your use cases. Additional RX/TX buffers and larger data lengths should also used for better performance, if sufficient RAM is available on your device.
 
-### Linux Host changes required
+Now build the hci_uart application using the modified nrf5.conf as the CONF_FILE. (Check out the Zephyr [Getting Started Guide](http://docs.zephyrproject.org/getting_started/getting_started.html) for build instructions if you're new to Zephyr.)
 
-To use the BLE dongle in a linux computer you simply need to configure the BT attach service to use the dongle.
+You can now drag and drop the hci_uart binary to the "DAPLINK" mount point. The nRF5 device will automatically reboot and act as a BLE dongle.
+
+### Linux Host Configuration
+
+To use the BLE dongle with a Linux computer, you need to configure the btattach service.
+
+Instructions for systemd-based installations:
 
 ```
 # Create bluetooth attach configuration file
@@ -63,9 +93,6 @@ EOF
 systemctl restart btattach.service
 ```
 
-And that's it.
+You may need to adjust HCITTY to another serial port if you have multiple available on your system.
 
-
-## Unsupported / pre-release binaries and instructions
-
-https://github.com/OpenSourceFoundries/zephyr-ble-dongle/releases
+And that's it. Enjoy!
