@@ -4,7 +4,6 @@ date = "2018-01-17"
 tags = ["mcuboot", "security", "keys"]
 categories = ["mcuboot", "threats"]
 banner = "img/banners/banner-mcuboot.jpg"
-draft = true
 +++
 
 Secure firmware over the air (FOTA) updates are a key [Zephyr microPlatform]({{< ref "product.html#zephyr-microplatform" >}}) feature. This post explains how to use your own firmware signing key pair to secure the boot process on your devices.
@@ -27,7 +26,8 @@ To make getting started easy, the MCUBoot repository's source code contains a de
 
 # Requirements
 
-You must have the Zephyr microPlatform installed on your system.
+You must have the Zephyr microPlatform installed on your system. See the installation instructions here in the [microPlatforms documentation](https://foundries.io/docs/latest/) for instructions if you haven't done that.
+
 Any board supported by the Zephyr microPlatform can be used with these instructions.
 
 # Generate Keys
