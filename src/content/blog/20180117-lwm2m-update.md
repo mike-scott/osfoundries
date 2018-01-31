@@ -4,7 +4,6 @@ date = "2018-01-17"
 tags = ["lwm2m", "ota", "update", "open source"]
 categories = ["LwM2M", "FOTA"]
 banner = "img/banners/lwm2m.png"
-draft = true
 +++
 
 [OMA Lightweight M2M](http://openmobilealliance.org/iot/lightweight-m2m-lwm2m) (LWM2M) offers a firmware object interface for directing client devices to download and apply firmware updates.  Using the Zephyr microPlaform and Eclipse's [Leshan Demo Server](https://www.eclipse.org/leshan/), this seemingly complex process can be demonstrated in a few easy steps.
@@ -20,7 +19,7 @@ To illustrate how a firmware update is delivered via LwM2M, you will make a smal
 
 ## Software Requirements
 
-Before you begin, [set up the LWM2M system described in the Getting Started guide](https://foundries.io/docs/latest/iotfoundry/lwm2m-howto.html).
+Before you begin, [set up the LWM2M system described in the microPlatforms Getting Started Tutorial](https://foundries.io/docs/latest/tutorial/index.html).  (These instructions were tested with the 0.7 public release of the microPlatforms; the LWM2M instructions may move in future versions.)
 
 ## Initial setup of the LwM2M client device
 
