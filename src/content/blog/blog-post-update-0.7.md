@@ -44,7 +44,7 @@ D6:E7 in the MAC addresses must be changed to D4:E7.
 
 #### Bugs
 
-##### LWM2M packet fix:
+##### LWM2M packet fix: 
 - The LWM2M stack includes a fix which prevents a packet
 which may need to be retransmitted from being freed
 until after this retransmission has completed, if necessary.
@@ -56,7 +56,7 @@ until after this retransmission has completed, if necessary.
 
 #### Features
 
-##### CONFIG_NET_L2_BT_ZEP1656 disabled:
+##### CONFIG_NET_L2_BT_ZEP1656 disabled: 
 - This obscure option was used to preserve compatibility
 contrary to the Bluetooth specification with
 implementation characteristics in the Linux kernel. Now
@@ -65,7 +65,7 @@ v4.14, which has fixes for these characteristics, the
 option can be disabled.
 
 
-##### dm-hawkbit-mqtt cleanups and optimizations:
+##### dm-hawkbit-mqtt cleanups and optimizations: 
 - Various confusing implementation details in this
 application have been fixed and otherwise cleaned
 up. The resulting application now requires less memory.
@@ -73,7 +73,7 @@ up. The resulting application now requires less memory.
 
 #### Bugs
 
-##### Packet pool workaround for MQTT:
+##### Packet pool workaround for MQTT: 
 - The dm-hawkbit-mqttt sample now uses an extra packet
 pool when the underlying link layer is Bluetooth. This
 keeps the network stack working in the face of IPv6
@@ -103,13 +103,13 @@ This kernel update includes x86 support for kernel page-table isolation
 
 #### Features
 
-##### Layer Update:
+##### Layer Update: 
 - OSF Unified Linux Kernel updated to 4.14.13.
 QCA6174 firmware updated to WLAN.RM.4.4.1-00079-QCARMSWPZ-1.
 Initial support for Raspberry Pi 3 64-bit.
 
 
-##### Build Environment Speedup:
+##### Build Environment Speedup: 
 - The build environment has been updated to use a mirror of the
 sstate cache which drastically improves the time it takes to
 build the first time.
@@ -123,7 +123,7 @@ build the first time.
 
 #### Features
 
-##### Layer Update:
+##### Layer Update: 
 - Intel microcode updated to 20180108.
 
 
@@ -135,7 +135,7 @@ build the first time.
 
 #### Features
 
-##### Layer Update:
+##### Layer Update: 
 - OPTEE OS recipe updated to simplify the deply logic.
 GCC Linaro 7.1 updated to include ILP32 patches for correct
 triplet.
@@ -151,7 +151,7 @@ triplet.
 
 #### Features
 
-##### Layer Update:
+##### Layer Update: 
 - wic.bmap image type added for Dragonboard 410c.
 
 
@@ -163,7 +163,7 @@ triplet.
 
 #### Features
 
-##### Layer Update:
+##### Layer Update: 
 - Glibc updated to the latest on 2.26 release.
 Binutils updated to 2.29.1.
 Python Setuptools updated to 38.2.5.
@@ -209,23 +209,23 @@ Qemu updated to 2.10.1.
 
 #### Bugs
 
-##### icu:
+##### icu: 
 - Fix double free in i18n/zonemeta.cpp.
 
  - [CVE-2017-14952](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-14952)
 
-##### openssl10:
+##### openssl10: 
 - Multiple issues.
 
  - [CVE-2017-3736](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-3736)
  - [CVE-2017-3735](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-3735)
 
-##### busybox:
+##### busybox: 
 - Vulnerability in the tab-complete logic.
 
  - [CVE-2017-16544](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-16544)
 
-##### binutils:
+##### binutils: 
 - Multiple issues.
 
  - [CVE-2017-15939](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-15939)
@@ -275,7 +275,7 @@ Qemu updated to 2.10.1.
 
 #### Features
 
-##### Layer Update:
+##### Layer Update: 
 - Switch remaining pypi recipes to use the pypi class.
 
 
@@ -287,7 +287,7 @@ Qemu updated to 2.10.1.
 
 #### Features
 
-##### Layer Update:
+##### Layer Update: 
 - Python-pyopenssl updated to 17.5.0.
 Python-cryptography updated to 2.1.4.
 Python-asn1crypto updated to 0.24.0.
@@ -299,7 +299,7 @@ Htop updated to v2.0.2.
 
 #### Bugs
 
-##### vim:
+##### vim: 
 - Information leak when creating swp files.
 
  - [CVE-2017-17087](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-17087)
@@ -309,7 +309,7 @@ Htop updated to v2.0.2.
 
 #### Features
 
-##### Layer Update:
+##### Layer Update: 
 - Config RPI_EXTRA_CONFIG added to rpi-config.
 Default KERNEL_IMAGETYPE changed to zImage.
 Default KERNEL_IMAGETYPE for raspberrypi3-64 changed to Image.
@@ -325,7 +325,7 @@ U-Boot support for Raspberry Pi Zero W.
 
 #### Features
 
-##### Layer Update:
+##### Layer Update: 
 - U-boot-fslc updated to 2017.11-based fork.
 
 

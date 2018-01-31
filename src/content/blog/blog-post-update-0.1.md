@@ -294,15 +294,6 @@ Go was updated to 1.9 and Docker was updated to the CE 17.06 release.
 ## Components
 
 
-### lmp-manifest
-
-
-#### Features
-- Not addressed in this update
-
-#### Bugs
-- Not addressed in this update
-
 ### Meta-96boards Layer
 
 
