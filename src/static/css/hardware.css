@@ -5,6 +5,7 @@ div.hwTable {
 }
 .divTable.hwTable .divTableCell, .divTable.hwTable .divTableHead {
   padding: 3px 8px;
+  border: 1px solid #1C6EA4;
 }
 .divTable.hwTable .divTableBody .divTableCell {
   font-size: 16px;
