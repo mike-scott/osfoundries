@@ -22,9 +22,8 @@ banner = "img/banners/update.png"
 EOL
 }
 
-var=0.1
-summary='The first release after launching Open Source Foundries'
-header $var '2017-11-09'
+var=17.10.1
+header $var '2017-10-13'
 curlit '# Zephyr microPlatform' zmp $var
 curlit '# Linux microPlatform' lmp $var
 
