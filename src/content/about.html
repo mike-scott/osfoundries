@@ -17,7 +17,6 @@
 
         </header>
 
-        <section class="bar background-white">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
@@ -67,7 +66,49 @@
                         Our technical team is globally distributed and comprises experts in software development, testing and delivery.
                         </div>
 
-                        <div class="map"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1YH3Qw6bX1O-8M5mZv5U0ehc1eWebGBW8" width="640" height="480"></iframe></div>
+                        <div class="map"><div class="blockdiagram"><img src="{{ .Site.BaseURL }}/img/teammap.png"></div></div>
+                        <div class="image-caption">Where in the world is Open Source Engineering?</div>
+
+                        <a name="community"></a>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="about-title">Community and Support</div>
+                            </div>
+                        </div>
+                        <div class="about-paragraph">
+                        Our technical engineering team is actively involved in the upstream communities
+                        of the Linux Kernel, Open Embedded/Yocto, <a class="link" href="https://zephyr.biterg.io">Zephyr Project</a>, Mynewt, MCUBoot, LAVA
+                        and other projects, but we also aim to provide areas for each microPlatform user
+                        to communicate with us.
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-3"></div>
+                            <div class="col-xs-12 col-md-2">
+                                <div class="blockdiagram">
+                                    <a href="https://forum.foundries.io">
+                                        <img width="80" src="{{ .Site.BaseURL }}/img/forum.png">
+                                    </a>
+                                    <div class="image-caption">microPlatform Forums</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-2">
+                                <div class="blockdiagram">
+                                    <a href="https://join.slack.com/t/opensourcefoundries/shared_invite/enQtMjUwNzA1MTc4NzA4LTI2YTc4YjUyMTY2NWE3NTQxOTJjYjY3M2NkNTVmYjM2M2JhZGYzNDM1Mzk4MzkxMDI5ZWNhOWUzMWVlYmI4NDE">
+                                        <img width="50" src="{{ .Site.BaseURL }}/img/slack.png">
+                                    </a>
+                                    <div class="image-caption">Slack Channels</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-2">
+                                <div class="blockdiagram">
+                                    <a href="https://opensourcefoundries.freshdesk.com/a/dashboard">
+                                        <img width="65" src="{{ .Site.BaseURL }}/img/support.png">
+                                    </a>
+                                    <div class="image-caption">Support Ticket System</div>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="about-title">Careers</div>
                         <div class="about-highlight">Engineering</div>
@@ -83,7 +124,7 @@
                         <div class="about-highlight">Digital Marketing</div>
                         <div class="about-paragraph">
                         Do you have a passion for inbound marketing, content marketing, product
-                        marketing, and product evangelization? If so, please get in touch (no agencies please). 
+                        marketing, and product evangelization? If so, please get in touch (no agencies please).
                         </div>
                         {{ if isset .Site.Params "email" }}
 

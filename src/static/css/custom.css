@@ -185,3 +185,12 @@
 #copyright {
     padding: 20px 0;
 }
+
+.blockdiagram {
+    text-align: center;
+}
+
+.blockdiagram img {
+    margin: 0 auto;
+    display: block;
+}
