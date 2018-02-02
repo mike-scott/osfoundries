@@ -46,7 +46,7 @@ paginate = 10
     [[menu.main]]
         name = "Pricing"
         parent = "Product"
-        url  = "/product/#pricing-anchor"
+        url  = "/product/#pricing"
         weight = 5
 [[menu.main]]
     name = "Partners"
