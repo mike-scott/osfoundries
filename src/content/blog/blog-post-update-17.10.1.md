@@ -6,6 +6,28 @@ categories = ["updates", "microPlatform"]
 banner = "img/banners/update.png"
 +++
 
+# Summary
+
+## Zephyr microPlatform changes for 17.10.1
+
+This release includes MCUBoot version 1.0.0, and a Zephyr tree that
+is based on 1.10. It also includes a new IoT Foundry application.
+
+The Zephyr tree includes many new features and bug fixes. Notable
+improvements for the Zephyr microPlatform include LWM2M protocol
+support, mainline support for 96Boards Carbon networking, DTLS
+support for the net_app library, and various Bluetooth and networking
+fixes.
+
+A new IoT Foundry application was added for a demonstration system
+providing firmware update and device communication via LWM2M.
+
+
+## Linux microPlatform changes for 17.10.1
+
+This is the first Linux microPlatform release created by Open Source Foundries.
+
+<!--more-->
 # Zephyr microPlatform
 
 ## Summary
@@ -22,7 +44,6 @@ fixes.
 A new IoT Foundry application was added for a demonstration system
 providing firmware update and device communication via LWM2M.
 
-<!--more-->
 ## Highlights
 
 - Zephyr tree from 1.10 development tree, with LWM2M support, support for 96Boards Carbon, and libraries for managing interactions with MCUBoot
@@ -476,7 +497,6 @@ via LWM2M.
 
 This is the first Linux microPlatform release created by Open Source Foundries.
 
-<!--more-->
 ## Highlights
 
 - Converted to Open Source Foundries Meta Layer

@@ -6,6 +6,21 @@ categories = ["updates", "microPlatform"]
 banner = "img/banners/update.png"
 +++
 
+# Summary
+
+## Zephyr microPlatform changes for 0.4
+
+This is the final update for the Zephyr v1.10 development cycle.
+
+The next update will be non-fast-forward update to the Zephyr
+repository, to begin development based on the v1.11 master branch.
+
+
+## Linux microPlatform changes for 0.4
+
+No changes have gone into the LMP since 0.3.
+
+<!--more-->
 # Zephyr microPlatform
 
 ## Summary
@@ -15,7 +30,6 @@ This is the final update for the Zephyr v1.10 development cycle.
 The next update will be non-fast-forward update to the Zephyr
 repository, to begin development based on the v1.11 master branch.
 
-<!--more-->
 ## Highlights
 
 - Zephyr tree based on v1.10
@@ -84,7 +98,6 @@ in one of their application directories.
 
 No changes have gone into the LMP since 0.3.
 
-<!--more-->
 ## Highlights
 
 - No changes were made since 0.3

@@ -6,6 +6,28 @@ categories = ["updates", "microPlatform"]
 banner = "img/banners/update.png"
 +++
 
+# Summary
+
+## Zephyr microPlatform changes for 0.2
+
+"This is the final release which uses the Linux kernel Kbuild
+build system. The next release will have a CMake-based build
+system. **All out of tree applications will need updates** to
+their build systems to move to CMake. Refer to the Zephyr
+Application Development Primer for details:
+
+http://docs.zephyrproject.org/application/application.html"
+
+
+## Linux microPlatform changes for 0.2
+
+Linux microPlatform build system improvements to easy the platform build process
+in docker containers.
+
+Layer updates for meta-osf, meta-freescale-3rdparty meta-qcom, meta-raspberrypi
+and openembedded-core and meta-linaro.
+
+<!--more-->
 # Zephyr microPlatform
 
 ## Summary
@@ -18,7 +40,6 @@ Application Development Primer for details:
 
 http://docs.zephyrproject.org/application/application.html"
 
-<!--more-->
 ## Highlights
 
 - Final Zephyr commit before the build system moves to CMake
@@ -170,7 +191,6 @@ in docker containers.
 Layer updates for meta-osf, meta-freescale-3rdparty meta-qcom, meta-raspberrypi
 and openembedded-core and meta-linaro.
 
-<!--more-->
 ## Highlights
 
 - Build system improvements to easy the platform build process in docker containers

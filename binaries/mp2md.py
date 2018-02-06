@@ -11,7 +11,7 @@ print "\n## Summary\n"
 summary = data['data']['release']['notes']['summary']
 print summary
 
-print "<!--more-->\n## Highlights\n"
+print "## Highlights\n"
 highlights = data['data']['release']['notes']['highlights']
 for highlight in data['data']['release']['notes']['highlights']:
     print('- '+highlight+'')

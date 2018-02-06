@@ -6,6 +6,26 @@ categories = ["updates", "microPlatform"]
 banner = "img/banners/update.png"
 +++
 
+# Summary
+
+## Zephyr microPlatform changes for 0.7
+
+The most significant change in this update follows the Linux
+microPlatform switch to a Linux v4.14-based tree. This impacts
+compatibility with any gateways relying on the old Bluetooth
+behavior, and also will cause changes to the MAC addresses reported
+by the Zephyr microPlatform sample applications. Users of the
+bt-joiner container whitelist feature in the Linux microPlatform
+will need to update their whitelists. Specifically, the leading
+D6:E7 in the MAC addresses must be changed to D4:E7.
+
+
+## Linux microPlatform changes for 0.7
+
+This kernel update includes x86 support for kernel page-table isolation
+(KPTI), which mitigates the recent meltdown security vulnerability.
+
+<!--more-->
 # Zephyr microPlatform
 
 ## Summary
@@ -19,7 +39,6 @@ bt-joiner container whitelist feature in the Linux microPlatform
 will need to update their whitelists. Specifically, the leading
 D6:E7 in the MAC addresses must be changed to D4:E7.
 
-<!--more-->
 ## Highlights
 
 - Bluetooth behaviors impacting MAC addresses are changed following Linux microPlatform update
@@ -87,7 +106,6 @@ packet header compression.
 This kernel update includes x86 support for kernel page-table isolation
 (KPTI), which mitigates the recent meltdown security vulnerability.
 
-<!--more-->
 ## Highlights
 
 - OSF Unified Linux Kernel updated to 4.14.13

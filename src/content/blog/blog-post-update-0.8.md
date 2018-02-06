@@ -6,6 +6,21 @@ categories = ["updates", "microPlatform"]
 banner = "img/banners/update.png"
 +++
 
+# Summary
+
+## Zephyr microPlatform changes for 0.8
+
+
+This is a new MCUBoot release, and an incremental merge of the
+Zephyr development branch.
+
+
+## Linux microPlatform changes for 0.8
+
+OSF Unified Linux Kernel updated to the 4.14.15 stable release.
+Default GCC version was changed from the 7.1-Linaro to the latest OpenEmbedded 7.2 release.
+
+<!--more-->
 # Zephyr microPlatform
 
 ## Summary
@@ -14,7 +29,6 @@ banner = "img/banners/update.png"
 This is a new MCUBoot release, and an incremental merge of the
 Zephyr development branch.
 
-<!--more-->
 ## Highlights
 
 - MCUboot based on v1.1.0 release, which supports ECDSA signatures and provides tools for password-protected private keys.
@@ -219,7 +233,6 @@ subsystem were merged.
 OSF Unified Linux Kernel updated to the 4.14.15 stable release.
 Default GCC version was changed from the 7.1-Linaro to the latest OpenEmbedded 7.2 release.
 
-<!--more-->
 ## Highlights
 
 - OSF Unified Linux Kernel updated to 4.14.15

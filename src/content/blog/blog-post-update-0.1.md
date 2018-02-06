@@ -1,11 +1,36 @@
 +++
 title = "microPlatform update 0.1"
-date = "2017-11-09"
+date = "2017-11-08"
 tags = ["linux", "zephyr", "update", "cve", "bugs"]
 categories = ["updates", "microPlatform"]
 banner = "img/banners/update.png"
 +++
 
+# Summary
+
+## Zephyr microPlatform changes for 0.1
+
+This release includes a Zephyr tree from the the 1.10 development
+cycle. This tree does not yet include the conversion of the build
+system to CMake.
+
+It includes an MCUBoot tree based on work done in the master
+branch following the v1.0.0 tag, which includes some work making it
+easier to port new boards to the bootloader than it was in that
+release.
+
+Finally, several sample applications are included, with numerous
+improvements from publicly released versions.
+
+
+## Linux microPlatform changes for 0.1
+
+This release includes a major OpenEmbedded / Yocto update, which is now based
+on the latest Rocko (2.4) baseline (which is in the process to be released).
+
+Go was updated to 1.9 and Docker was updated to the CE 17.06 release.
+
+<!--more-->
 # Zephyr microPlatform
 
 ## Summary
@@ -22,7 +47,6 @@ release.
 Finally, several sample applications are included, with numerous
 improvements from publicly released versions.
 
-<!--more-->
 ## Highlights
 
 - Zephyr tree from 1.10 development cycle, before CMake transition
@@ -280,7 +304,6 @@ on the latest Rocko (2.4) baseline (which is in the process to be released).
 
 Go was updated to 1.9 and Docker was updated to the CE 17.06 release.
 
-<!--more-->
 ## Highlights
 
 - Layers updated to the latest OpenEmbedded / Yocto Rocko (2.4) baseline
