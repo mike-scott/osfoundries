@@ -1,4 +1,4 @@
-baseurl = "http://opensourcefoundries.com/"
+baseurl = "https://opensourcefoundries.com/"
 title = "Open Source Foundries, Ltd."
 theme = "universal"
 publishDir = "../docs"
