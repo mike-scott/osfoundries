@@ -91,3 +91,10 @@ header $var '2018-02-02'
 highlight-it '# Highlights' $var
 curl-it '# Zephyr microPlatform' zmp $var
 curl-it '# Linux microPlatform' lmp $var
+
+var=0.9
+header $var '2018-02-21'
+highlight-it '# Highlights' $var
+curl-it '# Zephyr microPlatform' zmp $var
+curl-it '# Linux microPlatform' lmp $var
+
