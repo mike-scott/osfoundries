@@ -1,5 +1,5 @@
 +++
-title = "Open Source Bluetooth Low Energy (BLE) USB dongle"
+title = "180 days"
 date = "2018-03-30"
 tags = ["General"]
 categories = ["Newsletter", "Corporate"]
