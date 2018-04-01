@@ -37,7 +37,7 @@ __Features nearing release__
 
 * TUF / Uptane compliant (OTA) ‘over the air’ updates enabled by OTA+ Community Edition
 * EdgeX integration with the Linux microPlatform on x86, including the latest California pre-release with Go containers
- * _NOTE: We have Edge-X running on ARM, but some cpu/memory constrained devices struggle with the requirements of the early EdgeX services; the California release (June 2018), promises new Go-based services that make EdgeX close to a reality_
+  * _NOTE: We have Edge-X running on ARM, but some cpu/memory constrained devices struggle with the requirements of the early EdgeX services; the California release (June 2018), promises new Go-based services that make EdgeX close to a reality_
 * Cellular modem support and specifically the WNC M14A2A module paired with a NXP K64F freedom board to provide LTE/LTE-M connectivity on AT&T’s network
 
 __Experiments__
@@ -109,8 +109,8 @@ __End to End Testing__
 
 * Currently triggered for each update candidate
 * Zephyr and Linux Devices from bare metal
- * 90 LwM2M roll outs across 2 gateways and 2 zephyr device types and a minimum of 9 devices
- * 90 HTTP / Hawkbit roll outs across 2 gateways and 2 zephyr device types and a minimum of 9 devices
+  * 90 LwM2M roll outs across 2 gateways and 2 zephyr device types and a minimum of 9 devices
+  * 90 HTTP / Hawkbit roll outs across 2 gateways and 2 zephyr device types and a minimum of 9 devices
 
 __Linux microPlatform Testing__
 
