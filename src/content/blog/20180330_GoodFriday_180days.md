@@ -34,19 +34,20 @@ __microPlatforms__
 * Azure IoT Edge integration and proof-of-concept for container creating and management
 
 __Features nearing release__
+
 * TUF / Uptane compliant (OTA) ‘over the air’ updates enabled by OTA+ Community Edition
 * EdgeX integration with the Linux microPlatform on x86, including the latest California pre-release with Go containers
-
- * _NOTE: We have Edge-X running on ARM, but some cpu/memory constrained devices struggle with the requirements of the early EdgeX services; the California release (June 2018), promises new Go-based services that make EdgeX close to a reality_
-
+  * _NOTE: We have Edge-X running on ARM, but some cpu/memory constrained devices struggle with the requirements of the early EdgeX services; the California release (June 2018), promises new Go-based services that make EdgeX close to a reality_
 * Cellular modem support and specifically the WNC M14A2A module paired with a NXP K64F freedom board to provide LTE/LTE-M connectivity on AT&T’s network
 
 __Experiments__
+
 * Publishing IoT sensor data onto the blockchain, specifically the IOTA tangle and researching zcash possibilities and benefits
 * Providing a complete Open Source LwM2M light project
 * X.org and direct framebuffer graphics enablement from within containers
 
 __Board Support__
+
 * Raspberry PI 3 x64
 * Compulab IoT Gate
 * Intel Core i7 / x86_64 *
@@ -56,7 +57,7 @@ __Board Support__
 * Qualcomm Dragonboard 410c * & Dragonboard 820c *
 * Solidrun Hummingboard *
 
-_ * we make a best effort to support these new boards, but may or may not have full automation testing running_
+_* we make a best effort to support these new boards, but may or may not have full automation testing running_
 
 Testing and CI / Automation tools
 ---------------------------------
@@ -80,33 +81,39 @@ __MCUBoot__
 
 _Upstream Testing on every upstream commit_
 
- * Target Compilation Tests [MCUBoot, MCUBoot+Zephyr and MCUBoot+Zephyr+FOTA tests]
- * Functional Tests [Qemu Boot Simulation, FOTA testing on bare metal]
+* Target Compilation Tests [MCUBoot, MCUBoot+Zephyr and MCUBoot+Zephyr+FOTA tests]
+* Functional Tests [Qemu Boot Simulation, FOTA testing on bare metal]
 
 _OSF MCUBoot Testing_
- * Target compilation Tests [Zephyr+FOTA tests]
- * Functional Tests [MCUBoot Simulator, FOTA testing on bare metal]
+
+* Target compilation Tests [Zephyr+FOTA tests]
+* Functional Tests [MCUBoot Simulator, FOTA testing on bare metal]
 
 __Zephyr__
 
 _Upstream testing on every upstream Zephyr_
- * Compilation [Sanitycheck, FOTA compile tests]
+
+* Compilation [Sanitycheck, FOTA compile tests]
 
 _Internal testing on every OSF commit_
- * Target Compilation [Checkpatch, Sanity check, FOTA Samples]
- * Functional Tests [Drivers, IPM, Kernel Alert API, Kernel ARM Runtime, Kernel ARM NMI Runtime, Kernel Common, Kernel Context, Kernel Critical, Kernel Fatal Stack Sentinel, Kernel FIFO API, Kernel Generate ISR Table, Kernel Threads Custom Data API, Kernel Threads Lifecycle API, Kernel XIP, Bare Metal FOTA]
 
-_ FOTA Sample Application Testing on every commit_
- * Compilation tests [Checkpatch, FOTA Samples]
- * OSF MCUBoot on target
+* Target Compilation [Checkpatch, Sanity check, FOTA Samples]
+* Functional Tests [Drivers, IPM, Kernel Alert API, Kernel ARM Runtime, Kernel ARM NMI Runtime, Kernel Common, Kernel Context, Kernel Critical, Kernel Fatal Stack Sentinel, Kernel FIFO API, Kernel Generate ISR Table, Kernel Threads Custom Data API, Kernel Threads Lifecycle API, Kernel XIP, Bare Metal FOTA]
+
+_FOTA Sample Application Testing on every commit_
+
+* Compilation tests [Checkpatch, FOTA Samples]
+* OSF MCUBoot on target
 
 __End to End Testing__
+
 * Currently triggered for each update candidate
 * Zephyr and Linux Devices from bare metal
- * 90 LwM2M roll outs across 2 gateways and 2 zephyr device types and a minimum of 9 devices
- * 90 HTTP / Hawkbit roll outs across 2 gateways and 2 zephyr device types and a minimum of 9 devices
+  * 90 LwM2M roll outs across 2 gateways and 2 zephyr device types and a minimum of 9 devices
+  * 90 HTTP / Hawkbit roll outs across 2 gateways and 2 zephyr device types and a minimum of 9 devices
 
 __Linux microPlatform Testing__
+
 * Build and boot testing using KernelCI.org
 * Netperf, Docker, more tests coming online
 * Exploratory testing by engineers
