@@ -4,6 +4,10 @@
   {{ partial "head.html" . }}
 
   <body>
+      <script>
+          // Detect JS support used for cookie notice
+          document.body.className = document.body.className + " js_enabled";
+      </script>
 
     <div id="all">
 
