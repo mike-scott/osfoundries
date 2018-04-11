@@ -53,7 +53,7 @@ CONFIG_NET_APP_MY_IPV4_ADDR="192.168.0.99"
 #CONFIG_SYS_LOG_MODEM_LEVEL=4
 ```
 
-__Build and flash the sample to the BLE Nano 2__
+__Build and flash the sample to the Freedom K64F board (from the IoT Dev Kit)__
 
 Use the following commands from the base directory of the ZMP:
 
@@ -77,8 +77,6 @@ Connect to your K64F device using screen and look for the Registration Done (EP=
 screen /dev/tty.usbmodem1462 115200
 
 [0731130] [lib/lwm2m_rd_client] [INF] do_registration_reply_cb: Registration Done (EP='A1ENFQxI3j')
-```
-
 ```
 
 __Confirm that Leshan UI displays your connected device__
