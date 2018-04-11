@@ -181,6 +181,8 @@
 
 .btn-template-main-gettingstarted {
   border-color: orange;
+  text-decoration: none;
+  color: #000;
   margin: 20px 1px 1px 1px;
 
 }
