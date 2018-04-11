@@ -2,7 +2,7 @@
 title = "Zephyr Newsletter 11 April 2018"
 date = "2018-04-11"
 tags = ["zephyr"]
-categories = []
+categories = ["zephyr-news"]
 banner = "img/banners/zephyr.png"
 author = "Marti Bolivar"
 +++
