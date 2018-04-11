@@ -3,6 +3,7 @@ title = "180 days"
 date = "2018-03-30"
 tags = ["General"]
 categories = ["Newsletter", "Corporate"]
+banner = "img/banners/180days.png"
 +++
 
 It's March 30, 2018, Good Friday, and it has been 180 days since we started Open Source Foundries.  In this time, we established our initial infrastructure, created the first microPlatform products and, on March 27, we produced our 12th update to the microPlatforms, roughly 1 update every 2 weeks.  When we started the microPlatforms, we wanted to get our systems and processes running smooth enough to provide meaningful software updates that could be integrated into products by our subscribers.
