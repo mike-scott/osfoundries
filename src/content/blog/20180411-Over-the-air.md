@@ -98,14 +98,8 @@ $ tar -jxvf raspberrypi3-64-ostree_repo.tar.bz2
 
 # Run our image publishing script using a docker container
 
-# Log onto the Open Source Foundries subscriber container registry on your workstation
-#     docker login hub.foundries.io --username=unused
-# The username is currently ignored when logging in, but a value must be provided.
-# When prompted for the password, enter your token (Access Tokens: https://foundries.io/s/)
-
 # Sign and push the image to ATS garage
-$ docker run --rm -it -v $PWD:/build --workdir=/build \
-    hub.foundries.io/development/microplatforms/linux/extra-containers/aktualizr \
+$ docker run --rm -it -v $PWD:/build --workdir=/build opensourcefoundries/aktualizr \
 	  ota-publish -m raspberrypi3-64 -c credentials.zip -r ostree_repo
 
 ```
