@@ -122,12 +122,17 @@ Download and flash the prebuilt image to the Raspberry Pi 3 following the docume
 
 __Copy and start the Aktualizr client daemon__
 
+on your host machine:
 ```
 $ scp credentials.zip osf@raspberrypi3-64.local:~/
+```
+
+on your target machine: (ssh to the system)
+```
 $ sudo mv credentials.zip /var/sota/sota_provisioning_credentials.zip
 $ sudo cp /usr/lib/sota/sota_autoprov.toml /var/sota/sota.toml
 
-# Aktualizr will start automatically once it finds /var/sota/sota.toml
+# Note: Aktualizr will start automatically once it finds /var/sota/sota.toml
 ```
 
 __Browse to your ATS Garage account and manage the device's root filysystem__
