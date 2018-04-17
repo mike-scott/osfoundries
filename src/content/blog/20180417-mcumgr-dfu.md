@@ -27,13 +27,11 @@ In this blog, we will prepare system to use the Zephyr microPlatform; deploy our
    - Use "-b nrf52840_pca10056" instead of "-b nrf52_blenano2" when
      running ZMP
 
-   - The vendor-specific flashing tools needed are the nRF5x command
-     line tools, not PyOCD. Get the command line tools from here
+   - Install the [nRF5x command line
+     tools](http://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.tools%2Fdita%2Ftools%2Fnrf5x_command_line_tools%2Fnrf5x_nrfjprogexe.html),
+     instead of PyOCD.
 
-     You can download the nRF5x tools from:
-     [http://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.tools%2Fdita%2Ftools%2Fnrf5x_command_line_tools%2Fnrf5x_nrfjprogexe.html](http://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.tools%2Fdita%2Ftools%2Fnrf5x_command_line_tools%2Fnrf5x_nrfjprogexe.html)
-
-## Install mcmgr application on your dev machine
+## Install mcmgr on your development workstation
 
   Install the mcumgr application using "go get" (requires Go 1.7 or later):
 
@@ -42,7 +40,7 @@ In this blog, we will prepare system to use the Zephyr microPlatform; deploy our
    Make sure ~/go/bin is on the PATH of the user that runs the
    "mcumgr" commands.
 
-## Build and flash the smp_srv application
+## Build and flash the smp_svr application
 
    With your device console connected (115200 baud, 8N1), build and
    flash the smp_svr application, which allows DFU firmware update via
@@ -85,14 +83,14 @@ In this section you will connect, update and query the device using mcumgr.
 
 __Connect to the device using mcumgr__
 
-   It's now time to connect to your device using mcumgr.
-
-   These commands generally have to be run as root (commands are
-   prefixed with `#` instead of `$`), so first make sure mcumgr is
-   in root's PATH.
+   These commands generally have to be run as root (commands run as
+   root instead of your normal user are prefixed with `#` instead of `$` in
+   this blog post). First make sure mcumgr is in root's PATH.
 
      $ sudo -s
      # export PATH=$PATH:/home/YOUR_USERNAME/go/bin
+
+   Now verify you can connect to your device.
 
      # mcumgr --conntype ble --connstring ctlr_name=hci0,peer_name='Zephyr' echo hello
      hello
@@ -107,6 +105,9 @@ __Connect to the device using mcumgr__
 
 __Verify that only one application image is installed.__
 
+   Use the following command to check the set of available Zephyr
+   images on your device.
+
     # mcumgr --conntype ble --connstring ctlr_name=hci0,peer_name='Zephyr' image list
     Images:
     slot=0
@@ -115,7 +116,7 @@ __Verify that only one application image is installed.__
        flags: active confirmed
        hash: c7567dd9b84d15ddb4345e38435822ef102f5d1683e8425d5447bafd5cb15c11
 
-__Modify the sample application and update it OTA__
+__Modify the sample application and perform an OTA update__
 
    Edit the file
    zephyr/samples/subsys/mgmt/mcumgr/smp_svr/src/main.c,
@@ -123,8 +124,9 @@ __Modify the sample application and update it OTA__
 
     printk("This application has been updated\n");
 
-   Now re-build it with a different version number using zmp (make
-   sure to do this from a non-root shell):
+   Now re-build it with a different version number using zmp.
+
+   *Important: do this from a non-root shell*:
 
     $ ./zmp build -b nrf52840_pca10056 --imgtool-version 0.1.0 zephyr/samples/subsys/mgmt/mcumgr/smp_svr
 
@@ -149,12 +151,13 @@ __Query the device and make sure 0.1.0 is visible:__
     Split status: N/A (0)
 
    Note the presence of an update image in slot 1 with updated image
-   version.
+   version `0.1.0`, which corresponds to the value of the
+   `--imgtool-version` argument you passed to `zmp build` earlier.
 
 __Confirm the update__
 
-   "Confirm" the slot 1 image by SHA. This will make the bootloader
-   MCUboot install it during the next boot. From the above example,
+   "Confirm" the slot 1 image by SHA. This will make the bootloader,
+   MCUboot, install it during the next boot. From the above example,
 
     # mcumgr --conntype ble --connstring ctlr_name=hci0,peer_name='Zephyr' image test 7806e0a1239aa772f3c1c9ea121c8c95d485fc38b2b3bb930275b63a7962f938
     Images:
@@ -170,7 +173,7 @@ __Confirm the update__
        hash: 7806e0a1239aa772f3c1c9ea121c8c95d485fc38b2b3bb930275b63a7962f938
     Split status: N/A (0)
 
-   Note how the "flags" field now says "pending". This means the
+   Note how the `flags` field now says `pending`. This means the
    update image will be used at the next device reset.
 
 __Reboot the device using DFU:__
@@ -178,8 +181,8 @@ __Reboot the device using DFU:__
     # mcumgr --conntype ble --connstring ctlr_name=hci0,peer_name='Zephyr' reset
 
    You will see bootloader output confirming MCUboot is swapping into
-   the new image, then see the new printline with the string "This
-   application has been updated":
+   the new image, then see the new printline with the string `This
+   application has been updated`:
 
      ***** Booting Zephyr OS v1.1.0-52-g5bac42f *****
      [MCUBOOT] [INF] main: Starting bootloader
