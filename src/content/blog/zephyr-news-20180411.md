@@ -249,8 +249,6 @@ Individual Changes
 - Samples: 10
 - Scripts: 6
 
-</center>
-
 **Arches (10):**
 
 - [6d870ae2](https://github.com/zephyrproject-rtos/zephyr/commit/6d870ae25c5e722dfd7e9c9990ae82fa327c177f) arch/quark_se: Switch to native SPI DW driver
