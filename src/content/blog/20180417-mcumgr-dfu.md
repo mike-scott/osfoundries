@@ -26,6 +26,7 @@ Zephyr microPlatform; deploy our initial code to an
 [nRF52840-DK](https://www.nordicsemi.com/eng/Products/nRF52840-DK) dev board,
 and then deploy new code to the device using an OTA update.
 
+
 ## Install the Zephyr microPlatform:
 
    Please refer to our documentation to install the Zephyr microPlatform at:
@@ -100,6 +101,12 @@ __Connect to the device using mcumgr__
 
    Now verify you can connect to your device.
 
+   __Note:__ In this demo we are referencing hci0 which may be different on
+   your system.  For the demo to work, you will need a Bluetooth 4.0
+   compatible adapter and a recent Linux distribution (we performed this demo
+   with Ubuntu 17.10) with 'bluez' installed.  Oncey you install bluez, you can
+   identify your device using the 'hciconfig' utility.
+
      # mcumgr --conntype ble --connstring ctlr_name=hci0,peer_name='Zephyr' echo hello
      hello
 
@@ -126,7 +133,7 @@ __Verify that only one application image is installed.__
 
 __Modify the sample application and perform an OTA update__
 
-   Edit the file _zephyr/samples/subsys/mgmt/mcumgr/smp_svr/src/main.c_, adding
+   Edit the file zephyr/samples/subsys/mgmt/mcumgr/smp_svr/src/main.c, adding
    a printline to the main() function:
 
     printk("This application has been updated\n");
