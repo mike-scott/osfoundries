@@ -43,14 +43,15 @@ the highest level of security for embedded system software updates.
 We won't go into all of the details right now, but you can find out more from the following links:
 
 * Documentation available at: https://docs.atsgarage.com/usage/devices.html
-* Sourcecode available at: https://github.com/advancedtelematic/ota-community-edition
+* Source code available at: https://github.com/advancedtelematic/ota-community-edition
 
 ## Overview
 
 * As this support is part of a subscriber update, you'll need to setup a trial
 subscription account on [https://foundries.io](https://foundries.io)
-* Get a supported hardware development platform (Raspberry Pi 3, DB 410c, DB 820C,
-Toradex Colibri, Solidrun Hummingboard, Compulab IoT Gate, Beaglebone Black Wireless, x86)
+* Get a supported hardware development platform (Raspberry Pi 3, DragonBoard-410c,
+DragonBoard-820c, Toradex Colibri iMX7D, Solidrun HummingBoard 2, Compulab IoT Gate,
+Beaglebone Black Wireless, x86)
 * Download the latest system image: https://foundries.io/mp/lmp/latest/artifacts/
 (0.13 and later will be OTA ready)
 * Follow the documentation to [install the Linux microplatform](https://foundries.io/docs/latest/tutorial/installation-linux.html)
@@ -82,26 +83,22 @@ You can use a command line tool to sign and publish the artifacts of a build to
 ATS Garage (e.g. for Raspberry Pi 3)
 
 ```
-#create a clean directory with your credentials.zip file and the OSTree Repo
+# Create a clean directory with your credentials.zip file and the OSTree Repo
 $ mkdir lmp
 $ cd lmp
 
-# Download your ATS Garage credentials file and make it available in a local folder
-#	get credentials from: https://app.atsgarage.com/#/profile/access-keys
+# Download your ATS Garage credentials file (https://app.atsgarage.com/#/profile/access-keys)
+# and make it available in a local folder
 
-# Download and extract microPlatform OSTree repository tarball
-# from a specific LMP build number
-#   (e.g. https://foundries.io/mp/lmp/0.13/artifacts/supported-raspberrypi3-64/other/raspberrypi3-64-ostree_repo.tar.bz2)
+# Download and extract microPlatform OSTree repository tarball from a specific LMP build number
+# E.g. https://foundries.io/mp/lmp/0.13/artifacts/supported-raspberrypi3-64/other/raspberrypi3-64-ostree_repo.tar.bz2
 
 # Extract the tarball so you can sign and upload the artifacts
 $ tar -jxvf raspberrypi3-64-ostree_repo.tar.bz2
 
-# Run our image publishing script using a docker container
-
-# Sign and push the image to ATS garage
+# Run our image publishing script using a docker container in order to sign and push the image to ATS garage
 $ docker run --rm -it -v $PWD:/build --workdir=/build opensourcefoundries/aktualizr \
-	  ota-publish -m raspberrypi3-64 -c credentials.zip -r ostree_repo
-
+  ota-publish -m raspberrypi3-64 -c credentials.zip -r ostree_repo
 ```
 
 __Verify the Package can be viewed on the ATS Garage__
