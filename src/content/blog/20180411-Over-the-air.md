@@ -137,8 +137,10 @@ $ sudo cp /usr/lib/sota/sota_autoprov.toml /var/sota/sota.toml
 
 __Browse to your ATS Garage account and manage the device's root filysystem__
 
-If everything goes right, your device will auto register to the ATS Garage system
-and you can begin managing the system the moment you upload the next update.  At
+If everything goes right, your device will auto-register to the ATS Garage system.
+This may take a few minutes.
+
+You can begin managing the system the moment you upload the next update.  At
 Open Source Foundries we produce OS updates about every 10 days, so one will be
 available soon.
 
