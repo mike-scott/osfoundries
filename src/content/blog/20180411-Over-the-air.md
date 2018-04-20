@@ -96,9 +96,15 @@ $ cd lmp
 # Extract the tarball so you can sign and upload the artifacts
 $ tar -jxvf raspberrypi3-64-ostree_repo.tar.bz2
 
-# Run our image publishing script using a docker container in order to sign and push the image to ATS garage
+# Identify the image version ID from your running LMP system and use it when publishing the image to ATS Garage
+# This is required to avoid a version mismatch between the running system and the uploaded image
+raspberrypi3-64:~$ sed -e "s/.*lmp-//" -e "s/\"}//" /var/sota/installed_versions
+283
+
+# Run our image publishing script using a docker container in order to sign and push the image to ATS Garage
+$ VERSION=283
 $ docker run --rm -it -v $PWD:/build --workdir=/build opensourcefoundries/aktualizr \
-  ota-publish -m raspberrypi3-64 -c credentials.zip -r ostree_repo
+  ota-publish -m raspberrypi3-64 -c credentials.zip -r ostree_repo -v $VERSION
 ```
 
 __Verify the Package can be viewed on the ATS Garage__
