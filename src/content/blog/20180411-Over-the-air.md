@@ -54,7 +54,7 @@ DragonBoard-820c, Toradex Colibri iMX7D, Solidrun HummingBoard 2, Compulab IoT G
 Beaglebone Black Wireless, x86)
 * Download the latest system image: https://foundries.io/mp/lmp/latest/artifacts/
 (0.13 and later will be OTA ready)
-* Follow the documentation to [install the Linux microplatform](https://foundries.io/docs/latest/tutorial/installation-linux.html)
+* Install the Linux microPlatform
 * Upload an OS to ATS Garage for deployment
 * Provision your device
 * Upload a second OS to ATS Garage
@@ -65,12 +65,20 @@ Beaglebone Black Wireless, x86)
 
 To get started updating your Linux microPlatform devices follow these instructions:
 
+__Install the Linux microPlatform__
+
+    NOTE: You must use update 0.13 or newer builds with the OSTree repo
+
+Follow the documentation to [install the Linux microPlatform](https://foundries.io/docs/latest/tutorial/installation-linux.html).
+With a running Linux microPlatform system, follow the next steps to provision your device on ATS Garage.
+
 __Create an ATS Garage Account__
 
-* Create an ATS Garage account at https://app.atsgarage.com/ (free up to 20 devices)
+Create an ATS Garage account at https://app.atsgarage.com/ (free up to 20 devices).
 
 __Create your ATS Garage credentials__
-* Generate your auto provisioning credentials at https://app.atsgarage.com/#/profile/access-keys
+
+Generate your auto provisioning credentials at https://app.atsgarage.com/#/profile/access-keys
 
 Once you generate your credentials you can use the same credentials on many
 devices. These credentials are used to generate device-specific keys during
@@ -82,30 +90,46 @@ __Push the Linux microPlatform image to ATS garage__
 You can use a command line tool to sign and publish the artifacts of a build to
 ATS Garage (e.g. for Raspberry Pi 3)
 
-```
-# Create a clean directory with your credentials.zip file and the OSTree Repo
+* Create a clean directory with your credentials.zip file and the OSTree Repo
+
+    ```
 $ mkdir lmp
 $ cd lmp
+    ```
 
-# Download your ATS Garage credentials file (https://app.atsgarage.com/#/profile/access-keys)
-# and make it available in a local folder
+* Download your ATS Garage credentials file (https://app.atsgarage.com/#/profile/access-keys) and make it available in a local folder
 
-# Download and extract microPlatform OSTree repository tarball from a specific LMP build number
-# E.g. https://foundries.io/mp/lmp/0.13/artifacts/supported-raspberrypi3-64/other/raspberrypi3-64-ostree_repo.tar.bz2
+* Download and extract microPlatform OSTree repository tarball from a specific LMP build number (e.g. https://foundries.io/mp/lmp/0.13/artifacts/supported-raspberrypi3-64/other/raspberrypi3-64-ostree_repo.tar.bz2)
 
-# Extract the tarball so you can sign and upload the artifacts
+    ```
 $ tar -jxvf raspberrypi3-64-ostree_repo.tar.bz2
+    ```
 
-# Identify the image version ID from your running LMP system and use it when publishing the image to ATS Garage
-# This is required to avoid a version mismatch between the running system and the uploaded image
+* Identify the image version ID from the running LMP system if provisioning your device for the first time
+  - This is required to avoid a version mismatch between the running system and the uploaded image
+  - In a future update this step will not be required
+
+    ```
 raspberrypi3-64:~$ sed -e "s/.*lmp-//" -e "s/\"}//" /var/sota/installed_versions
 283
+    ```
 
-# Run our image publishing script using a docker container in order to sign and push the image to ATS Garage
+* Set the version ID for the uploaded image
+  - Same as described in the previous step if provisioning for the first time
+  - When uploading additional image updates just use the microPlatform update version instead (e.g. 0.14)
+
+    ```
 $ VERSION=283
+    ```
+
+* Run our image publishing script using a docker container in order to sign and push the image to ATS Garage
+
+    ```
 $ docker run --rm -it -v $PWD:/build --workdir=/build opensourcefoundries/aktualizr \
-  ota-publish -m raspberrypi3-64 -c credentials.zip -r ostree_repo -v $VERSION
-```
+      ota-publish -m raspberrypi3-64 -c credentials.zip -r ostree_repo -v $VERSION
+    ```
+
+In case of upload errors (e.g. OSTree fetch error: 502), please make sure to retry a few more times as the server might be overloaded.
 
 __Verify the Package can be viewed on the ATS Garage__
 
@@ -116,12 +140,6 @@ Browse to: https://app.atsgarage.com/#/packages/raspberrypi3-64-lmp
 Now that we have an update loaded into ATS garage, we will provision the device, we
 are using the Raspberry Pi 3 for demonstration purposes, though the other boards can
 also be used.
-
-__Flash the Linux microPlatform to the device__
-
-    NOTE: You must use update 0.13 or newer builds with the OSTree repo
-
-Download and flash the prebuilt image to the Raspberry Pi 3 following the documentation at: https://foundries.io/docs/latest/tutorial/installation-linux.html
 
 __Copy and start the Aktualizr client daemon__
 
