@@ -148,3 +148,56 @@ Once you upload a second image to ATS Garage, you can initiate an OS upgrade fro
 the ATS web system and then reboot the target device to activate the image.
 
 Further documentation will be available soon.
+
+# Issues and observations
+
+## Watching the aktualizr logs
+
+If you are having a problem with the device connecting to ATS garage, you can
+watch the client logs with the following commands
+
+```
+sudo journalctl -f -u aktualizr.service
+```
+
+## Device fails to show up on ATS garage
+
+We have recently noticed a variety of timeouts when communicating with ATS
+garage.  From our experience, most of these timeouts and communication failures
+will self-recover.  If you notice a delay in device communication or
+registration you can review the aktualizr client logs (see above).
+
+A sample set of errors that seem to be recoverable may look like:
+
+```
+Apr 26 17:15:18 raspberrypi3-64 aktualizr[592]: curl error 28 (http code 0): Timeout was reached
+Apr 26 17:15:19 raspberrypi3-64 aktualizr[592]: curl error 35 (http code 0): SSL connect error
+
+```
+
+
+## Device fails to sync and kRejectAll observed
+
+We have noticed that from time to time, the aktualizr client delivered in
+update 0.13 is susceptible to an issue that has been fixed in 0.14 and later
+microPlatform updates.
+
+The issue, which has been fixed in the upstream aktualizr client, puts the
+device into a state where it can not take an update.
+
+To work around this issue you can use the following commands to modify the
+SQLite database.
+
+```
+# stop the aktualizr service
+sudo systemctl stop aktualizr.service
+
+# remove the 'meta' table from the sqlite database
+docker run -v /var/sota/sql.db:/sql.db opensourcefoundries/utilities sqlite3 /sql.db "drop table meta;"
+
+# start the aktualizer service
+sudo systemctl start aktualizr.service
+
+# OPTIONAL: you can watch the aktualizr logs to verify the connection
+sudo journalctl -f -u aktualizr.service
+```
