@@ -10,7 +10,9 @@ You can easily try out portainer and some of our experimental containers by ssh'
 
     docker run -d -p 9000:9000 --restart always --name portainer  -v $PWD/data:/data -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --logo https://foundries.io/static/img/logo.png --templates https://raw.githubusercontent.com/OpenSourceFoundries/ez/master/templates.json
 
-After you get the service running, you can then access the portainer UI: 
+![](/uploads/2018/05/08/runportainer.png)
+
+After you get the service running, you can then access the portainer UI:
 
 ![](/uploads/2018/05/08/create-account.png)
 
@@ -26,6 +28,6 @@ Now you have access to the Portainer UI.  From here you can create, refresh, sto
 
 ![](/uploads/2018/05/08/front-page.png)
 
-You can also try out some sample 'experimental' apps that we are compiling to demonstrate the ease of using containers to 'contain' an application, allowing for simplicity when updating the baseOS using OTA community edition.  
+You can also try out some sample 'experimental' apps that we are compiling to demonstrate the ease of using containers to 'contain' an application, allowing for simplicity when updating the baseOS using OTA community edition.
 
 ![](/uploads/2018/05/08/experimental-apps.png)
