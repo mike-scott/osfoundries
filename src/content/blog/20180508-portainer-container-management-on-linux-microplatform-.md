@@ -6,6 +6,8 @@ title = "Portainer Container Management on Linux microPlatform "
 +++
 At Open Source Foundries, we are constantly looking across the ecosystem  for the best projects to complement the microPlatforms.  One such project is [Portainer](https://portainer.io "Portainer"). "Portainer is an open-source lightweight management UI which allows you to easily manage your Docker hosts or swarm clusters.
 
+<!--more-->
+
 You can easily try out portainer and some of our experimental containers by ssh'ing into a system running the Linux microPlatform and running
 
     docker run -d -p 9000:9000 --restart always --name portainer  -v $PWD/data:/data -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer --logo https://foundries.io/static/img/logo.png --templates https://raw.githubusercontent.com/OpenSourceFoundries/ez/master/templates.json
