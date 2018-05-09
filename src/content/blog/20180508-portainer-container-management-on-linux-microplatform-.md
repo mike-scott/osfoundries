@@ -1,11 +1,10 @@
 +++
 author = "Alan Bennett"
 banner = "/uploads/2018/05/08/portainer.png"
-categories = []
+categories = ["lmp"]
 date = "2018-05-08T06:00:00+00:00"
-tags = []
+tags = ["portainer", "container", "docker", "management"]
 title = "Portainer Container Management on Linux microPlatform "
-type = ""
 
 +++
 At Open Source Foundries, we are constantly looking across the ecosystem  for the best projects to complement the microPlatforms.  One such project is [Portainer](https://portainer.io "Portainer"). "Portainer is an open-source lightweight management UI which allows you to easily manage your Docker hosts or swarm clusters."
