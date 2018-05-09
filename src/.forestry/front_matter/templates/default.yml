@@ -1,6 +1,5 @@
 ---
 pages:
-- blog/20180508-portainer-container-management-on-linux-microplatform-.md
 - blog/using-docker-compose.yml-with-portainer.md
 hide_body: false
 is_partial: false
