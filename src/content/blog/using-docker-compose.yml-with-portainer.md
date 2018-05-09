@@ -3,7 +3,6 @@ author = "Alan Bennett"
 banner = "/uploads/2018/05/09/p-d-dc.png"
 categories = ["lmp"]
 date = "2018-05-08T06:00:00+00:00"
-draft = true
 tags = ["portainer", "container", "docker", "docker-compose"]
 title = "Using docker-compose.yml with Portainer"
 
@@ -20,7 +19,7 @@ Portainer has been a great asset and we have started to rely on it for single-co
 4. Portainer templates
 5. See it all work
 
-For an introduction on running portainer on the microplatform, check out the \[How to run Portainer on the Linux microPlatform Blog.\]({{< relref "blog/20180508-portainer-container-management-on-linux-microplatform-.md" >}})
+For an introduction on running portainer on the microplatform, check out the [How to run Portainer on the Linux microPlatform Blog]({{< relref "blog/20180508-portainer-container-management-on-linux-microplatform-.md" >}}).
 
 ## Docker-compose in a docker container
 
