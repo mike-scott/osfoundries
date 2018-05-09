@@ -34,3 +34,6 @@ fields:
   type: file
   hidden: false
   default: ''
+- type: text
+  name: author
+  label: Author
