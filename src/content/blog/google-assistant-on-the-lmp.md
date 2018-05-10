@@ -151,7 +151,75 @@ Use the registration UI in the Actions Console to register a device model.
 
 The `credentials.json` file must be located on the device. Later, you will run an authorization tool and reference this file in order to authorize the Google Assistant SDK sample to make Google Assistant queries. Do not rename this file.
 
-Download this file and transfer it to the device. 
+Download this file and transfer it to the device.
 
     scp ~/Downloads/credentials.json osf@raspberrypi3-64.local:/home/osf/
+
+### 3. Run the SDK and Sample code
+
+In the Google samples you would now install software onto your target device, however the container you have been using to query the audio hardware is configured and ready to run the sample with no further modification.
+
+#### Authorize your device
+
+In order to connect your device to the Google services you will first need to generate the appropriate credentials.  We'll do this in a more interactive version using the bash shell and mapping in our credentials.json file from above.
+
+    docker run -it --privileged -v ${PWD}/credentials.json:/credentials.json opensourcefoundries/ok-google bash
+    google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype \
+              --scope https://www.googleapis.com/auth/gcm \
+              --save --headless --client-secrets /credentials.json
+
+Running google-oauthlib-tool will return a HTTPS URL that you will need to copy and paste into your browser to complete the authorization steps.
+
+Copy the authorization code back into your terminal window to complete the authorization dance and get your credentials.
+
+Note three values from your credentials file
+
+    cat /root/.config/google-oauthlib-tool/credentials.json 
+    
+    {
+      "client_secret": "kF4ZAu-vftrwI7OjoNooztSX",
+      "scopes": [
+        "https://www.googleapis.com/auth/assistant-sdk-prototype",
+        "https://www.googleapis.com/auth/gcm"
+      ],
+      "token_uri": "https://accounts.google.com/o/oauth2/token",
+      "client_id": "75206904208-5dql3dfkk883.apps.googleusercontent.com",
+      "refresh_token": "1/Ux2UDvinl32DAjHYb6jbA"
+    }
+
+Now we can exit the container and re-launch it to run the ok-google sample and pass in all of the variables we have discovered.
+
+    docker run -it --privileged \
+       -e MIC_ADDR="hw:2,0" \
+       -e SPEAKER_ADDR="hw:2,0" \
+       -e PROJECT_ID=voice-kit-01 \
+       -e MODEL_ID=voice-kit-01-number2-flc5yj \
+       -e CLIENT_SECRET=kF4ZLu-X \
+       -e CLIENT_ID=7508-5d3.apps.googleusercontent.com \
+       -e REFRESH_TOKEN="1/Ux0k2DAjHYb6jbA" \
+       opensourcefoundries/ok-google
+    setup authorized credentials file
+    setup alsa configuration
+    + exec bash -c 'googlesamples-assistant-hotword --project_id ${PROJECT_ID}  --device_model_id ${MODEL_ID}'
+    device_model_id: voice-kit-01-number2-flc5yj
+    device_id: FB5D19145D253C8575B061402DF93723
+    
+    https://embeddedassistant.googleapis.com/v1alpha2/projects/voice-kit-01/devices/FB5D19145D253C8575B061402DF93723 404
+    Registering....
+    Device registered.
+    ON_MUTED_CHANGED:
+      {'is_muted': False}
+    ON_START_FINISHED
+    
+    ON_CONVERSATION_TURN_STARTED
+    ON_END_OF_UTTERANCE
+    ON_RECOGNIZING_SPEECH_FINISHED:
+      {'text': 'what time is it'}
+    ON_RESPONDING_STARTED:
+      {'is_error_response': False}
+    ON_RESPONDING_FINISHED
+    ON_CONVERSATION_TURN_FINISHED:
+      {'with_follow_on_turn': False}
+
+We also can use our Portainer templates to launch the container
 
