@@ -1,6 +1,6 @@
 +++
 author = "Alan Bennett"
-banner = ""
+banner = "/uploads/2018/05/10/Google-Launches-the-Google-Assistant-SDK-for-3rd-Party-Companies.png"
 categories = ["lmp"]
 date = "2018-05-09T19:48:23+00:00"
 draft = true
@@ -8,7 +8,7 @@ tags = ["Google", "Assistant", "Alsa"]
 title = "Google Assistant on the LmP"
 
 +++
-In this blog, we'll describe how we create a container to run Google's Assistant on a simple Raspberry PI with a speaker and microphone.
+In this blog, we'll describe how we create a container to run Google's Assistant on a simple Raspberry PI with a speaker and microphone.  Once you gather all the information necessary, this sample creates a simple, portable and easy to reproduce Google Assistant appliance out of your Raspberry PI.
 
 <!-- more -->
 
@@ -99,6 +99,8 @@ Now we know that the MIC is **2,0** and the Speaker is **2,0** we will be able t
 After you adjust the volume, you can retest using speaker-test command from step 1 above.
 
 ### 3. Now to Authorize your device with the Google Cloud services
+
+Note: Much of this blog was excerpted from Google's SDK documentation at [https://developers.google.com/assistant/sdk/guides/library/python/](https://developers.google.com/assistant/sdk/guides/library/python/ "https://developers.google.com/assistant/sdk/guides/library/python/")
 
 #### Configure an Actions Console project
 
@@ -226,3 +228,19 @@ Now we can exit the container and re-launch it to run the ok-google sample and p
 One you know the necessary variables, you can use our Portainer templates to launch the container.
 
 \[How to run Portainer on the Linux microPlatform Blog\]({{< relref "blog/20180508-portainer-container-management-on-linux-microplatform-.md" >}})
+
+#### Open the App Templates and select **OK Google**
+
+![](/uploads/2018/05/10/Screen Shot 2018-05-09 at 8.25.43 PM.png)
+
+#### Fill in all the details for the service
+
+![](/uploads/2018/05/10/Screen Shot 2018-05-09 at 8.29.02 PM.png)
+
+#### The container should be running.  
+
+![](/uploads/2018/05/10/Screen Shot 2018-05-09 at 8.29.12 PM.png)
+
+#### Check the logs
+
+![](/uploads/2018/05/10/Screen Shot 2018-05-09 at 8.30.06 PM.png)
