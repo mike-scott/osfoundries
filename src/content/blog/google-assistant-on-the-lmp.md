@@ -45,7 +45,7 @@ In order to route the audio to the right device we will need to find the hardwar
    1. Find the microphone device (Note: **Card: 2** and **Device: 0**) (unfortunately, the card ID may may change over reboots)
 
 ```
-docker run -it --privileged opensourcefoundries/ok-google arecord -l
+docker run -it --device /dev/snd opensourcefoundries/ok-google arecord -l
 setup authorized credentials file
 setup alsa configuration
 + exec arecord -l
@@ -58,7 +58,7 @@ Subdevice #0: subdevice #0
    2. Find the speaker device (Note: **Card: 2** and **Device: 0**) (unfortunately, the card ID may may change over reboots)
 
 ```
-docker run -it --privileged opensourcefoundries/ok-google aplay -l
+docker run -it --device /dev/snd opensourcefoundries/ok-google aplay -l
 setup authorized credentials file
 setup alsa configuration
 + exec aplay -l
@@ -90,16 +90,16 @@ Now we know that the MIC is **2,0** and the Speaker is **2,0** we will be able t
    2. Note: we also call the 'speaker-test' utility and run the wav test.  You should hear "Front Left"
 
 ```
-docker run -it --privileged -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google speaker-test -t wav
+docker run -it --device /dev/snd -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google speaker-test -t wav
 ```
 
    3. Press CTRL-C to exit
 2. Adjust the speaker volume, you can also adjust the MIC gain using the alsamixer application
 
 ```
-docker run -it --privileged -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google alsamixer
+docker run -it --device /dev/snd -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google alsamixer
   OR
-docker run -it --privileged -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google alsamixer --card=2 --view=all
+docker run -it --device /dev/snd -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google alsamixer --card=2 --view=all
 ```
 
 #### Select the right device (aka Sound Card)
@@ -181,7 +181,7 @@ In the Google samples you would now install software onto your target device, ho
 
 In order to connect your device to the Google services you will first need to generate the appropriate credentials.  We'll do this in a more interactive version using the bash shell and mapping in our credentials.json file from above.
 
-    docker run -it --privileged -v ${PWD}/credentials.json:/credentials.json opensourcefoundries/ok-google bash
+    docker run -it --device /dev/snd -v ${PWD}/credentials.json:/credentials.json opensourcefoundries/ok-google bash
     google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype \
               --scope https://www.googleapis.com/auth/gcm \
               --save --headless --client-secrets /credentials.json
@@ -215,15 +215,18 @@ Note three values from your credentials file
 
 Now we can exit the container and re-launch it to run the ok-google sample and pass in all of the variables we have discovered.
 
-    docker run -it --privileged \
-       -e MIC_ADDR="hw:2,0" \
-       -e SPEAKER_ADDR="hw:2,0" \
-       -e PROJECT_ID=voice-kit-01 \
-       -e MODEL_ID=voice-kit-01-number2-flc5yj \
-       -e CLIENT_SECRET=kF4ZLu-X \
-       -e CLIENT_ID=7508-5d3.apps.googleusercontent.com \
-       -e REFRESH_TOKEN="1/Ux0k2DAjHYb6jbA" \
-       opensourcefoundries/ok-google
+    MIC_ADDR="hw:2,0"
+    SPEAKER_ADDR="hw:2,0"
+    PROJECT_ID=voice-kit-01
+    MODEL_ID=voice-kit-01-number2-flc5yj
+    CLIENT_ID=7508-5d3.apps.googleusercontent.com
+    CLIENT_SECRET=kF4ZLu-X
+    REFRESH_TOKEN=1/Ux0k2DAjHYb6jbA
+    docker run -it --device /dev/snd \
+       -e MIC_ADDR=$MIC_ADDR -e SPEAKER_ADDR=$SPEAKER_ADDR -e PROJECT_ID=$PROJECT_ID \
+       -e MODEL_ID=$MODEL_ID -e CLIENT_SECRET=$CLIENT_SECRET -e CLIENT_ID=$CLIENT_ID \
+       -e REFRESH_TOKEN=$REFRESH_TOKEN \
+       --name ok-google-cli-demo opensourcefoundries/ok-google
     setup authorized credentials file
     setup alsa configuration
     + exec bash -c 'googlesamples-assistant-hotword --project_id ${PROJECT_ID}  --device_model_id ${MODEL_ID}'
