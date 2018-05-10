@@ -7,9 +7,29 @@ tags = ["Google", "Assistant", "Alsa"]
 title = "Google Assistant on the LmP"
 
 +++
-In this blog, we'll describe how we run the Google Assistant SDK on a Raspberry Pi with an external speaker and microphone.  After you get things configured and gather key pieces of information you'll have a simple, portable and easy to reproduce Google Assistant appliance.
+In this blog, I describe how to run the Google Assistant SDK on a Raspberry Pi with an external speaker and microphone.  After you get things configured and gather key pieces of information you'll have a simple, portable and easy to reproduce Google Assistant appliance.
 
 <!--more-->
+
+Running the Google SDK on the LmP is extremely simple, just run the following docker command and you'll have the demo running in a matter of minutes.
+
+    docker run --rm -it --device /dev/snd \
+       -e MIC_ADDR=$MIC_ADDR -e SPEAKER_ADDR=$SPEAKER_ADDR -e PROJECT_ID=$PROJECT_ID \
+       -e MODEL_ID=$MODEL_ID -e CLIENT_SECRET=$CLIENT_SECRET -e CLIENT_ID=$CLIENT_ID \
+       -e REFRESH_TOKEN=$REFRESH_TOKEN \
+       --name ok-google-cli-demo opensourcefoundries/ok-google
+
+Ok, maybe the challenge isn't running the sample, but figuring out the hardware addresses and Google Cloud variables necessary.
+
+    MIC_ADDR="hw:2,0"
+    SPEAKER_ADDR="hw:2,0"
+    PROJECT_ID=voice-kit-01
+    MODEL_ID=voice-kit-01-number2-flc5yj
+    CLIENT_ID=7508-5d3.apps.googleusercontent.com
+    CLIENT_SECRET=kF4ZLu-X
+    REFRESH_TOKEN=1/Ux0k2DAjHYb6jbA
+
+In the rest of this blog, we'll show you where to collect all of these values so that running the Google Assistant will be easy, repeatable and portable.
 
 ## Hardware needed
 
@@ -45,7 +65,7 @@ In order to route the audio to the right device we will need to find the hardwar
    1. Find the microphone device (Note: **Card: 2** and **Device: 0**) (unfortunately, the card ID may may change over reboots)
 
 ```
-docker run -it --device /dev/snd opensourcefoundries/ok-google arecord -l
+docker run -it --rm --device /dev/snd opensourcefoundries/ok-google arecord -l
 setup authorized credentials file
 setup alsa configuration
 + exec arecord -l
@@ -58,7 +78,7 @@ Subdevice #0: subdevice #0
    2. Find the speaker device (Note: **Card: 2** and **Device: 0**) (unfortunately, the card ID may may change over reboots)
 
 ```
-docker run -it --device /dev/snd opensourcefoundries/ok-google aplay -l
+docker run -it --rm --device /dev/snd opensourcefoundries/ok-google aplay -l
 setup authorized credentials file
 setup alsa configuration
 + exec aplay -l
@@ -90,16 +110,16 @@ Now we know that the MIC is **2,0** and the Speaker is **2,0** we will be able t
    2. Note: we also call the 'speaker-test' utility and run the wav test.  You should hear "Front Left"
 
 ```
-docker run -it --device /dev/snd -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google speaker-test -t wav
+docker run -it --rm --device /dev/snd -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google speaker-test -t wav
 ```
 
    3. Press CTRL-C to exit
 2. Adjust the speaker volume, you can also adjust the MIC gain using the alsamixer application
 
 ```
-docker run -it --device /dev/snd -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google alsamixer
+docker run -it --rm --device /dev/snd -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google alsamixer
   OR
-docker run -it --device /dev/snd -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google alsamixer --card=2 --view=all
+docker run -it --rm --device /dev/snd -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google alsamixer --card=2 --view=all
 ```
 
 #### Select the right device (aka Sound Card)
@@ -181,7 +201,7 @@ In the Google samples you would now install software onto your target device, ho
 
 In order to connect your device to the Google services you will first need to generate the appropriate credentials.  We'll do this in a more interactive version using the bash shell and mapping in our credentials.json file from above.
 
-    docker run -it --device /dev/snd -v ${PWD}/credentials.json:/credentials.json opensourcefoundries/ok-google bash
+    docker run -it --rm --device /dev/snd -v ${PWD}/credentials.json:/credentials.json opensourcefoundries/ok-google bash
     google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype \
               --scope https://www.googleapis.com/auth/gcm \
               --save --headless --client-secrets /credentials.json
@@ -222,7 +242,7 @@ Now we can exit the container and re-launch it to run the ok-google sample and p
     CLIENT_ID=7508-5d3.apps.googleusercontent.com
     CLIENT_SECRET=kF4ZLu-X
     REFRESH_TOKEN=1/Ux0k2DAjHYb6jbA
-    docker run -it --device /dev/snd \
+    docker run -it --rm --device /dev/snd \
        -e MIC_ADDR=$MIC_ADDR -e SPEAKER_ADDR=$SPEAKER_ADDR -e PROJECT_ID=$PROJECT_ID \
        -e MODEL_ID=$MODEL_ID -e CLIENT_SECRET=$CLIENT_SECRET -e CLIENT_ID=$CLIENT_ID \
        -e REFRESH_TOKEN=$REFRESH_TOKEN \
