@@ -42,7 +42,7 @@ In order to route the audio to the right device we will need to find the hardwar
 
 1. Plug your device(s) into your Raspberry Pi (we will be using the Jabra Device)
 2. Load and run a container that contains the ALSA subsystem (not this also happens to be the container we'll use to run the Google Assistant, but for now we are going to use it only to find the HW device IDs)
-   1. Find the microphone device (Note: **Card: 2** and **Device: 0**)
+   1. Find the microphone device (Note: **Card: 2** and **Device: 0**) (unfortunately, the card ID may may change over reboots)
 
 ```
 docker run -it --privileged opensourcefoundries/ok-google arecord -l
@@ -55,7 +55,7 @@ Subdevices: 1/1
 Subdevice #0: subdevice #0
 ```
 
-   2. Find the speaker device Jabra: **Card: 2** and **Device: 0** again
+   2. Find the speaker device (Note: **Card: 2** and **Device: 0**) (unfortunately, the card ID may may change over reboots)
 
 ```
 docker run -it --privileged opensourcefoundries/ok-google aplay -l
@@ -83,7 +83,7 @@ card 2: USB [Jabra SPEAK 510 USB], device 0: USB Audio [USB Audio]
   ÅSubdevice #0: subdevice #0
 ```
 
-Now we know that the MIC is **2,0** and the Speaker is **2,0** we will be able to pass this information into the container for further adjustments.
+Now we know that the MIC is **2,0** and the Speaker is **2,0** we will be able to pass this information into the container for further adjustments.  (Note: the card ID may may change over reboots)
 
 1. Test the speaker volume
    1. Note: we pass in MIC_ADDR  and a SPEAKER_ADDR environment variables
@@ -97,6 +97,8 @@ docker run -it --privileged -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" openso
 2. Adjust the speaker volume, you can also adjust the MIC gain using the alsamixer application
 
 ```
+docker run -it --privileged -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google alsamixer
+  OR
 docker run -it --privileged -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google alsamixer --card=2 --view=all
 ```
 
