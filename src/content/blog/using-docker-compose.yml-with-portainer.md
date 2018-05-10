@@ -7,7 +7,7 @@ tags = ["portainer", "container", "docker", "docker-compose"]
 title = "Using docker-compose.yml with Portainer"
 
 +++
-Portainer has been a great asset and we have started to rely on it for single-container image management.  Unfortunately, Portainer has been designed for 2 key use-cases.  single containers and "stacks" that are meant to be deployed onto Kubernetes or Swarm orchestrators.  For many of our demo's we want to manage a suite of containers and orchestrate their startup so we can manage large container suites like the 9+ container-based micro-services that comprise the Edge-X project.  For remote control we initially started with Ansible, and though it's great for a controlled container management system, it doesn't demo as well as Portainer does.  In this blog we'll describe about how we use Portainer and docker compose to deploy and coordinate multiple containers at Open Source foundries.
+Portainer has been a great asset and we have started to rely on it for single-container image management.  Unfortunately, Portainer has been designed for 2 key use-cases.  single containers and "stacks" that are meant to be deployed onto Kubernetes or Swarm orchestrators.  For many of our demos we want to manage a suite of containers and orchestrate their startup so we can manage large container suites like the 9+ container-based micro-services that comprise the Edge-X project.  For remote control we initially started with Ansible, and though it's great for a controlled container management system, it doesn't demo as well as Portainer does.  In this blog we'll describe about how we use Portainer and docker compose to deploy and coordinate multiple containers at Open Source foundries.
 
 <!-- More -->
 
@@ -48,7 +48,7 @@ I'm sure there could be a better option, but after a review, I opted to store al
 The container:
 
     FROM alpine
-    
+
     RUN apk add --no-cache python3-dev py3-pip docker git bash curl
     RUN pip3 install --upgrade pip docker-compose
     COPY compose-files/* /
@@ -61,9 +61,9 @@ And then by default I simply use the environment variable $TARGET to bring up th
 The start.sh script
 
     #/bin/sh
-    
+
     set -x
-    
+
     docker-compose -H unix:///var/run/docker.sock -f /$TARGET up -d
 
 So now I can describe a template process in Portainer, add an environment variable that points to a specific compose file that lives in our compose-launcher docker image(s).
@@ -76,15 +76,15 @@ To do this, we add the use of Portainer's Container "CMD" override option to run
 
     set -x
     COMPOSE_FILE=/edgex.yml
-    
+
     echo "Starting mongo"
     docker-compose -f $COMPOSE_FILE up -d mongo
     echo "Starting consul"
     docker-compose -f $COMPOSE_FILE up -d config-seed
-    
+
     echo "Sleeping before launching remaining services"
     sleep 15
-    
+
     echo "Starting support-logging"
     docker-compose -f $COMPOSE_FILE up -d logging
     echo "Starting core-metadata"
@@ -97,7 +97,7 @@ To do this, we add the use of Portainer's Container "CMD" override option to run
     docker-compose -f $COMPOSE_FILE up -d export-client
     echo "Starting core-export-distro"
     docker-compose -f $COMPOSE_FILE up -d export-distro
-    
+
     echo "Starting device-virtual"
     docker-compose -f $COMPOSE_FILE up -d device-virtual
 

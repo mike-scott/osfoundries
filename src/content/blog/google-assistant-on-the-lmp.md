@@ -7,29 +7,30 @@ tags = ["Google", "Assistant", "Alsa"]
 title = "Google Assistant on the LmP"
 
 +++
-In this blog, we'll describe how we create a container to run Google's Assistant on a simple Raspberry PI with a speaker and microphone.  Once you gather all the information necessary, this sample creates a simple, portable and easy to reproduce Google Assistant appliance out of your Raspberry PI.
+In this blog, we'll describe how we run the Google Assistant SDK on a Raspberry Pi with an external speaker and microphone.  After you get things configured and gather key pieces of information you'll have a simple, portable and easy to reproduce Google Assistant appliance.
 
-<!-- more -->
+<!--more-->
 
 ## Hardware needed
 
-1. Raspberry PI 3b (others should work, but for this demo we'll use the 3b)
-   1. All the peripherals (5V micro-usb power, 8GB microSD card)
+1. Raspberry Pi 3b (others LmP devices will work, but for this demo we'll use the 3b)
+   1. All the peripherals (Ethernet cable, 5V micro-usb power, 8GB microSD card)
 2. External speaker and Microphone
-   1. $85 - [JABRA 510 USB/Bluetooth speaker phone](https://www.amazon.com/Jabra-Wireless-Bluetooth-Softphone-Packaging/dp/B00AQUO5RI) (speaker & Mic)
-   2. $12 - [USHonk USB Speaker](https://www.amazon.com/USHONK-Speaker-Computer-Multimedia-Notebook/dp/B075M7FHM1) (speaker only)
-   3. Headphones (speaker only)
-   4. $5 - [Kinobo USB mic](https://www.amazon.com/Kinobo-Microphone-Desktop-Recognition-Software/dp/B00IR8R7WQ) (Mic only)
+   1. $85 - [JABRA 510 USB/Bluetooth speaker phone](https://www.amazon.com/Jabra-Wireless-Bluetooth-Softphone-Packaging/dp/B00AQUO5RI) (speaker & mic)
+3. Other Hardware tested
+   1. $12 - [USHonk USB Speaker](https://www.amazon.com/USHONK-Speaker-Computer-Multimedia-Notebook/dp/B075M7FHM1) (speaker only)
+   2. Headphones (speaker only)
+   3. $5 - [Kinobo USB mic](https://www.amazon.com/Kinobo-Microphone-Desktop-Recognition-Software/dp/B00IR8R7WQ) (mic only)
 
 ## Load the latest Linux microPlatform
 
 Get all the latest software by using the latest microPlatform release. Sign up for a free trial to the subscription @ [https://foundries.io](https://foundries.io "https://foundries.io") and download the latest artifacts @ [https://foundries.io/mp/lmp/latest/artifacts/](https://foundries.io/mp/lmp/latest/artifacts/ "https://foundries.io/mp/lmp/latest/artifacts/").
 
-Download a LmP pre-built binary for your Raspberry PI 3b, write it to a microSD card (using [Resin's Etcher.io project](https://etcher.io/)) or decompress and write it to the flash device using the dd command (i.e. sudo dd if=lmp-gateway-image-raspberrypi3-64.img of=/dev/sdH bs=4M).
+Download a LmP pre-built binary for your Raspberry Pi 3b, write it to a microSD card (using [Resin's Etcher.io project](https://etcher.io/)) or decompress and write it to the flash device using the dd command.
 
-Power on your device (5v microUSB power, Ethernet Cable to a Internet connected port, microSD card with the LmP running)
+If you are unfamiliar with the Linux microPlatform, more detailed instructions on using the Linux microPlatform can be found at [Documentation on how to install the Linux microPlatform](https://foundries.io/docs/latest/tutorial/installation-linux.html)
 
-### 1. Connect to your raspberry PI using SSH
+### 1. Connect to your Raspberry Pi using SSH
 
     ssh osf@raspberrypi3-64.local
 
@@ -39,9 +40,9 @@ Power on your device (5v microUSB power, Ethernet Cable to a Internet connected 
 
 In order to route the audio to the right device we will need to find the hardware addresses (and possibly adjust the volume a bit).
 
-1. Plug your device(s) into your Raspberry PI 3b (we will be using the Jabra Device)
+1. Plug your device(s) into your Raspberry Pi (we will be using the Jabra Device)
 2. Load and run a container that contains the ALSA subsystem (not this also happens to be the container we'll use to run the Google Assistant, but for now we are going to use it only to find the HW device IDs)
-   1. Find the microphone device (Note: **Card 2** and **Device 0**)
+   1. Find the microphone device (Note: **Card: 2** and **Device: 0**)
 
 ```
 docker run -it --privileged opensourcefoundries/ok-google arecord -l
@@ -54,7 +55,7 @@ Subdevices: 1/1
 Subdevice #0: subdevice #0
 ```
 
-   2. Find the speaker device Jabra: **Card 2:** and **Device: 0** again
+   2. Find the speaker device Jabra: **Card: 2** and **Device: 0** again
 
 ```
 docker run -it --privileged opensourcefoundries/ok-google aplay -l
@@ -93,12 +94,11 @@ docker run -it --privileged -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" openso
 ```
 
    3. Press CTRL-C to exit
-2. Adjust the speaker volume, you can also adjust the MIC gain if you want using the alsamixer application
+2. Adjust the speaker volume, you can also adjust the MIC gain using the alsamixer application
 
 ```
-$ docker run -it --privileged -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google alsamixer
+docker run -it --privileged -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google alsamixer --card=2 --view=all
 ```
-
 
 #### Select the right device (aka Sound Card)
 
@@ -127,14 +127,13 @@ To enable access to the Google Assistant API, do the following:
 1. [Open the Actions Console](https://console.actions.google.com/).
 2. Click on Add/import project.
 3. To create a new project, type a name in the Project name box and click CREATE PROJECT.
-
    _If you already have an existing Google Cloud Platform project, you can select that project and import it instead._
 4. Click the **Device registration** box.
 5. Enable the Google Assistant API on the project you selected (see the [Terms of Service](https://developers.google.com/assistant/sdk/terms-of-service)). You need to do this in the Cloud Platform Console.
 
-   [ENABLE THE API](https://console.developers.google.com/apis/api/embeddedassistant.googleapis.com/overview)
+     [ENABLE THE API in Console.developers.google.com](https://console.developers.google.com/apis/api/embeddedassistant.googleapis.com/overview)
 
-   Click **Enable**.
+     Then Click **Enable**.
 
 #### Set activity controls for your account
 
@@ -161,7 +160,6 @@ Use the registration UI in the Actions Console to register a device model.
 #### Create model
 
 1. Fill out all of the fields for your device.
-
    See the device model JSON [reference](https://developers.google.com/assistant/sdk/reference/device-registration/model-and-instance-schemas.html#device_model_json) for more information on these fields.
 2. When you are finished, click **REGISTER MODEL**
 
