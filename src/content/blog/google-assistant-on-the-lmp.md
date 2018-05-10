@@ -79,6 +79,6 @@ In order to route the audio to the right device we will need to find the hardwar
 Now we know that the MIC is HW:1,0 and the Speaker is HW:1,0 we will use this information for further adjustments.
 
 1. Test the speaker volume
+   1. Note: we pass in MIC__ADDR  and a SPEAKER__ADDR environment variables
 
-       $ docker run -it --privileged -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google
-       
+          $ docker run -it --privileged -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google speaker-test -t wav
