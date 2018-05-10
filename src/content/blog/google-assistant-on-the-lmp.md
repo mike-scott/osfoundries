@@ -1,10 +1,10 @@
 +++
-author = ""
+author = "Alan Bennett"
 banner = ""
-categories = []
+categories = ["lmp"]
 date = "2018-05-09T19:48:23+00:00"
 draft = true
-tags = []
+tags = ["Google", "Assistant", "Alsa"]
 title = "Google Assistant on the LmP"
 
 +++
