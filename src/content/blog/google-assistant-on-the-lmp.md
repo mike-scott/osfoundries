@@ -98,7 +98,7 @@ Now we know that the MIC is **2,0** and the Speaker is **2,0** we will be able t
 
 After you adjust the volume, you can retest using speaker-test command from step 1 above.
 
-### 2. Now to Authorize your device with the Google Cloud services
+### 3. Now to Authorize your device with the Google Cloud services
 
 #### Configure an Actions Console project
 
@@ -155,7 +155,7 @@ Download this file and transfer it to the device.
 
     scp ~/Downloads/credentials.json osf@raspberrypi3-64.local:/home/osf/
 
-### 3. Run the SDK and Sample code
+### 4. Run the SDK and Sample code
 
 In the Google samples you would now install software onto your target device, however the container you have been using to query the audio hardware is configured and ready to run the sample with no further modification.
 
@@ -177,14 +177,14 @@ Note three values from your credentials file
     cat /root/.config/google-oauthlib-tool/credentials.json 
     
     {
-      "client_secret": "kF4ZAu-vftrwI7OjoNooztSX",
+      "client_secret": "kF4ZOjX",
       "scopes": [
         "https://www.googleapis.com/auth/assistant-sdk-prototype",
         "https://www.googleapis.com/auth/gcm"
       ],
       "token_uri": "https://accounts.google.com/o/oauth2/token",
-      "client_id": "75206904208-5dql3dfkk883.apps.googleusercontent.com",
-      "refresh_token": "1/Ux2UDvinl32DAjHYb6jbA"
+      "client_id": "7520-5883.apps.googleusercontent.com",
+      "refresh_token": "1/Ux2UDvinAjHYb6jbA"
     }
 
 Now we can exit the container and re-launch it to run the ok-google sample and pass in all of the variables we have discovered.
@@ -221,5 +221,8 @@ Now we can exit the container and re-launch it to run the ok-google sample and p
     ON_CONVERSATION_TURN_FINISHED:
       {'with_follow_on_turn': False}
 
-We also can use our Portainer templates to launch the container
+## Extra Credit: Portainer
 
+One you know the necessary variables, you can use our Portainer templates to launch the container.
+
+\[How to run Portainer on the Linux microPlatform Blog\]({{< relref "blog/20180508-portainer-container-management-on-linux-microplatform-.md" >}})
