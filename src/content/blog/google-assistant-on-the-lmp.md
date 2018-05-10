@@ -3,7 +3,6 @@ author = "Alan Bennett"
 banner = "/uploads/2018/05/10/Google-Launches-the-Google-Assistant-SDK-for-3rd-Party-Companies.png"
 categories = ["lmp"]
 date = "2018-05-09T19:48:23+00:00"
-draft = true
 tags = ["Google", "Assistant", "Alsa"]
 title = "Google Assistant on the LmP"
 
