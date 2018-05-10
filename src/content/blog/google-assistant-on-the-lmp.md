@@ -32,6 +32,8 @@ Power on your device (5v microUSB power, Ethernet Cable to a Internet connected 
 
 ### 1. Connect to your raspberry PI using SSH
 
+    ssh osf@raspberrypi3-64.local
+
 ![](/uploads/2018/05/10/connect.png)
 
 ### 2. Find your microphone and speaker addresses
@@ -50,7 +52,7 @@ In order to route the audio to the right device we will need to find the hardwar
           card 2: USB [Jabra SPEAK 510 USB], device 0: USB Audio [USB Audio]
             Subdevices: 1/1
             Subdevice #0: subdevice #0
-   2. Find the speaker device
+   2. Find the speaker device Jabra: **Card 2:** and **Device: 0** again
 
           $ docker run -it --privileged opensourcefoundries/ok-google aplay -l
           setup authorized credentials file
@@ -76,9 +78,80 @@ In order to route the audio to the right device we will need to find the hardwar
             Subdevices: 1/1
             Subdevice #0: subdevice #0
 
-Now we know that the MIC is HW:1,0 and the Speaker is HW:1,0 we will use this information for further adjustments.
+Now we know that the MIC is **2,0** and the Speaker is **2,0** we will be able to pass this information into the container for further adjustments.
 
 1. Test the speaker volume
    1. Note: we pass in MIC__ADDR  and a SPEAKER__ADDR environment variables
+   2. Note: we also call the 'speaker-test' utility and run the wav test.  You should hear "Front Left"
 
           $ docker run -it --privileged -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google speaker-test -t wav
+   3. Press CTRL-C to exit
+2. Adjust the speaker volume, you can also adjust the MIC gain if you want using the alsamixer application
+
+       $ docker run -it --privileged -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google alsamixer
+
+   ![](/uploads/2018/05/10/card.png)
+
+   ![](/uploads/2018/05/10/sp-vol.png)
+
+   ![](/uploads/2018/05/10/mic-vol.png)
+
+After you adjust the volume, you can retest using speaker-test command from step 1 above.
+
+### 2. Now to Authorize your device with the Google Cloud services
+
+#### Configure an Actions Console project
+
+A Google Cloud Platform project, managed by the Actions Console, gives your device access to the Google Assistant API. The project tracks quota usage and gives you valuable metrics for the requests made from your device.
+
+To enable access to the Google Assistant API, do the following:
+
+1. [Open the Actions Console](https://console.actions.google.com/).
+2. Click on Add/import project.
+3. To create a new project, type a name in the Project name box and click CREATE PROJECT.
+
+   _If you already have an existing Google Cloud Platform project, you can select that project and import it instead._
+4. Click the **Device registration** box.
+5. Enable the Google Assistant API on the project you selected (see the [Terms of Service](https://developers.google.com/assistant/sdk/terms-of-service)). You need to do this in the Cloud Platform Console.
+
+   [ENABLE THE API](https://console.developers.google.com/apis/api/embeddedassistant.googleapis.com/overview)
+
+   Click **Enable**.
+
+#### Set activity controls for your account
+
+In order to use the Google Assistant, you must share certain activity data with Google. The Google Assistant needs this data to function properly; this is not specific to the SDK.
+
+Open the [Activity Controls page](https://myaccount.google.com/activitycontrols) for the Google account that you want to use with the Assistant. You can use any Google account, it does not need to be your developer account.
+
+**Ensure the following toggle switches are enabled (blue)**:
+
+* Web & App Activity
+  * In addition, be sure to select the **Include Chrome browsing history and activity from websites and apps that use Google services** checkbox.
+* Device Information
+* Voice & Audio Activity
+
+#### Register the Device Model
+
+Use the registration UI in the Actions Console to register a device model.
+
+1. Open the [Actions Console](https://console.actions.google.com/).
+2. Select the project you created previously.
+3. Select the **Device registration** tab (under **ADVANCED OPTIONS**) from the left navbar.
+4. Click the **REGISTER MODEL** button.
+
+#### Create model
+
+1. Fill out all of the fields for your device.
+
+   See the device model JSON [reference](https://developers.google.com/assistant/sdk/reference/device-registration/model-and-instance-schemas.html#device_model_json) for more information on these fields.
+2. When you are finished, click **REGISTER MODEL**
+
+#### Download credentials file
+
+The `credentials.json` file must be located on the device. Later, you will run an authorization tool and reference this file in order to authorize the Google Assistant SDK sample to make Google Assistant queries. Do not rename this file.
+
+Download this file and transfer it to the device. 
+
+    scp ~/Downloads/credentials.json osf@raspberrypi3-64.local:/home/osf/
+
