@@ -1,6 +1,6 @@
 +++
 author = "Alan Bennett"
-banner = "/uploads/2018/05/10/Google-Launches-the-Google-Assistant-SDK-for-3rd-Party-Companies.png"
+banner = "/uploads/2018/05/09/assistant.png"
 categories = ["lmp"]
 date = "2018-05-09T19:48:23+00:00"
 tags = ["Google", "Assistant", "Alsa"]
@@ -43,61 +43,78 @@ In order to route the audio to the right device we will need to find the hardwar
 2. Load and run a container that contains the ALSA subsystem (not this also happens to be the container we'll use to run the Google Assistant, but for now we are going to use it only to find the HW device IDs)
    1. Find the microphone device (Note: **Card 2** and **Device 0**)
 
-          $ docker run -it --privileged opensourcefoundries/ok-google arecord -l
-          setup authorized credentials file
-          setup alsa configuration
-          + exec arecord -l
-          **** List of CAPTURE Hardware Devices ****
-          card 2: USB [Jabra SPEAK 510 USB], device 0: USB Audio [USB Audio]
-            Subdevices: 1/1
-            Subdevice #0: subdevice #0
+```
+docker run -it --privileged opensourcefoundries/ok-google arecord -l
+setup authorized credentials file
+setup alsa configuration
++ exec arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 2: USB [Jabra SPEAK 510 USB], device 0: USB Audio [USB Audio]
+Subdevices: 1/1
+Subdevice #0: subdevice #0
+```
+
    2. Find the speaker device Jabra: **Card 2:** and **Device: 0** again
 
-          $ docker run -it --privileged opensourcefoundries/ok-google aplay -l
-          setup authorized credentials file
-          setup alsa configuration
-          + exec aplay -l
-          **** List of PLAYBACK Hardware Devices ****
-          card 0: vc4hdmi [vc4-hdmi], device 0: MAI PCM vc4-hdmi-hifi-0 []
-            Subdevices: 1/1
-            Subdevice #0: subdevice #0
-          card 1: ALSA [bcm2835 ALSA], device 0: bcm2835 ALSA [bcm2835 ALSA]
-            Subdevices: 7/7
-            Subdevice #0: subdevice #0
-            Subdevice #1: subdevice #1
-            Subdevice #2: subdevice #2
-            Subdevice #3: subdevice #3
-            Subdevice #4: subdevice #4
-            Subdevice #5: subdevice #5
-            Subdevice #6: subdevice #6
-          card 1: ALSA [bcm2835 ALSA], device 1: bcm2835 ALSA [bcm2835 IEC958/HDMI]
-            Subdevices: 1/1
-            Subdevice #0: subdevice #0
-          card 2: USB [Jabra SPEAK 510 USB], device 0: USB Audio [USB Audio]
-            Subdevices: 1/1
-            Subdevice #0: subdevice #0
+```
+docker run -it --privileged opensourcefoundries/ok-google aplay -l
+setup authorized credentials file
+setup alsa configuration
++ exec aplay -l
+**** List of PLAYBACK Hardware Devices ****
+card 0: vc4hdmi [vc4-hdmi], device 0: MAI PCM vc4-hdmi-hifi-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 1: ALSA [bcm2835 ALSA], device 0: bcm2835 ALSA [bcm2835 ALSA]
+  Subdevices: 7/7
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+card 1: ALSA [bcm2835 ALSA], device 1: bcm2835 ALSA [bcm2835 IEC958/HDMI]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 2: USB [Jabra SPEAK 510 USB], device 0: USB Audio [USB Audio]
+  Subdevices: 1/1
+  ÅSubdevice #0: subdevice #0
+```
 
 Now we know that the MIC is **2,0** and the Speaker is **2,0** we will be able to pass this information into the container for further adjustments.
 
 1. Test the speaker volume
-   1. Note: we pass in MIC__ADDR  and a SPEAKER__ADDR environment variables
+   1. Note: we pass in MIC_ADDR  and a SPEAKER_ADDR environment variables
    2. Note: we also call the 'speaker-test' utility and run the wav test.  You should hear "Front Left"
 
-          $ docker run -it --privileged -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google speaker-test -t wav
+```
+docker run -it --privileged -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google speaker-test -t wav
+```
+
    3. Press CTRL-C to exit
 2. Adjust the speaker volume, you can also adjust the MIC gain if you want using the alsamixer application
 
-       $ docker run -it --privileged -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google alsamixer
+```
+$ docker run -it --privileged -e MIC_ADDR="hw:2,0" -e SPEAKER_ADDR="hw:2,0" opensourcefoundries/ok-google alsamixer
+```
 
-   ![](/uploads/2018/05/10/card.png)
 
-   ![](/uploads/2018/05/10/sp-vol.png)
+#### Select the right device (aka Sound Card)
 
-   ![](/uploads/2018/05/10/mic-vol.png)
+   ![](/uploads/2018/05/09/card.png)
+
+#### Adjust speaker volume
+
+   ![](/uploads/2018/05/09/sp-vol.png)
+
+#### Adjust microphone gain
+
+   ![](/uploads/2018/05/09/mic-vol.png)
 
 After you adjust the volume, you can retest using speaker-test command from step 1 above.
 
-### 3. Now to Authorize your device with the Google Cloud services
+### 3. Authorize your device with the Google Cloud services
 
 Note: Much of this blog was excerpted from Google's SDK documentation at [https://developers.google.com/assistant/sdk/guides/library/python/](https://developers.google.com/assistant/sdk/guides/library/python/ "https://developers.google.com/assistant/sdk/guides/library/python/")
 
@@ -171,21 +188,29 @@ In order to connect your device to the Google services you will first need to ge
 
 Running google-oauthlib-tool will return a HTTPS URL that you will need to copy and paste into your browser to complete the authorization steps.
 
+![](/uploads/2018/05/09/auth-dance.png)
+
+![](/uploads/2018/05/09/code.png)
+
+
 Copy the authorization code back into your terminal window to complete the authorization dance and get your credentials.
+
+![](/uploads/2018/05/09/copyback.png)
+
 
 Note three values from your credentials file
 
-    cat /root/.config/google-oauthlib-tool/credentials.json 
-    
+    cat /root/.config/google-oauthlib-tool/credentials.json
+
     {
-      "client_secret": "kF4ZOjX",
+      "client_secret": "kF4ZLu-X",
       "scopes": [
         "https://www.googleapis.com/auth/assistant-sdk-prototype",
         "https://www.googleapis.com/auth/gcm"
       ],
       "token_uri": "https://accounts.google.com/o/oauth2/token",
-      "client_id": "7520-5883.apps.googleusercontent.com",
-      "refresh_token": "1/Ux2UDvinAjHYb6jbA"
+      "client_id": "7508-5d3.apps.googleusercontent.com",
+      "refresh_token": "1/Ux0k2DAjHYb6jbA"
     }
 
 Now we can exit the container and re-launch it to run the ok-google sample and pass in all of the variables we have discovered.
@@ -203,15 +228,15 @@ Now we can exit the container and re-launch it to run the ok-google sample and p
     setup alsa configuration
     + exec bash -c 'googlesamples-assistant-hotword --project_id ${PROJECT_ID}  --device_model_id ${MODEL_ID}'
     device_model_id: voice-kit-01-number2-flc5yj
-    device_id: FB5D19145D253C8575B061402DF93723
-    
-    https://embeddedassistant.googleapis.com/v1alpha2/projects/voice-kit-01/devices/FB5D19145D253C8575B061402DF93723 404
+    device_id: FB5DB23
+
+    https://embeddedassistant.googleapis.com/v1alpha2/projects/voice-kit-01/devices/FB5DB23 404
     Registering....
     Device registered.
     ON_MUTED_CHANGED:
       {'is_muted': False}
     ON_START_FINISHED
-    
+
     ON_CONVERSATION_TURN_STARTED
     ON_END_OF_UTTERANCE
     ON_RECOGNIZING_SPEECH_FINISHED:
@@ -226,20 +251,20 @@ Now we can exit the container and re-launch it to run the ok-google sample and p
 
 One you know the necessary variables, you can use our Portainer templates to launch the container.
 
-\[How to run Portainer on the Linux microPlatform Blog\]({{< relref "blog/20180508-portainer-container-management-on-linux-microplatform-.md" >}})
+[How to run Portainer on the Linux microPlatform Blog]({{< relref "blog/20180508-portainer-container-management-on-linux-microplatform-.md" >}})
 
 #### Open the App Templates and select **OK Google**
 
-![](/uploads/2018/05/10/Screen Shot 2018-05-09 at 8.25.43 PM.png)
+![](/uploads/2018/05/09/templates.png)
 
 #### Fill in all the details for the service
 
-![](/uploads/2018/05/10/Screen Shot 2018-05-09 at 8.29.02 PM.png)
+![](/uploads/2018/05/09/details.png)
 
-#### The container should be running.  
+#### The container should be running.
 
-![](/uploads/2018/05/10/Screen Shot 2018-05-09 at 8.29.12 PM.png)
+![](/uploads/2018/05/09/running.png)
 
 #### Check the logs
 
-![](/uploads/2018/05/10/Screen Shot 2018-05-09 at 8.30.06 PM.png)
+![](/uploads/2018/05/09/logs.png)
