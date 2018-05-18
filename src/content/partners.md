@@ -75,6 +75,7 @@ __Reference Hardware__
 * Leverage self-testing/certification programs (coming in 2018)
 * Partners may use the subscription without restriction for internal use
 * Partner internal engineering teams get immediate benefit by working against a stable, verified open source software platform that benefits from automated integration testing and continuous updates of the latest technologies
-* Contact us to learn more
+
+<a role="button" class="btn" href="https://foundries.io/partner">Sign up now</a>
 
 ---
