@@ -309,7 +309,7 @@ devices.
 
 Various Arm-specific fixes went in as part of the v8-M work.
 
-A new CONFIG_BT_MES_IVU_DIVIDER went in, which fixes an issue related
+A new CONFIG_BT_MESH_IVU_DIVIDER went in, which fixes an issue related
 to re-initializing initialization vectors. Various other Bluetooth
 cleanups and fixes went in, including removals of deprecated APIs and
 unused variables and documentation fixes.
