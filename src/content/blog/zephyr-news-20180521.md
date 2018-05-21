@@ -139,7 +139,7 @@ objects of various types:
 
 Additional APIs for allowing userspace access to queues includes:
 
-- [k_queue_alloc_append()](http://docs.zephyrproject.org/api/kernel_api.html#_CPPv220k_queue_alloc_appendP7k_queuePv)/[k_queue_alloc_prepend](http://docs.zephyrproject.org/api/kernel_api.html#_CPPv221k_queue_alloc_prependP7k_queuePv)
+- [k_queue_alloc_append()](http://docs.zephyrproject.org/api/kernel_api.html#_CPPv220k_queue_alloc_appendP7k_queuePv)/[k_queue_alloc_prepend()](http://docs.zephyrproject.org/api/kernel_api.html#_CPPv221k_queue_alloc_prependP7k_queuePv)
 - [k_fifo_alloc_put()](http://docs.zephyrproject.org/api/kernel_api.html#c.k_fifo_alloc_put)
 - [k_lifo_alloc_put()](http://docs.zephyrproject.org/api/kernel_api.html#c.k_lifo_alloc_put)
 
