@@ -81,7 +81,7 @@ OpenAMP (and its libmetal dependency) was merged to enable
 message-based cross-core communication. This carries BSD-3-Clause and
 BSD-2-Clause licenses.
 
-An usage sample is in [samples/subsys/openamp](http://docs.zephyrproject.org/samples/subsys/ipc/openamp/README.html).
+A usage sample is in [samples/subsys/openamp](http://docs.zephyrproject.org/samples/subsys/ipc/openamp/README.html).
 
 **New Zephyr SDK**:
 
