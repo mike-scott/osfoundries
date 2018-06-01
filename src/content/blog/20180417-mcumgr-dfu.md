@@ -42,7 +42,7 @@ and then deploy new code to the device using an OTA update.
      tools](http://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.tools%2Fdita%2Ftools%2Fnrf5x_command_line_tools%2Fnrf5x_nrfjprogexe.html),
      instead of PyOCD.
 
-## Install mcmgr on your development workstation
+## Install mcumgr on your development workstation
 
   Install the mcumgr application using "go get" (requires Go 1.7 or later):
 
@@ -104,7 +104,7 @@ __Connect to the device using mcumgr__
    __Note:__ In this demo we are referencing hci0 which may be different on
    your system.  For the demo to work, you will need a Bluetooth 4.0
    compatible adapter and a recent Linux distribution (we performed this demo
-   with Ubuntu 17.10) with 'bluez' installed.  Oncey you install bluez, you can
+   with Ubuntu 17.10) with 'bluez' installed.  Once you install bluez, you can
    identify your device using the 'hciconfig' utility.
 
      # mcumgr --conntype ble --connstring ctlr_name=hci0,peer_name='Zephyr' echo hello
