@@ -76,6 +76,7 @@ __Reference Hardware__
 * Partners may use the subscription without restriction for internal use
 * Partner internal engineering teams get immediate benefit by working against a stable, verified open source software platform that benefits from automated integration testing and continuous updates of the latest technologies
 
-<a role="button" class="btn" href="https://foundries.io/partner">Sign up now</a>
+<a role="button" class="btn" href="https://foundries.io/partner">Sign up now</a><br>
+<a role="button" class="btn" href="https://foundries.io/partner/terms">Partner Agreement</a>
 
 ---
