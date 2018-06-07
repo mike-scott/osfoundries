@@ -86,6 +86,12 @@ paginate = 10
         parent = "About"
         url  = "/about/#Careers"
         weight = 5
+    [[menu.main]]
+        name = "Labs"
+        parent = "About"
+        url  = "/labs"
+        weight = 5
+
 
 [[menu.main]]
     name = "Getting Started"

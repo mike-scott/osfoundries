@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+  {{ partial "head.html" . }}
+
+  <link href="{{ .Site.BaseURL }}css/labs.css" rel="stylesheet">
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          {{ partial "top.html" . }}
+
+          {{ partial "nav.html" . }}
+
+        </header>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span class="anchor" id="about"></span>
+                        <div class="labs-title">Open Source Foundries Labs</div>
+                        <div class="labs-paragraph">
+                            At Open Source Foundries, we are constantly creating software and new
+                            technologies that help us deliver on our microPlatform mission.
+
+                            These efforts, though they may not be formally supported as products, often help us
+                            demonstrate the capabilities of our microPlatforms or help us
+                            improve the overall ecosystems we participate in.
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span class="anchor" id="about"></span>
+                        <div class="labs-title">JobServ</div>
+                        <div class="labs-paragraph">
+                            Automation is paramount to our success and to meet our huge goals we built
+                            the horizontally scalable open source CI system JobServ.  Find out more
+                            about JobServ on Github @ <a class="link" href="https://github.com/OpenSourceFoundries/jobserv">https://github.com/OpenSourceFoundries/jobserv</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span class="anchor" id="about"></span>
+                        <div class="labs-title">EZ containers / App Store</div>
+                        <div class="labs-paragraph">
+                            Our EZ containers project uses the <a class="link" href="https://portainer.io/">Portainer</a>
+                            software project.  Portainer is "an open-source lightweight management UI which allows you to easily manage your docker hosts or swarm clusters".
+                            <br><br>
+                            In our EZ project we maintain an set of template containers
+                            that can easily change the personality of a target system.  With
+                            these templates you can turn your system into a
+                            Google Assistant (with a microphone and speaker),
+                            an Airplane Tracker (with an SDR radio),
+                            a BLE IoT Gateway or load a variety of other demos.
+                            <br>
+                            <br>You can find out more on Github @ <a class="link" href="https://github.com/OpenSourceFoundries/ez">https://github.com/OpenSourceFoundries/ez</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        {{ partial "footer.html" . }}
+
+    </div>
+    <!-- /#all -->
+
+    {{ partial "scripts.html" . }}
+
+  </body>
+</html>
