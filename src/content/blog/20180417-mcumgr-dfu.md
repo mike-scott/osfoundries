@@ -19,7 +19,7 @@ DFU support within Zephyr provided by
 Before getting started, some of the features described in this blog require
 accessing features released to subscribers of the Zephyr microPlatform.  You can
 find out more about subscriptions at:
-[https://foundries.io](https://foundries.io).
+[https://app.foundries.io](https://app.foundries.io).
 
 In this blog, we will prepare will prepare developer's workstation to use the
 Zephyr microPlatform; deploy our initial code to an
@@ -30,7 +30,7 @@ and then deploy new code to the device using an OTA update.
 ## Install the Zephyr microPlatform:
 
    Please refer to our documentation to install the Zephyr microPlatform at:
-   [https://foundries.io/mp/zmp/latest/docs/tutorial/installation-zephyr.html](https://foundries.io/mp/zmp/latest/docs/tutorial/installation-zephyr.html)
+   [https://app.foundries.io/mp/zmp/latest/docs/tutorial/installation-zephyr.html](https://app.foundries.io/mp/zmp/latest/docs/tutorial/installation-zephyr.html)
 
    __NOTE:__ in this blog, we use the nRF52840-DK board instead of the BLE Nano
    2 used by default in the documentation. To use the nRF52840-DK, the following

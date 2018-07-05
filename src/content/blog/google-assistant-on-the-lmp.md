@@ -44,11 +44,11 @@ In the rest of this blog, we'll show you where to collect all of these values so
 
 ## Load the latest Linux microPlatform
 
-Get all the latest software by using the latest microPlatform release. Sign up for a free trial to the subscription @ [https://foundries.io](https://foundries.io "https://foundries.io") and download the latest artifacts @ [https://foundries.io/mp/lmp/latest/artifacts/](https://foundries.io/mp/lmp/latest/artifacts/ "https://foundries.io/mp/lmp/latest/artifacts/").
+Get all the latest software by using the latest microPlatform release. Sign up for a free trial to the subscription @ [https://app.foundries.io](https://app.foundries.io "https://app.foundries.io") and download the latest artifacts @ [https://app.foundries.io/mp/lmp/latest/artifacts/](https://app.foundries.io/mp/lmp/latest/artifacts/ "https://app.foundries.io/mp/lmp/latest/artifacts/").
 
 Download a LmP pre-built binary for your Raspberry Pi 3b, write it to a microSD card (using [Resin's Etcher.io project](https://etcher.io/)) or decompress and write it to the flash device using the dd command.
 
-If you are unfamiliar with the Linux microPlatform, more detailed instructions on using the Linux microPlatform can be found at [Documentation on how to install the Linux microPlatform](https://foundries.io/docs/latest/tutorial/installation-linux.html)
+If you are unfamiliar with the Linux microPlatform, more detailed instructions on using the Linux microPlatform can be found at [Documentation on how to install the Linux microPlatform](https://app.foundries.io/docs/latest/tutorial/installation-linux.html)
 
 ### 1. Connect to your Raspberry Pi using SSH
 

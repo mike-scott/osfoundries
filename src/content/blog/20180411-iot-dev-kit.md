@@ -40,8 +40,8 @@ Key items include:
 
 ## Zephyr microPlatform Software Requirements
 
-* As this support is part of a subscriber update, you'll need to set up a trial subscription account on https://foundries.io.
-* [Install the Zephyr microplatform](https://foundries.io/docs/latest/tutorial/installation-zephyr.html). You're using FRDM-K64F instead of BLE Nano 2, but you must still install PyOCD. Make sure to use `-b frdm_k64f` instead of `-b nrf52_blenano2` in any `zmp` command lines.
+* As this support is part of a subscriber update, you'll need to set up a trial subscription account on https://app.foundries.io.
+* [Install the Zephyr microplatform](https://app.foundries.io/docs/latest/tutorial/installation-zephyr.html). You're using FRDM-K64F instead of BLE Nano 2, but you must still install PyOCD. Make sure to use `-b frdm_k64f` instead of `-b nrf52_blenano2` in any `zmp` command lines.
 
 __Enable Logging and network subsystem__
 
@@ -103,6 +103,6 @@ that each endpoint name is unique.
 
 ![Leshan Demo Server client list](../../../../../img/blog/leshan-client-list.png)
 
-You can now interact with the device using LWM2M, as described in https://foundries.io/docs/latest/tutorial/basic-system.html#use-the-system.
+You can now interact with the device using LWM2M, as described in https://app.foundries.io/docs/latest/tutorial/basic-system.html#use-the-system.
 
 **CAUTION: If you do not have good LTE signal, the device will not stay on-line for very long.**

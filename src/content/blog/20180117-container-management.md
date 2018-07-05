@@ -27,7 +27,7 @@ before continuing.
 
 ## The Simple Case
 
-In the most simple scenario, your device management system ([Hawkbit](https://foundries.io/docs/latest/iotfoundry/hawkbit-howto.html) or [Leshan](https://foundries.io/docs/latest/iotfoundry/lwm2m-howto.html))
+In the most simple scenario, your device management system ([Hawkbit](https://app.foundries.io/docs/latest/iotfoundry/hawkbit-howto.html) or [Leshan](https://app.foundries.io/docs/latest/iotfoundry/lwm2m-howto.html))
 will be running on your host system. In this case the script only needs to know
 the IP address of your LMP device to set it up:
 ```

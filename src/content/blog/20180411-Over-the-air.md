@@ -48,11 +48,11 @@ We won't go into all of the details right now, but you can find out more from th
 ## Overview
 
 * As this support is part of a subscriber update, you'll need to setup a trial
-subscription account on [https://foundries.io](https://foundries.io)
+subscription account on [https://app.foundries.io](https://app.foundries.io)
 * Get a supported hardware development platform (Raspberry Pi 3, DragonBoard-410c,
 DragonBoard-820c, Toradex Colibri iMX7D, Solidrun HummingBoard 2, Compulab IoT Gate,
 Beaglebone Black Wireless, x86)
-* Download the latest system image: https://foundries.io/mp/lmp/latest/artifacts/
+* Download the latest system image: https://app.foundries.io/mp/lmp/latest/artifacts/
 (0.13 and later will be OTA ready)
 * Install the Linux microPlatform
 * Upload an OS to ATS Garage for deployment
@@ -69,7 +69,7 @@ __Install the Linux microPlatform__
 
     NOTE: You must use update 0.13 or newer builds with the OSTree repo
 
-Follow the documentation to [install the Linux microPlatform](https://foundries.io/docs/latest/tutorial/installation-linux.html).
+Follow the documentation to [install the Linux microPlatform](https://app.foundries.io/docs/latest/tutorial/installation-linux.html).
 With a running Linux microPlatform system, follow the next steps to provision your device on ATS Garage.
 
 __Create an ATS Garage Account__
@@ -99,7 +99,7 @@ $ cd lmp
 
 * Download your ATS Garage credentials file (https://app.atsgarage.com/#/profile/access-keys) and make it available in a local folder
 
-* Download and extract microPlatform OSTree repository tarball from a specific LMP build number (e.g. https://foundries.io/mp/lmp/0.13/artifacts/supported-raspberrypi3-64/other/raspberrypi3-64-ostree_repo.tar.bz2)
+* Download and extract microPlatform OSTree repository tarball from a specific LMP build number (e.g. https://app.foundries.io/mp/lmp/0.13/artifacts/supported-raspberrypi3-64/other/raspberrypi3-64-ostree_repo.tar.bz2)
 
     ```
 $ tar -jxvf raspberrypi3-64-ostree_repo.tar.bz2

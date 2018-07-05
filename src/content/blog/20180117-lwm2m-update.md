@@ -19,7 +19,7 @@ To illustrate how a firmware update is delivered via LwM2M, you will make a smal
 
 ## Software Requirements
 
-Before you begin, [set up the LWM2M system described in the microPlatforms Getting Started Tutorial](https://foundries.io/docs/latest/tutorial/index.html).  (These instructions were tested with the 0.7 public release of the microPlatforms; the LWM2M instructions may move in future versions.)
+Before you begin, [set up the LWM2M system described in the microPlatforms Getting Started Tutorial](https://app.foundries.io/docs/latest/tutorial/index.html).  (These instructions were tested with the 0.7 public release of the microPlatforms; the LWM2M instructions may move in future versions.)
 
 ## Initial setup of the LwM2M client device
 

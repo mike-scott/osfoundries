@@ -26,7 +26,7 @@ To make getting started easy, the MCUBoot repository's source code contains a de
 
 # Requirements
 
-You must have the Zephyr microPlatform installed on your system. See the installation instructions here in the [microPlatforms documentation](https://foundries.io/docs/latest/) for instructions if you haven't done that.
+You must have the Zephyr microPlatform installed on your system. See the installation instructions here in the [microPlatforms documentation](https://app.foundries.io/docs/latest/) for instructions if you haven't done that.
 
 Any board supported by the Zephyr microPlatform can be used with these instructions.
 

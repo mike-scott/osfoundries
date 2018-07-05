@@ -128,7 +128,7 @@ Subscriber Dashboard
 
 __Delivery__
 
-With https://foundries.io, we have established a simple interface as the foundation of our initial product offering.  Our dashboard is a simple front-end built on Kubernetes-powered and scalable APIs that can support our next phases as we work on evolving our dashboard to provide an industry leading level of code inspection to support our code inference goals.
+With https://app.foundries.io, we have established a simple interface as the foundation of our initial product offering.  Our dashboard is a simple front-end built on Kubernetes-powered and scalable APIs that can support our next phases as we work on evolving our dashboard to provide an industry leading level of code inspection to support our code inference goals.
 
 __Support__
 

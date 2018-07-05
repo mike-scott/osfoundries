@@ -95,7 +95,7 @@ paginate = 10
 
 [[menu.main]]
     name = "Getting Started"
-    url  = "https://foundries.io"
+    url  = "https://app.foundries.io"
     weight = 99
 
 [[menu.topbar]]
